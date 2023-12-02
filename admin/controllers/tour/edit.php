@@ -5,10 +5,9 @@ require_once('/DA/admin/models/tour.php');
 if (!empty($_POST)) {
     upload();
     tour_update();
-    
 }
 $id = $_GET['id'];
-$data = show($id);
+$data = showTourID($id);
     foreach ($data as $element) {
      $locationID = $element['tour_location_id'];
 }   

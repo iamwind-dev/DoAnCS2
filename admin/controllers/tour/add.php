@@ -4,7 +4,7 @@ include('admin/models/tour.php');
 require_once('/DA/lib/functions.php');
 if (!empty($_POST)) {
     upload();
-    tour_updatee();
+    tour_add();
 }
 $table = 'location';
 $data = get_all($table);

@@ -1,9 +1,9 @@
 <?php
-function get_a_record($table, $id)
+function get_a_record($table, $id,$idType)
 {
-require_once('/DA/connection.php');
+    $conn = mysqli_connect('localhost', 'root', '060304', 'doanqldulich');
 $id = intval($id);
-$sql = "SELECT * FROM `$table` WHERE id=$id";
+$sql = "SELECT * FROM `$table` WHERE `$idType`=$id";
 $query = mysqli_query($conn, $sql) ;
 $data = NULL;
 if (mysqli_num_rows($query) > 0) {
@@ -12,6 +12,8 @@ mysqli_free_result($query);
 }
 return $data;
 }
+
+
 
 function insert($table, $data = array())
 {
