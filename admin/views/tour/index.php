@@ -44,7 +44,7 @@ include('/DA/admin/views/shared/header.php');
                     <th style="width: 400px">Image</th>
                     <th style="width: 400px">Schedule/Price</th>
                     <th>Information/Location</th>
-                    <th>Status</th>
+                    <th style="width: 400px">Status</th>
                     <th>Rate</th>
                     <th>Action</th>
                   </tr>
@@ -81,7 +81,7 @@ include('/DA/admin/views/shared/header.php');
                       </td>
                       <td>
                         <span
-                          class="rounded-100 py-4 px-10 text-center text-14 fw-500 bg-success-4 text-success-4">Pending</span>
+                          class="rounded-100 py-4 px-10 text-center text-14 fw-500 bg-success-4 text-success-4"><?php echo $element['tour_status']; ?></span>
                       </td>
                       <td>
                         <div class="rounded-4 size-35 bg-blue-1 text-white flex-center text-12 fw-600">

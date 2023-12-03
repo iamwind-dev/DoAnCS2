@@ -29,7 +29,7 @@
                         <div class="col-xl-10">
                             <?php
                             foreach ($data as $element) { ?>
-                                <form id="myform" action="../../../admin.php?controller=tour&amp;action=edit" method="post"
+                                <form id="myform" action="../../../admin.php?controller=tour&action=edit" method="post"
                                     enctype="multipart/form-data">
                                     <input type="text" name="id" value="<?php echo $element['id'] ?>" hidden>
                                     <div class="text-18 fw-500 mb-10">Tên Tour</div>
@@ -47,26 +47,28 @@
                                                 <div class="form-input ">
                                                     <select name="diadiem" id="select1">
                                                         <option id="op1"
-                                                            value="<?php echo $element['tour_location_id'].'-'. $element['tour_location_name']; ?>">
+                                                            value="<?php echo $element['tour_location_id'] . '-' . $element['tour_location_name']; ?>">
                                                             <?php echo $element['tour_location_name']; ?>
                                                         </option>
                                                         <?php foreach ($data1 as $element1) { ?>
-                                                            <option id="op1" value="<?php echo $element1['id'].'-'. $element1['location_name']; ?>">
-                                                                <?php echo $element1['location_name']; ?>  
+                                                            <option id="op1"
+                                                                value="<?php echo $element1['id'] . '-' . $element1['location_name']; ?>">
+                                                                <?php echo $element1['location_name']; ?>
                                                             </option>
                                                         <?php } ?>
                                                     </select>
                                                 </div>
-                                                <input type="text" id="hiddenField1" name="iddiadiem" hidden>
-        <input type="text" id="hiddenField2" name="diadiem" hidden>
                                             </div>
                                             <div class="col-5">
                                                 <div class="text-18 fw-500 mb-10">Trạng Thái </div>
                                                 <div class="form-input ">
-                                                    <select name="trangthai" id="select1">
-                                                        <option id="op1" value="a">a</option>
-                                                        <option id="op1" value="b">b</option>
-                                                        <option id="op1" value="c">c</option>
+                                                    <select name="trangthai" id="select2">
+                                                        <option id="op1" value="<?php echo $element['tour_status_id'] .'-'. $element['tour_status']; ?>"><?php echo $element['tour_status']; ?></option>
+                                                        <?php foreach ($data2 as $element1) { ?>
+                                                                <option id="op1" value="<?php echo $element1['id'] . '-'.$element1['status_name']; ?>">
+                                                                    <?php echo $element1['status_name']; ?>
+                                                                </option>
+                                                            <?php } ?>
                                                     </select>
                                                 </div>
                                             </div>
@@ -134,7 +136,7 @@
                                         <div class="text-18 fw-500 mb-10">Mô tả tour</div>
                                         <div class="form-input ">
                                             <textarea name="mota" id="editor" value="">
-                                                <?php echo $element['tour_description']; ?>    </textarea>
+                                                    <?php echo $element['tour_description']; ?>    </textarea>
                                         </div>
                                     </div>
                                     <div class="col-12">
@@ -152,19 +154,20 @@
                                                 <i class='bx bxs-cloud-upload icon'></i>
                                                 <h3>Upload Image</h3>
                                                 <p>Image size must be less than <span>2MB</span></p>
-                                                <img src="../../../public/img/tours/<?php echo $element['tour_image_url'];  ?>"
+                                                <img src="../../../public/img/tours/<?php echo $element['tour_image_url']; ?>"
                                                     alt="">
                                             </div>
                                             <button type="button" class="select-image">Select Image</button>
                                         </div>
                                     </div>
-                                    <input type="text" name="image" id=""
-                                        value="<?php echo $element['tour_image_url']; ?>" hidden>
+                                    <input type="text" name="image" id="" value="<?php echo $element['tour_image_url']; ?>"
+                                        hidden>
                                     <div class="d-inline-block pt-30">
                                         <input type="submit" class="button h-50 px-24 -dark-1 bg-blue-1 text-white"
                                             value="Lưu" form="myform">
                                         </input>
                                     </div>
+                                    
                                 </form>
                             <?php } ?>
                         </div>
@@ -172,5 +175,5 @@
                 </div>
             </div>
         </div>
-        
+
         <?php include('/DA/admin/views/shared/footer.php') ?>

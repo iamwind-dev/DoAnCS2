@@ -24,14 +24,21 @@
                 <div class="tabs__content pt-30 js-tabs-content">
                     <div class="tabs__pane -tab-item-1 is-tab-el-active">
                         <div class="col-xl-10">
-                            <form id="myform" action="../../../admin.php?controller=tour&amp;action=add" method="post"
+                            <form id="myform" action="../../../admin.php?controller=hotel&amp;action=add" method="post"
                                 enctype="multipart/form-data">
-                                <div class="text-18 fw-500 mb-10">Tên Tour</div>
+                                <div class="text-18 fw-500 mb-10">Tên Khách Sạn</div>
                                 <div class="row x-gap-20 y-gap-20">
                                     <div class="col-12">
                                         <div class="form-input ">
-                                            <input name="tentour" type="text" required>
-                                            <label class="lh-1 text-16 text-light-1">Tên Tour</label>
+                                            <input name="tenks" type="text" required>
+                                            <label class="lh-1 text-16 text-light-1">Tên Khách Sạn</label>
+                                        </div>
+                                    </div>
+                                    <div class="col-12">
+                                        <div class="text-18 fw-500 mb-10">Địa Chỉ</div>
+                                        <div class="form-input ">
+                                            <input name="diachi" type="text" required>
+                                            <label class="lh-1 text-16 text-light-1">Địa Chie</label>
                                         </div>
                                     </div>
                                     <div class="row">
@@ -40,12 +47,13 @@
                                             <div class="form-input ">
                                                 <select name="diadiem" id="select1">
                                                     <?php foreach ($data as $element) { ?>
-                                                        <option id="op1" value="<?php echo $element['id'].'-'.$element['location_name']; ?>">
+                                                        <option id="op1"
+                                                            value="<?php echo $element['id'] . '-' . $element['location_name']; ?>">
                                                             <?php echo $element['location_name']; ?>
                                                         </option>
                                                     <?php } ?>
                                                 </select>
-                                                
+
                                             </div>
                                         </div>
                                         <div class="col-5">
@@ -53,7 +61,8 @@
                                             <div class="form-input ">
                                                 <select name="trangthai" id="select1">
                                                     <?php foreach ($data1 as $element) { ?>
-                                                        <option id="op1" value="<?php echo $element['id'] . '-' . $element['status_name']; ?>">
+                                                        <option id="op1"
+                                                            value="<?php echo $element['id'] . '-' . $element['status_name']; ?>">
                                                             <?php echo $element['status_name']; ?>
                                                         </option>
                                                     <?php } ?>
@@ -63,10 +72,10 @@
                                     </div>
                                     <div class="row">
                                         <div class="col-5">
-                                            <div class="text-18 fw-500 mb-10">Số lượng người tham gia</div>
+                                            <div class="text-18 fw-500 mb-10">Số điện thoại liên hệ</div>
                                             <div class="form-input ">
-                                                <input name="sltg" type="text" required>
-                                                <label class="lh-1 text-16 text-light-1">Số lượng người tham gia</label>
+                                                <input name="sdt" type="text" required>
+                                                <label class="lh-1 text-16 text-light-1">Số điện thoại liên hệ</label>
                                             </div>
                                         </div>
                                         <div class="col-5">
@@ -78,46 +87,7 @@
                                         </div>
                                     </div>
 
-                                    <div class="row">
-                                        <div class="col-5">
-                                            <div class="text-18 fw-500 mb-10">Phương tiện di chuyển</div>
-                                            <div class="form-input ">
-                                                <input name="phuongtien" type="text" required>
-                                                <label class="lh-1 text-16 text-light-1">Phương tiện di
-                                                    chuyển</label>
-                                            </div>
-                                        </div>
-                                        <div class="col-5">
-                                            <div class="text-18 fw-500 mb-10">Địa điểm xuất phát</div>
-                                            <div class="form-input ">
-                                                <input name="diemxp" type="text" required>
-                                                <label class="lh-1 text-16 text-light-1">Địa Điểm xuất
-                                                    phát</label>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="row">
-                                        <div class="col-5">
-                                            <div class="text-18 fw-500 mb-10">Hành trình:</div>
-                                            <div class="form-input ">
-                                                <input name="hanhtrinh" type="text" required>
-                                                <label class="lh-1 text-16 text-light-1">Hành trình</label>
-                                            </div>
-                                        </div>
-                                        <div class="col-5">
-                                            <div class="text-18 fw-500 mb-10">Lịch Trình</div>
-                                            <div class="form-input ">
-                                                <input name="lichtrinh" type="text" required>
-                                                <label class="lh-1 text-16 text-light-1">Địa Điểm xuất
-                                                    phát</label>
-                                            </div>
-
-
-                                        </div>
-
-
-
-                                    </div>
+                                    
 
                                 </div>
 
@@ -125,7 +95,7 @@
 
 
                                 <div class="col-12">
-                                    <div class="text-18 fw-500 mb-10">Mô tả tour</div>
+                                    <div class="text-18 fw-500 mb-10">Mô tả Khách Sạn</div>
                                     <div class="form-input ">
                                         <textarea name="mota" id="editor"></textarea>
 
@@ -133,7 +103,7 @@
 
                                 </div>
                                 <div class="col-12">
-                                    <div class="text-18 fw-500 mb-10">Giới thiệu tour</div>
+                                    <div class="text-18 fw-500 mb-10">Giới thiệu Khách Sạn</div>
                                     <div class="form-input ">
                                         <textarea name="gioithieu" id="editor1"></textarea>
 

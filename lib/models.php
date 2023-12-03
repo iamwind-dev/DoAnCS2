@@ -61,9 +61,39 @@ function get_all($table)
 
 function delete_record($id, $table)
 {
-    include('/DA/connection.php');
+    global $conn;
     $sql = "DELETE  from `$table` where id=$id";
     $query = mysqli_query($conn, $sql);
     header("location:admin.php?controller=$table");
     return $query;
+}
+
+function showLocation($id)
+{
+    $sql = "SELECT * FROM location WHERE id <> $id;  ";
+    global $conn;
+    $query = mysqli_query($conn, $sql);
+    $data = array();
+    if (mysqli_num_rows($query) > 0) {
+        while ($row = mysqli_fetch_assoc($query)) {
+            $data[] = $row;
+        }
+        mysqli_free_result($query);
+    }
+    return $data;
+}
+
+function showStatus($id)
+{
+    $sql = "SELECT * FROM status WHERE id <> $id;  ";
+    global $conn;
+    $query = mysqli_query($conn, $sql);
+    $data = array();
+    if (mysqli_num_rows($query) > 0) {
+        while ($row = mysqli_fetch_assoc($query)) {
+            $data[] = $row;
+        }
+        mysqli_free_result($query);
+    }
+    return $data;
 }

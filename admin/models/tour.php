@@ -1,5 +1,5 @@
 <?php
-require_once('/DA/connection.php');
+require_once('/DA/lib/config/database.php');
 
 
 
@@ -39,23 +39,18 @@ require_once('/DA/connection.php');
 //     return $data;
 // }
 
-function showLocation($id)
-{
-    $sql = "SELECT * FROM location WHERE id <> $id;  ";
-    global $conn;
-    $query = mysqli_query($conn, $sql);
-    $data = array();
-    if (mysqli_num_rows($query) > 0) {
-        while ($row = mysqli_fetch_assoc($query)) {
-            $data[] = $row;
-        }
-        mysqli_free_result($query);
-    }
-    return $data;
-}
+
 
 function tour_update()
 {
+    $trangthai = $_POST['trangthai'];
+    $mang = explode('-', $trangthai);
+    $idtrangthai = $mang[0];
+    $tentrangthai = $mang[1];
+    $diadiem = $_POST['diadiem'];
+    $mang1 = explode('-', $diadiem);
+    $iddiadiem = $mang1[0];
+    $tendiadiem = $mang1[1];
 
     $id = $_POST['id'];
     if (!empty($_FILES['file']['tmp_name'])) {
@@ -76,8 +71,10 @@ function tour_update()
         'tour_max_capacity' => intval($_POST['sltg']),
         'tour_vehicle' => $_POST['phuongtien'],
         'tour_starting_point' => ($_POST['diemxp']),
-        'tour_location_name' => ($_POST['diadiem']),
-        'tour_location_id' => ($_POST['iddiadiem']),
+        'tour_location_name' => ($tendiadiem),
+        'tour_location_id' => ($iddiadiem),
+        'tour_status_id' => ($idtrangthai),
+        'tour_status' => ($tentrangthai),
         'tour_image_url' => ($image),
     );
     update('tour', $id, $tour);
@@ -87,6 +84,14 @@ function tour_update()
 
 function tour_add()
 {
+    $trangthai = $_POST['trangthai'];
+    $mang = explode('-', $trangthai);
+    $idtrangthai = $mang[0];
+    $tentrangthai = $mang[1];
+    $diadiem = $_POST['diadiem'];
+    $mang1 = explode('-', $diadiem);
+    $iddiadiem = $mang1[0];
+    $tendiadiem = $mang1[1];
     $tentour = $_POST['tentour'];
     $tour = array(
         'tour_name' => $tentour,
@@ -98,8 +103,10 @@ function tour_add()
         'tour_max_capacity' => intval($_POST['sltg']),
         'tour_vehicle' => $_POST['phuongtien'],
         'tour_starting_point' => ($_POST['diemxp']),
-        'tour_location_id' => ($_POST['iddiadiem']),
-        'tour_location_name' => ($_POST['diadiem']),
+        'tour_location_id' => ($iddiadiem),
+        'tour_location_name' => ($tendiadiem),
+        'tour_status_id' => ($idtrangthai),
+        'tour_status' => ($tentrangthai),
         'tour_image_url' => ($_FILES['file']['name']),
     );
     insert('tour', $tour);
