@@ -22,6 +22,8 @@
                 <div class="tabs__content pt-30 js-tabs-content">
                     <div class="tabs__pane -tab-item-1 is-tab-el-active">
                         <div class="col-xl-10">
+                            <?php
+                            foreach ($data as $element) { ?>
                             <form id="myform" action="../../../admin.php?controller=category&amp;action=edit"
                                 method="post" enctype="multipart/form-data">
                                 <div class="text-18 fw-500 mb-10">Tên Tour</div>
@@ -30,9 +32,9 @@
                                         <div class="form-input ">
 
                                             <input name="tendm" type="text" required
-                                                value="<?php echo $data['category_name'] ?>">
+                                                value="<?php echo $element['category_name'] ?>">
                                             <input name="id" type="text" required
-                                                value="<?php echo $data['category_id'] ?>" hidden>
+                                                value="<?php echo $element['id'] ?>" hidden>
                                             <label class="lh-1 text-16 text-light-1">Tên Danh muc</label>
                                         </div>
                                     </div>
@@ -52,7 +54,7 @@
                                 <div class="col-12">
                                     <div class="text-18 fw-500 mb-10">Mô tả Danh muc</div>
                                     <div class="form-input ">
-                                        <textarea name="mota" id="editor"><?php echo $data['category_description'] ?></textarea>
+                                        <textarea name="mota" id="editor"><?php echo $element['category_description'] ?></textarea>
                                     </div>
                                 </div>
                                 <div class="d-inline-block pt-30">
@@ -60,6 +62,7 @@
                                     </input>
                                 </div>
                             </form>
+                            <?php } ?>
                         </div>
                     </div>
                 </div>

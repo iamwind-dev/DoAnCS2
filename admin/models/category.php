@@ -15,7 +15,7 @@ function category_add()
 
 function category_update()
 {
-    $idtype = "category_id";
+    
     $id = $_POST['id'];
 
     $tendm = $_POST['tendm'];
@@ -24,7 +24,7 @@ function category_update()
         'category_status' => ($_POST['trangthai']),
         'category_description' => ($_POST['mota']),
     );
-    update('category', $idtype, $id, $category);
+    update('category', $id, $category);
     //chuyển hướng nếu them dc
     header('location:admin.php?controller=category');
 }

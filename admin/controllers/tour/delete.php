@@ -1,4 +1,5 @@
 <?php
 include('admin/models/tour.php');
+require_once('/DA/lib/models.php');
 $id=$_GET['id'];
-$data = tour_delete($id);
+$data = delete_record($id,'tour');

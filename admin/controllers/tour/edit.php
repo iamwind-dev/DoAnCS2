@@ -7,9 +7,9 @@ if (!empty($_POST)) {
     tour_update();
 }
 $id = $_GET['id'];
-$data = showTourID($id);
-    foreach ($data as $element) {
-     $locationID = $element['tour_location_id'];
-}   
-$data1=showLocation($locationID);
+$data = get_a_record('tour',$id);
+foreach ($data as $e) {
+    $location_id  = $e['tour_location_id'];
+}  
+$data1=showLocation($location_id);
 include('admin/views/tour/edit.php');

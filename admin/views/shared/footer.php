@@ -34,6 +34,38 @@
 </div>
 
 <!-- JavaScript -->
+<!-- <script>
+            var selectElement = document.getElementById("select1");
+ var hiddenField1 = document.getElementById("hiddenField1");
+ var hiddenField2 = document.getElementById("hiddenField2");
+
+  // Lấy giá trị của tùy chọn đầu tiên khi trang được tải
+        var selectedValue = selectElement.options[selectElement.selectedIndex].value;
+
+        // Phân tách giá trị thành hai phần dựa trên dấu gạch ngang
+        var parts = selectedValue.split('-');
+        var value1 = parts[0];
+        var value2 = parts[1];
+
+        // Gán giá trị vào các trường ẩn trong form
+        hiddenField1.value = value1;
+        hiddenField2.value = value2;
+
+ // Thêm sự kiện để lắng nghe sự thay đổi trong select
+ selectElement.addEventListener("change", function () {
+   // Lấy giá trị của tùy chọn được chọn
+   var selectedValue = selectElement.options[selectElement.selectedIndex].value;
+
+   // Phân tách giá trị thành hai phần dựa trên dấu gạch ngang
+   var parts = selectedValue.split("-");
+   var diadiem = parts[0];
+   var iddiadiem = parts[1];
+
+   // Gán giá trị vào các trường ẩn trong form
+   hiddenField1.value = diadiem;
+   hiddenField2.value = iddiadiem;
+ });
+        </script> -->
 <script>
     ClassicEditor
         .create(document.querySelector('#editor'))
@@ -54,6 +86,7 @@
 
 <script src="/public/js/vendors.js"></script>
 <script src="/public/js/main.js"></script>
+<script src="/public/js/main2.js"></script>
 </body>
 
 

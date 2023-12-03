@@ -1,16 +1,19 @@
 <?php
-function get_a_record($table, $id,$idType)
+require_once('/DA/lib/config/database.php');
+function get_a_record($table, $id)
 {
-    $conn = mysqli_connect('localhost', 'root', '060304', 'doanqldulich');
-$id = intval($id);
-$sql = "SELECT * FROM `$table` WHERE `$idType`=$id";
-$query = mysqli_query($conn, $sql) ;
-$data = NULL;
-if (mysqli_num_rows($query) > 0) {
-$data = mysqli_fetch_assoc($query);
-mysqli_free_result($query);
-}
-return $data;
+    global $conn;
+    $id = intval($id);
+    $sql = "SELECT * FROM `$table` WHERE id =$id";
+    $query = mysqli_query($conn, $sql);
+    $data = NULL;
+    if (mysqli_num_rows($query) > 0) {
+        while ($row = mysqli_fetch_assoc($query)) {
+            $data[] = $row;
+        }
+        mysqli_free_result($query);
+    }
+    return $data;
 }
 
 
@@ -18,25 +21,25 @@ return $data;
 function insert($table, $data = array())
 {
     $values = array();
-    $conn = mysqli_connect('localhost', 'root', '060304', 'doanqldulich');
+    global $conn;
     foreach ($data as $key => $value) {
         $value = mysqli_real_escape_string($conn, $value);
         $values[] = "`$key`='$value'";
     }
-        $sql = "INSERT INTO `$table` SET " . implode(',', $values);
+    $sql = "INSERT INTO `$table` SET " . implode(',', $values);
     mysqli_query($conn, $sql);
 }
 
 
-function update($table,$idtype,$id, $data = array())
+function update($table, $id, $data = array())
 {
     $values = array();
-    $conn = mysqli_connect('localhost', 'root', '060304', 'doanqldulich');
+    global $conn;
     foreach ($data as $key => $value) {
         $value = mysqli_real_escape_string($conn, $value);
         $values[] = "`$key`='$value'";
     }
-    $sql = "UPDATE `$table` SET " . implode(',', $values) . " WHERE `$idtype`=$id";
+    $sql = "UPDATE `$table` SET " . implode(',', $values) . " WHERE id =$id";
     mysqli_query($conn, $sql);
 }
 
@@ -44,7 +47,7 @@ function update($table,$idtype,$id, $data = array())
 function get_all($table)
 {
     $sql = "SELECT * FROM `$table` ";
-    $conn = mysqli_connect('localhost', 'root', '060304', 'doanqldulich');
+    global $conn;
     $query = mysqli_query($conn, $sql);
     $data = array();
     if (mysqli_num_rows($query) > 0) {
@@ -54,4 +57,13 @@ function get_all($table)
         mysqli_free_result($query);
     }
     return $data;
+}
+
+function delete_record($id, $table)
+{
+    include('/DA/connection.php');
+    $sql = "DELETE  from `$table` where id=$id";
+    $query = mysqli_query($conn, $sql);
+    header("location:admin.php?controller=$table");
+    return $query;
 }

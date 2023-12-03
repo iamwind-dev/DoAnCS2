@@ -38,13 +38,15 @@
                                         <div class="col-5">
                                             <div class="text-18 fw-500 mb-10">Địa Điểm</div>
                                             <div class="form-input ">
-                                                <select name="diadiem" id="select1">
+                                                <select name="diadie" id="select1">
                                                     <?php foreach ($data as $element) { ?>
-                                                        <option id="op1" value="<?php echo $element['location_id'] ?>">
+                                                        <option id="op1" value="<?php echo $element['id'].'-'.$element['location_name']; ?>">
                                                             <?php echo $element['location_name']; ?>
                                                         </option>
                                                     <?php } ?>
                                                 </select>
+                                                <input type="text" id="hiddenField1" name="iddiadiem" hidden>
+        <input type="text" id="hiddenField2" name="diadiem" hidden>
                                             </div>
                                         </div>
                                         <div class="col-5">

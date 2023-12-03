@@ -5,6 +5,9 @@ if (!empty($_POST)) {
     category_update();
 }
 $id = $_GET['id'];
-$idType='category_id';
-$data = get_a_record('category',$id,$idType);
+
+$data = get_a_record('category',$id);
+foreach($data as $e){
+    echo $e['id'];
+}
 include('admin/views/category/edit.php');

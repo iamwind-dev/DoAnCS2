@@ -658,7 +658,7 @@
                             <a href="#"><i class="icon icon-chevron-sm-down"></i> Dashboard</a>
                           </li>
 
-                          <li><a href="db-dashboard.html">Dashboard</a></li>
+                          <li><a href="admin.php">Dashboard</a></li>
 
                           <li><a href="db-booking.html">Booking</a></li>
 

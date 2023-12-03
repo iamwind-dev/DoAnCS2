@@ -1,6 +1,6 @@
 <?php
 session_start();
-require_once('/DA/connection.php');
+require_once('/DA/lib/config/database.php');
 
 if (isset($_GET['controller']) && '' != $_GET['controller']) {
     $controller = $_GET['controller'];

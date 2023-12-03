@@ -51,9 +51,11 @@ include('/DA/admin/views/shared/header.php');
                 </thead>
                 <tbody>
                   <?php
+                  $a = 0;
                   foreach ($data as $element) { ?>
+                  
                     <tr>
-                      <td>1</td>
+                      <td><?php echo ++$a; ?></td>
                       <td class="text-blue-1 fw-500">
                         <?php echo $element['tour_name'];
                         ?>
@@ -69,7 +71,7 @@ include('/DA/admin/views/shared/header.php');
                       </td>
                       <td>
                         <b>Địa điểm:</b>
-                        <?php echo $element['location_name']; ?><br /><b>Di Chuyển:</b>
+                        <?php echo $element['tour_location_name']; ?><br /><b>Di Chuyển:</b>
                         <?php echo $element['tour_vehicle']; ?><br /><b>Điểm Xuất Phát:</b>
                         <?php echo $element['tour_starting_point']; ?><br /><b>Ngày đi:
                         </b>
@@ -98,7 +100,7 @@ include('/DA/admin/views/shared/header.php');
 
                           <div class="col-auto">
                             <a
-                              href="../../../admin.php?controller=tour&amp;action=edit&amp;id=<?php echo $element['tour_id']; ?>"><button
+                              href="../../../admin.php?controller=tour&amp;action=edit&amp;id=<?php echo $element['id']; ?>"><button
                                 class="flex-center bg-light-2 rounded-4 size-35">
                                 <i class="icon-edit text-16 text-light-1"></i>
                               </button>
@@ -106,7 +108,7 @@ include('/DA/admin/views/shared/header.php');
                           </div>
                           <div class="col-auto">
                             <a
-                              href="../../../admin.php?controller=tour&amp;action=delete&amp;id=<?php echo $element['tour_id']; ?>"><button
+                              href="../../../admin.php?controller=tour&amp;action=delete&amp;id=<?php echo $element['id']; ?>"><button
                                 class="flex-center bg-light-2 rounded-4 size-35">
                                 <i class="icon-trash-2 text-16 text-light-1"></i></button></a>
                           </div>
