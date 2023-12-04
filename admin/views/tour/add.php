@@ -4,7 +4,7 @@
     <div class="dashboard__content bg-light-2">
         <div class="row y-gap-20 justify-between items-end pb-60 lg:pb-40 md:pb-32">
             <div class="col-auto">
-                <h1 class="text-30 lh-14 fw-600">Add Hotels</h1>
+                <h1 class="text-30 lh-14 fw-600">Add Tours</h1>
                 <div class="text-15 text-light-1">Lorem ipsum dolor sit amet, consectetur.</div>
             </div>
 
@@ -18,7 +18,7 @@
                     <div class="col-auto">
                         <button
                             class="tabs__button text-18 lg:text-16 text-light-1 fw-500 pb-5 lg:pb-0 js-tabs-button is-tab-el-active"
-                            data-tab-target=".-tab-item-1">1. Content</button>
+                            data-tab-target=".-tab-item-1">Content</button>
                     </div>
                 </div>
                 <div class="tabs__content pt-30 js-tabs-content">

@@ -6,7 +6,7 @@ function get_a_record($table, $id)
     $id = intval($id);
     $sql = "SELECT * FROM `$table` WHERE id =$id";
     $query = mysqli_query($conn, $sql);
-    $data = NULL;
+    $data = array();
     if (mysqli_num_rows($query) > 0) {
         while ($row = mysqli_fetch_assoc($query)) {
             $data[] = $row;
@@ -14,6 +14,18 @@ function get_a_record($table, $id)
         mysqli_free_result($query);
     }
     return $data;
+}
+
+
+function get_a_recordd($table, $id)
+{
+    global $conn;
+    $id = intval($id);
+    $sql = "SELECT * FROM `$table` WHERE id =$id";
+    $query = mysqli_query($conn, $sql);
+    $data = array();
+    $row = mysqli_fetch_assoc($query);
+    return $row;
 }
 
 
@@ -29,6 +41,23 @@ function insert($table, $data = array())
     $sql = "INSERT INTO `$table` SET " . implode(',', $values);
     mysqli_query($conn, $sql);
 }
+
+function insert_get_id($table, $data = array())
+{
+    $values = array();
+    global $conn;
+    foreach ($data as $key => $value) {
+        $value = mysqli_real_escape_string($conn, $value);
+        $values[] = "`$key`='$value'";
+    }
+    $sql = "INSERT INTO `$table` SET " . implode(',', $values);
+    mysqli_query($conn, $sql);
+    $sql2="SELECT last_insert_id()";
+    $result=mysqli_query($conn, $sql2);
+    $row = mysqli_fetch_assoc($result);
+    return $row;    
+}
+
 
 
 function update($table, $id, $data = array())

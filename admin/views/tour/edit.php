@@ -21,7 +21,7 @@
                     <div class="col-auto">
                         <button
                             class="tabs__button text-18 lg:text-16 text-light-1 fw-500 pb-5 lg:pb-0 js-tabs-button is-tab-el-active"
-                            data-tab-target=".-tab-item-1">1. Content</button>
+                            data-tab-target=".-tab-item-1">Content</button>
                     </div>
                 </div>
                 <div class="tabs__content pt-30 js-tabs-content">
@@ -63,12 +63,16 @@
                                                 <div class="text-18 fw-500 mb-10">Trạng Thái </div>
                                                 <div class="form-input ">
                                                     <select name="trangthai" id="select2">
-                                                        <option id="op1" value="<?php echo $element['tour_status_id'] .'-'. $element['tour_status']; ?>"><?php echo $element['tour_status']; ?></option>
+                                                        <option id="op1"
+                                                            value="<?php echo $element['tour_status_id'] . '-' . $element['tour_status']; ?>">
+                                                            <?php echo $element['tour_status']; ?>
+                                                        </option>
                                                         <?php foreach ($data2 as $element1) { ?>
-                                                                <option id="op1" value="<?php echo $element1['id'] . '-'.$element1['status_name']; ?>">
-                                                                    <?php echo $element1['status_name']; ?>
-                                                                </option>
-                                                            <?php } ?>
+                                                            <option id="op1"
+                                                                value="<?php echo $element1['id'] . '-' . $element1['status_name']; ?>">
+                                                                <?php echo $element1['status_name']; ?>
+                                                            </option>
+                                                        <?php } ?>
                                                     </select>
                                                 </div>
                                             </div>
@@ -136,7 +140,7 @@
                                         <div class="text-18 fw-500 mb-10">Mô tả tour</div>
                                         <div class="form-input ">
                                             <textarea name="mota" id="editor" value="">
-                                                    <?php echo $element['tour_description']; ?>    </textarea>
+                                                        <?php echo $element['tour_description']; ?>    </textarea>
                                         </div>
                                     </div>
                                     <div class="col-12">
@@ -167,7 +171,7 @@
                                             value="Lưu" form="myform">
                                         </input>
                                     </div>
-                                    
+
                                 </form>
                             <?php } ?>
                         </div>

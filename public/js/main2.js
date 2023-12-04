@@ -1,5 +1,3 @@
-
-
 //SELECT IMG
 const selectImage = document.querySelector(".select-image");
 const inputFile = document.querySelector("#file");
@@ -68,3 +66,90 @@ const observer = new IntersectionObserver((entries, observer) => {
 imageElements.forEach((image) => {
   observer.observe(image);
 });
+
+function chuyenTrang(nextSection) {
+  // Ẩn tất cả các phần
+  document.getElementById("nhap-thong-tin").classList.add("hidden");
+  document.getElementById("hoa-don").classList.add("hidden");
+
+  // Hiển thị phần tiếp theo
+  document.getElementById(nextSection).classList.remove("hidden");
+  // Lấy các phần tử cần thay đổi
+  const step1 = document.getElementById("step1");
+  const step2 = document.getElementById("step2");
+
+  // Lấy nội dung và lớp CSS của từng phần tử
+  const step1Content = step1.innerHTML;
+  const step1Class = step1.className;
+  const step2Content = "1";
+  const step2Class = step2.className;
+
+  // Thay đổi nội dung và lớp CSS giữa hai phần tử
+  step1.innerHTML = step2Content;
+  step1.className = step2Class;
+  step2.innerHTML = step1Content;
+  step2.className = step1Class;
+}
+
+
+function handleSubmitAndChangeContent(event) {
+  // Gọi hàm xử lý form
+  submitForm();
+
+  // Gọi hàm thay đổi nội dung giữa các phần tử
+  document.getElementById("thanhtoan").classList.add("hidden");
+  document.getElementById("nhap-thong-tin").classList.add("hidden");
+  document.getElementById("hoa-don").classList.remove("hidden");
+  const step1 = document.getElementById("step1");
+  const step2 = document.getElementById("step2");
+  const step1Content = step1.innerHTML;
+  const step1Class = step1.className;
+  const step2Content = "1"; // Nội dung mới
+  const step2Class = step2.className;
+
+  step1.innerHTML = step2Content;
+  step1.className = step2Class;
+  step2.innerHTML = step1Content;
+  step2.className = step1Class;
+
+  // Ngăn chặn sự kiện mặc định của form submit
+  event.preventDefault();
+}
+
+
+
+// Lắng nghe sự kiện submit của form
+// document.getElementById("thanhtoan").addEventListener("submit",  function (nextSection) {
+//     // Ẩn tất cả các phần
+//     document.getElementById("nhap-thong-tin").classList.add("hidden");
+//     document.getElementById("hoa-don").classList.add("hidden");
+
+//     // Hiển thị phần tiếp theo
+//     document.getElementById(nextSection).classList.remove("hidden");
+//     // Lấy các phần tử cần thay đổi
+//     const step1 = document.getElementById("step1");
+//     const step2 = document.getElementById("step2");
+
+//     // Lấy nội dung và lớp CSS của từng phần tử
+//     const step1Content = step1.innerHTML;
+//     const step1Class = step1.className;
+//     const step2Content = "1";
+//     const step2Class = step2.className;
+
+//     // Thay đổi nội dung và lớp CSS giữa hai phần tử
+//     step1.innerHTML = step2Content;
+//     step1.className = step2Class;
+//     step2.innerHTML = step1Content;
+//     step2.className = step1Class;
+//   }
+// );
+
+
+function submitForm() {
+  // Lấy giá trị từ trường input trong form
+  var inputValue = document.getElementById("hoten").value;
+
+  // Hiển thị giá trị trong div bên ngoài form
+  var resultDiv = document.getElementById("hotenn");
+  resultDiv.innerHTML = inputValue;
+}

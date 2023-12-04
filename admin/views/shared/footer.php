@@ -66,7 +66,7 @@
    hiddenField2.value = iddiadiem;
  });
         </script> -->
-<script>
+<!-- <script>
     ClassicEditor
         .create(document.querySelector('#editor'))
         .catch(error => {
@@ -77,7 +77,38 @@
         .catch(error => {
             console.error(error);
         });
-</script>
+</script> -->
+
+
+    <script src="https://cdn.ckeditor.com/ckeditor5/40.1.0/classic/ckeditor.js"></script>
+    <script type="text/javascript">
+    ClassicEditor
+                .create(document.querySelector('#editor1'), {
+                    ckfinder:
+                    {
+                        uploadUrl: 'fileupload.php'
+                    }
+                })
+                .then(editor => {
+                    console.log(editor);
+                })
+                .catch(error => {
+                    console.error(error);
+                });
+    ClassicEditor
+                .create(document.querySelector('#editor'), {
+                    ckfinder:
+                    {
+                        uploadUrl: '../../../lib/config/fileupload.php'
+                    }
+                })
+                .then(editor => {
+                    console.log(editor);
+                })
+                .catch(error => {
+                    console.error(error);
+                });
+    </script>
 <script src="../../../cdnjs.cloudflare.com/ajax/libs/Chart.js/3.7.1/chart.min.js"
     integrity="sha512-QSkVNOCYLtj73J4hbmVoOV6KVZuMluZlioC+trLpewV8qMjsWqlIQvkn1KGX2StWvPMdWGBqim1xlC8krl1EKQ=="
     crossorigin="anonymous" referrerpolicy="no-referrer"></script>

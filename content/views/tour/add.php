@@ -18,8 +18,8 @@
 
     <!-- Stylesheets -->
     <link rel="stylesheet" href="/public/css/vendors.css">
-  <link rel="stylesheet" href="/public/css/main.css">
-  <script src="https://cdn.ckeditor.com/ckeditor5/40.1.0/classic/ckeditor.js"></script>
+    <link rel="stylesheet" href="/public/css/main.css">
+    <script src="https://cdn.ckeditor.com/ckeditor5/40.1.0/classic/ckeditor.js"></script>
 
 
 
@@ -235,7 +235,8 @@
                                                                 </div>
 
                                                                 <div class="mega__image d-flex relative">
-                                                                    <img src="#" data-src="/public/img/backgrounds/7.png"
+                                                                    <img src="#"
+                                                                        data-src="/public/img/backgrounds/7.png"
                                                                         alt="image" class="rounded-4 js-lazy">
 
                                                                     <div class="absolute w-full h-full px-30 py-24">
@@ -895,7 +896,7 @@
                             <div class="col-auto">
                                 <button
                                     class="tabs__button text-18 lg:text-16 text-light-1 fw-500 pb-5 lg:pb-0 js-tabs-button is-tab-el-active"
-                                    data-tab-target=".-tab-item-1">1. Content</button>
+                                    data-tab-target=".-tab-item-1">Content</button>
                             </div>
 
                             <div class="col-auto">
@@ -922,347 +923,366 @@
                             <div class="tabs__pane -tab-item-1 is-tab-el-active">
                                 <div class="col-xl-10">
                                     <form action="">
-                                    <div class="text-18 fw-500 mb-10">Tour Content</div>
-                                    <div class="row x-gap-20 y-gap-20">
-                                        <div class="row">
-                                        <div class="col-12">
-                                        Name
-                                            <div class="form-input ">
-                                                <input type="text" required>
-                                                <label class="lh-1 text-16 text-light-1">Tour Name</label>
-                                            </div>
-
-                                        </div>
-                                        </div>
-
-                                        <div class="row">
-                                        <div class="col-6">
-                                        Địa Điểm:
-                                            <div class="form-input ">
-                                                <input type="text" required>
-                                                <label class="lh-1 text-16 text-light-1">Địa Điểm</label>
-                                            </div>
-                                        </div>
-
-                                        <div class="col-6">
-                                        Trạng Thái:
-                                            <div class="form-input ">
-                                                <input type="text" required>
-                                                <label class="lh-1 text-16 text-light-1">Trạng Thái</label>
-                                            </div>
-                                        </div>
-                                        </div>
-
-                                        <div class="row">
-                                        <div class="col-6">
-                                        Số người tham gia:
-                                            <div class="form-input ">
-                                                <input type="text" required>
-                                                <label class="lh-1 text-16 text-light-1">Số người tham gia</label>
-                                            </div>
-                                        </div>
-
-                                        <div class="col-6">
-                                        Giá
-                                            <div class="form-input ">
-                                                <input type="text" required>
-                                                <label class="lh-1 text-16 text-light-1">Giá</label>
-                                            </div>
-                                        </div>
-                                        </div>
-
-                                        <div class="row">
-                                        <div class="col-6">
-                                        Phương tiện di chuyển:
-                                            <div class="form-input ">
-                                                <input type="text" required>
-                                                <label class="lh-1 text-16 text-light-1">Phương tiện di chuyển</label>
-                                            </div>
-                                        </div>
-
-                                        <div class="col-6">
-                                        Địa điểm xuất phát:
-                                            <div class="form-input ">
-                                                <input type="text" required>
-                                                <label class="lh-1 text-16 text-light-1">Địa điểm xuất phát</label>
-                                            </div>
-                                        </div>
-                                        </div>
-
-                                        <div class="col-12">
-                                        Hành trình:
-                                            <div class="form-input ">
-                                                <input type="text" required>
-                                                <label class="lh-1 text-16 text-light-1">Hành Trình</label>
-                                            </div>
-
-                                        </div>
-
-                                        <div class="col-12">
-                                        Lịch trình:
-                                            <div class="form-input ">
-                                                <input type="text" required>
-                                                <label class="lh-1 text-16 text-light-1">lịch Trình</label>
-                                            </div>
-
-                                        </div>
-
-                                        <div class="col-12">
-                                        Mô tả lịch trình
-                                            <div class="form-input ">
-                                                <textarea name="content" id="editor" required rows="5"></textarea>
-                                            </div>
-
-                                        </div>
-
-                                        <div class="col-12">
-                                        Giới thiệu tour:
-                                            <div class="form-input ">
-                                                <textarea name="content1" id="editor1" required rows="5"></textarea>
-                                            </div>
-
-                                        </div>
-                                    
-                                    </div>
-
-
-                                    <div class="mt-30">
-                                        <div class="fw-500">Banner Image</div>
-
-                                        <div class="row x-gap-20 y-gap-20 pt-15">
-                                            <div class="col-auto">
-                                                <div class="w-200">
-                                                    <div class="d-flex ratio ratio-1:1">
-                                                        <input type="file"
-                                                            class=" file flex-center flex-column text-center bg-blue-2 h-full w-1/1 absolute rounded-4 border-type-1">
-                                                            <div class="icon-upload-file text-40 text-blue-1 mb-10">
-                                                            </div>
-                                                            <div class="text-blue-1 fw-500">Upload Images</div>
-                                                        </input>
+                                        <div class="text-18 fw-500 mb-10">Tour Content</div>
+                                        <div class="row x-gap-20 y-gap-20">
+                                            <div class="row">
+                                                <div class="col-12">
+                                                    Name
+                                                    <div class="form-input ">
+                                                        <input type="text" required>
+                                                        <label class="lh-1 text-16 text-light-1">Tour Name</label>
                                                     </div>
-                                                    <div class="text-center mt-10 text-14 text-light-1">PNG or JPG no
-                                                        bigger than 800px wide and tall.</div>
+
                                                 </div>
                                             </div>
 
+                                            <div class="row">
+                                                <div class="col-6">
+                                                    Địa Điểm:
+                                                    <div class="form-input ">
+                                                        <input type="text" required>
+                                                        <label class="lh-1 text-16 text-light-1">Địa Điểm</label>
+                                                    </div>
+                                                </div>
 
-                                            
+                                                <div class="col-6">
+                                                    Trạng Thái:
+                                                    <div class="form-input ">
+                                                        <input type="text" required>
+                                                        <label class="lh-1 text-16 text-light-1">Trạng Thái</label>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="row">
+                                                <div class="col-6">
+                                                    Số người tham gia:
+                                                    <div class="form-input ">
+                                                        <input type="text" required>
+                                                        <label class="lh-1 text-16 text-light-1">Số người tham
+                                                            gia</label>
+                                                    </div>
+                                                </div>
+
+                                                <div class="col-6">
+                                                    Giá
+                                                    <div class="form-input ">
+                                                        <input type="text" required>
+                                                        <label class="lh-1 text-16 text-light-1">Giá</label>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="row">
+                                                <div class="col-6">
+                                                    Phương tiện di chuyển:
+                                                    <div class="form-input ">
+                                                        <input type="text" required>
+                                                        <label class="lh-1 text-16 text-light-1">Phương tiện di
+                                                            chuyển</label>
+                                                    </div>
+                                                </div>
+
+                                                <div class="col-6">
+                                                    Địa điểm xuất phát:
+                                                    <div class="form-input ">
+                                                        <input type="text" required>
+                                                        <label class="lh-1 text-16 text-light-1">Địa điểm xuất
+                                                            phát</label>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="col-12">
+                                                Hành trình:
+                                                <div class="form-input ">
+                                                    <input type="text" required>
+                                                    <label class="lh-1 text-16 text-light-1">Hành Trình</label>
+                                                </div>
+
+                                            </div>
+
+                                            <div class="col-12">
+                                                Lịch trình:
+                                                <div class="form-input ">
+                                                    <input type="text" required>
+                                                    <label class="lh-1 text-16 text-light-1">lịch Trình</label>
+                                                </div>
+
+                                            </div>
+
+                                            <div class="col-12">
+                                                Mô tả lịch trình
+                                                <div class="form-input ">
+                                                    <textarea name="content" id="editor" required rows="5"></textarea>
+                                                </div>
+
+                                            </div>
+
+                                            <div class="col-12">
+                                                Giới thiệu tour:
+                                                <div class="form-input ">
+                                                    <textarea name="content1" id="editor1" required rows="5"></textarea>
+                                                </div>
+
+                                            </div>
 
                                         </div>
-                                    </div>
 
-                                    <div class="mt-30">
-                                        <div class="fw-500">Gallery</div>
 
-                                        <div class="row x-gap-20 y-gap-20 pt-15">
-                                            <div class="col-auto">
-                                                <div class="w-200">
-                                                    <div class="d-flex ratio ratio-1:1">
+                                        <div class="mt-30">
+                                            <div class="fw-500">Banner Image</div>
+
+                                            <div class="row x-gap-20 y-gap-20 pt-15">
+                                                <div class="col-auto">
+                                                    <div class="w-200">
+                                                        <div class="d-flex ratio ratio-1:1">
+                                                            <input type="file"
+                                                                class=" file flex-center flex-column text-center bg-blue-2 h-full w-1/1 absolute rounded-4 border-type-1">
+                                                            <div class="icon-upload-file text-40 text-blue-1 mb-10">
+                                                            </div>
+                                                            <div class="text-blue-1 fw-500">Upload Images</div>
+                                                            </input>
+                                                        </div>
+                                                        <div class="text-center mt-10 text-14 text-light-1">PNG or JPG
+                                                            no
+                                                            bigger than 800px wide and tall.</div>
+                                                    </div>
+                                                </div>
+
+
+
+
+                                            </div>
+                                        </div>
+
+                                        <div class="mt-30">
+                                            <div class="fw-500">Gallery</div>
+
+                                            <div class="row x-gap-20 y-gap-20 pt-15">
+                                                <div class="col-auto">
+                                                    <div class="w-200">
+                                                        <div class="d-flex ratio ratio-1:1">
+                                                            <div
+                                                                class="flex-center flex-column text-center bg-blue-2 h-full w-1/1 absolute rounded-4 border-type-1">
+                                                                <div class="icon-upload-file text-40 text-blue-1 mb-10">
+                                                                </div>
+                                                                <div class="text-blue-1 fw-500">Upload Images</div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="text-center mt-10 text-14 text-light-1">PNG or JPG
+                                                            no
+                                                            bigger than 800px wide and tall.</div>
+                                                    </div>
+                                                </div>
+
+
+                                                <div class="col-auto">
+                                                    <div class="d-flex ratio ratio-1:1 w-200">
+                                                        <img src="/public/img/avatars/3.png" alt="image"
+                                                            class="img-ratio rounded-4">
+
                                                         <div
-                                                            class="flex-center flex-column text-center bg-blue-2 h-full w-1/1 absolute rounded-4 border-type-1">
-                                                            <div class="icon-upload-file text-40 text-blue-1 mb-10">
+                                                            class="d-flex justify-end px-10 py-10 h-100 w-1/1 absolute">
+                                                            <div class="size-40 bg-white rounded-4">
+                                                                <i class="icon-trash text-16"></i>
                                                             </div>
-                                                            <div class="text-blue-1 fw-500">Upload Images</div>
-                                                        </div>
-                                                    </div>
-                                                    <div class="text-center mt-10 text-14 text-light-1">PNG or JPG no
-                                                        bigger than 800px wide and tall.</div>
-                                                </div>
-                                            </div>
-
-
-                                            <div class="col-auto">
-                                                <div class="d-flex ratio ratio-1:1 w-200">
-                                                    <img src="/public/img/avatars/3.png" alt="image"
-                                                        class="img-ratio rounded-4">
-
-                                                    <div class="d-flex justify-end px-10 py-10 h-100 w-1/1 absolute">
-                                                        <div class="size-40 bg-white rounded-4">
-                                                            <i class="icon-trash text-16"></i>
                                                         </div>
                                                     </div>
                                                 </div>
-                                            </div>
 
-                                            <div class="col-auto">
-                                                <div class="d-flex ratio ratio-1:1 w-200">
-                                                    <img src="/public/img/avatars/3.png" alt="image"
-                                                        class="img-ratio rounded-4">
+                                                <div class="col-auto">
+                                                    <div class="d-flex ratio ratio-1:1 w-200">
+                                                        <img src="/public/img/avatars/3.png" alt="image"
+                                                            class="img-ratio rounded-4">
 
-                                                    <div class="d-flex justify-end px-10 py-10 h-100 w-1/1 absolute">
-                                                        <div class="size-40 bg-white rounded-4">
-                                                            <i class="icon-trash text-16"></i>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-
-                                            <div class="col-auto">
-                                                <div class="d-flex ratio ratio-1:1 w-200">
-                                                    <img src="/public/img/avatars/3.png" alt="image"
-                                                        class="img-ratio rounded-4">
-
-                                                    <div class="d-flex justify-end px-10 py-10 h-100 w-1/1 absolute">
-                                                        <div class="size-40 bg-white rounded-4">
-                                                            <i class="icon-trash text-16"></i>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-
-                                        </div>
-                                    </div>
-
-
-                                    <div class="border-top-light mt-30 mb-30"></div>
-
-                                    <div class="text-18 fw-500 mb-10">Hotel Policy</div>
-                                    <div class="row x-gap-20 y-gap-20">
-                                        <div class="col-12">
-
-                                            <div class="form-input ">
-                                                <input type="text" required>
-                                                <label class="lh-1 text-16 text-light-1">Hotel rating standard</label>
-                                            </div>
-
-                                        </div>
-                                    </div>
-
-                                    <div class="mt-20">
-                                        <div class="fw-500 mb-20">Policy</div>
-
-                                        <div class="overflow-scroll scroll-bar-1">
-                                            <table class="table-5 -border-bottom col-12">
-                                                <thead class="bg-light-2">
-                                                    <tr>
-                                                        <th>Title</th>
-                                                        <th>Content</th>
-                                                        <th></th>
-                                                    </tr>
-                                                </thead>
-                                                <tbody>
-
-                                                    <tr>
-                                                        <td class="col-5">
-
-                                                            <div class="form-input ">
-                                                                <input type="text" required>
-                                                                <label class="lh-1 text-16 text-light-1">Eg: What kind
-                                                                    of footwear is most suitable?</label>
-                                                            </div>
-
-                                                        </td>
-                                                        <td class="col-7">
-
-                                                            <div class="form-input ">
-                                                                <textarea required rows="5"></textarea>
-                                                                <label class="lh-1 text-16 text-light-1">Content</label>
-                                                            </div>
-
-                                                        </td>
-                                                        <td class="col-auto">
-                                                            <button class="flex-center bg-light-2 rounded-4 size-35">
-                                                                <i class="icon-trash-2 text-16 text-light-1"></i>
-                                                            </button>
-                                                        </td>
-                                                    </tr>
-
-                                                    <tr>
-                                                        <td class="col-5">
-
-                                                            <div class="form-input ">
-                                                                <input type="text" required>
-                                                                <label class="lh-1 text-16 text-light-1">Eg: What kind
-                                                                    of footwear is most suitable?</label>
-                                                            </div>
-
-                                                        </td>
-                                                        <td class="col-7">
-
-                                                            <div class="form-input ">
-                                                                <textarea required rows="5"></textarea>
-                                                                <label class="lh-1 text-16 text-light-1">Content</label>
-                                                            </div>
-
-                                                        </td>
-                                                        <td class="col-auto">
-                                                            <button class="flex-center bg-light-2 rounded-4 size-35">
-                                                                <i class="icon-trash-2 text-16 text-light-1"></i>
-                                                            </button>
-                                                        </td>
-                                                    </tr>
-
-                                                </tbody>
-                                            </table>
-                                        </div>
-
-                                        <div class="d-flex justify-end">
-                                            <button class="button -md -blue-1 bg-blue-1-05 text-blue-1 mt-20">Add
-                                                Item</button>
-                                        </div>
-                                    </div>
-
-                                    <div class="mt-30">
-                                        <div class="fw-500">Featured Image</div>
-
-                                        <div class="row x-gap-20 y-gap-20 pt-15">
-                                            <div class="col-auto">
-                                                <div class="w-200">
-                                                    <div class="d-flex ratio ratio-1:1">
                                                         <div
-                                                            class="flex-center flex-column text-center bg-blue-2 h-full w-1/1 absolute rounded-4 border-type-1">
-                                                            <div class="icon-upload-file text-40 text-blue-1 mb-10">
+                                                            class="d-flex justify-end px-10 py-10 h-100 w-1/1 absolute">
+                                                            <div class="size-40 bg-white rounded-4">
+                                                                <i class="icon-trash text-16"></i>
                                                             </div>
-                                                            <div class="text-blue-1 fw-500">Upload Images</div>
-                                                        </div>
-                                                    </div>
-                                                    <div class="text-center mt-10 text-14 text-light-1">PNG or JPG no
-                                                        bigger than 800px wide and tall.</div>
-                                                </div>
-                                            </div>
-
-
-                                            <div class="col-auto">
-                                                <div class="d-flex ratio ratio-1:1 w-200">
-                                                    <img src="/public/img/avatars/3.png" alt="image"
-                                                        class="img-ratio rounded-4">
-
-                                                    <div class="d-flex justify-end px-10 py-10 h-100 w-1/1 absolute">
-                                                        <div class="size-40 bg-white rounded-4">
-                                                            <i class="icon-trash text-16"></i>
                                                         </div>
                                                     </div>
                                                 </div>
-                                            </div>
 
-                                            <div class="col-auto">
-                                                <div class="d-flex ratio ratio-1:1 w-200">
-                                                    <img src="/public/img/avatars/3.png" alt="image"
-                                                        class="img-ratio rounded-4">
+                                                <div class="col-auto">
+                                                    <div class="d-flex ratio ratio-1:1 w-200">
+                                                        <img src="/public/img/avatars/3.png" alt="image"
+                                                            class="img-ratio rounded-4">
 
-                                                    <div class="d-flex justify-end px-10 py-10 h-100 w-1/1 absolute">
-                                                        <div class="size-40 bg-white rounded-4">
-                                                            <i class="icon-trash text-16"></i>
+                                                        <div
+                                                            class="d-flex justify-end px-10 py-10 h-100 w-1/1 absolute">
+                                                            <div class="size-40 bg-white rounded-4">
+                                                                <i class="icon-trash text-16"></i>
+                                                            </div>
                                                         </div>
                                                     </div>
                                                 </div>
+
                                             </div>
-
-                                            <div class="col-auto">
-                                                <div class="d-flex ratio ratio-1:1 w-200">
-                                                    <img src="/public/img/avatars/3.png" alt="image"
-                                                        class="img-ratio rounded-4">
-
-                                                    <div class="d-flex justify-end px-10 py-10 h-100 w-1/1 absolute">
-                                                        <div class="size-40 bg-white rounded-4">
-                                                            <i class="icon-trash text-16"></i>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-
                                         </div>
-                                    </div>
+
+
+                                        <div class="border-top-light mt-30 mb-30"></div>
+
+                                        <div class="text-18 fw-500 mb-10">Hotel Policy</div>
+                                        <div class="row x-gap-20 y-gap-20">
+                                            <div class="col-12">
+
+                                                <div class="form-input ">
+                                                    <input type="text" required>
+                                                    <label class="lh-1 text-16 text-light-1">Hotel rating
+                                                        standard</label>
+                                                </div>
+
+                                            </div>
+                                        </div>
+
+                                        <div class="mt-20">
+                                            <div class="fw-500 mb-20">Policy</div>
+
+                                            <div class="overflow-scroll scroll-bar-1">
+                                                <table class="table-5 -border-bottom col-12">
+                                                    <thead class="bg-light-2">
+                                                        <tr>
+                                                            <th>Title</th>
+                                                            <th>Content</th>
+                                                            <th></th>
+                                                        </tr>
+                                                    </thead>
+                                                    <tbody>
+
+                                                        <tr>
+                                                            <td class="col-5">
+
+                                                                <div class="form-input ">
+                                                                    <input type="text" required>
+                                                                    <label class="lh-1 text-16 text-light-1">Eg: What
+                                                                        kind
+                                                                        of footwear is most suitable?</label>
+                                                                </div>
+
+                                                            </td>
+                                                            <td class="col-7">
+
+                                                                <div class="form-input ">
+                                                                    <textarea required rows="5"></textarea>
+                                                                    <label
+                                                                        class="lh-1 text-16 text-light-1">Content</label>
+                                                                </div>
+
+                                                            </td>
+                                                            <td class="col-auto">
+                                                                <button
+                                                                    class="flex-center bg-light-2 rounded-4 size-35">
+                                                                    <i class="icon-trash-2 text-16 text-light-1"></i>
+                                                                </button>
+                                                            </td>
+                                                        </tr>
+
+                                                        <tr>
+                                                            <td class="col-5">
+
+                                                                <div class="form-input ">
+                                                                    <input type="text" required>
+                                                                    <label class="lh-1 text-16 text-light-1">Eg: What
+                                                                        kind
+                                                                        of footwear is most suitable?</label>
+                                                                </div>
+
+                                                            </td>
+                                                            <td class="col-7">
+
+                                                                <div class="form-input ">
+                                                                    <textarea required rows="5"></textarea>
+                                                                    <label
+                                                                        class="lh-1 text-16 text-light-1">Content</label>
+                                                                </div>
+
+                                                            </td>
+                                                            <td class="col-auto">
+                                                                <button
+                                                                    class="flex-center bg-light-2 rounded-4 size-35">
+                                                                    <i class="icon-trash-2 text-16 text-light-1"></i>
+                                                                </button>
+                                                            </td>
+                                                        </tr>
+
+                                                    </tbody>
+                                                </table>
+                                            </div>
+
+                                            <div class="d-flex justify-end">
+                                                <button class="button -md -blue-1 bg-blue-1-05 text-blue-1 mt-20">Add
+                                                    Item</button>
+                                            </div>
+                                        </div>
+
+                                        <div class="mt-30">
+                                            <div class="fw-500">Featured Image</div>
+
+                                            <div class="row x-gap-20 y-gap-20 pt-15">
+                                                <div class="col-auto">
+                                                    <div class="w-200">
+                                                        <div class="d-flex ratio ratio-1:1">
+                                                            <div
+                                                                class="flex-center flex-column text-center bg-blue-2 h-full w-1/1 absolute rounded-4 border-type-1">
+                                                                <div class="icon-upload-file text-40 text-blue-1 mb-10">
+                                                                </div>
+                                                                <div class="text-blue-1 fw-500">Upload Images</div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="text-center mt-10 text-14 text-light-1">PNG or JPG
+                                                            no
+                                                            bigger than 800px wide and tall.</div>
+                                                    </div>
+                                                </div>
+
+
+                                                <div class="col-auto">
+                                                    <div class="d-flex ratio ratio-1:1 w-200">
+                                                        <img src="/public/img/avatars/3.png" alt="image"
+                                                            class="img-ratio rounded-4">
+
+                                                        <div
+                                                            class="d-flex justify-end px-10 py-10 h-100 w-1/1 absolute">
+                                                            <div class="size-40 bg-white rounded-4">
+                                                                <i class="icon-trash text-16"></i>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                                <div class="col-auto">
+                                                    <div class="d-flex ratio ratio-1:1 w-200">
+                                                        <img src="/public/img/avatars/3.png" alt="image"
+                                                            class="img-ratio rounded-4">
+
+                                                        <div
+                                                            class="d-flex justify-end px-10 py-10 h-100 w-1/1 absolute">
+                                                            <div class="size-40 bg-white rounded-4">
+                                                                <i class="icon-trash text-16"></i>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                                <div class="col-auto">
+                                                    <div class="d-flex ratio ratio-1:1 w-200">
+                                                        <img src="/public/img/avatars/3.png" alt="image"
+                                                            class="img-ratio rounded-4">
+
+                                                        <div
+                                                            class="d-flex justify-end px-10 py-10 h-100 w-1/1 absolute">
+                                                            <div class="size-40 bg-white rounded-4">
+                                                                <i class="icon-trash text-16"></i>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                            </div>
+                                        </div>
                                     </form>
                                 </div>
 
@@ -2365,17 +2385,17 @@
     <!-- JavaScript -->
     <script>
         ClassicEditor
-            .create( document.querySelector( '#editor' ) )
-            .catch( error => {
-                console.error( error );
-            } );
+            .create(document.querySelector('#editor'))
+            .catch(error => {
+                console.error(error);
+            });
     </script>
     <script>
         ClassicEditor
-            .create( document.querySelector( '#editor1' ) )
-            .catch( error => {
-                console.error( error );
-            } );
+            .create(document.querySelector('#editor1'))
+            .catch(error => {
+                console.error(error);
+            });
     </script>
     <script src="../../../cdnjs.cloudflare.com/ajax/libs/Chart.js/3.7.1/chart.min.js"
         integrity="sha512-QSkVNOCYLtj73J4hbmVoOV6KVZuMluZlioC+trLpewV8qMjsWqlIQvkn1KGX2StWvPMdWGBqim1xlC8krl1EKQ=="
@@ -2384,7 +2404,7 @@
     <script src="../../../unpkg.com/%40googlemaps/markerclusterer%402.5.1/dist/index.min.js"></script>
 
     <script src="/public/js/vendors.js"></script>
-  <script src="/public/js/main.js"></script>
+    <script src="/public/js/main.js"></script>
 </body>
 
 

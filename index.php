@@ -6,7 +6,7 @@ if (isset($_GET['controller']) && '' != $_GET['controller']) {
     $controller = $_GET['controller'];
 }
 else {
-    $controller = 'home';
+    $controller = 'booking';
 }
 
 if (isset($_GET['action']) && '' != $_GET['action']) {

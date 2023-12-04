@@ -1,7 +1,5 @@
 <?php
 
-
-
 function upload($folder)
 {
     $target_dir = "/DA/public/img/";

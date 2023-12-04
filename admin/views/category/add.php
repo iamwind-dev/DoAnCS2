@@ -16,7 +16,7 @@
                     <div class="col-auto">
                         <button
                             class="tabs__button text-18 lg:text-16 text-light-1 fw-500 pb-5 lg:pb-0 js-tabs-button is-tab-el-active"
-                            data-tab-target=".-tab-item-1">1. Content</button>
+                            data-tab-target=".-tab-item-1">Content</button>
                     </div>
                 </div>
                 <div class="tabs__content pt-30 js-tabs-content">
@@ -29,12 +29,12 @@
                                     <div class="col-12">
                                         <div class="form-input ">
                                             <input name="tendm" type="text" required>
-                        <label class="lh-1 text-16 text-light-1">Tên Danh muc</label>
+                                            <label class="lh-1 text-16 text-light-1">Tên Danh muc</label>
                                         </div>
                                     </div>
                                     <div class="row">
                                         <div class="col-5">
-                                        <div class="text-18 fw-500 mb-10">Trạng Thái</div>
+                                            <div class="text-18 fw-500 mb-10">Trạng Thái</div>
                                             <div class="form-input ">
                                                 <select name="trangthai" id="select1">
                                                     <option id="op1" value="a">a</option>
@@ -52,7 +52,8 @@
                                     </div>
                                 </div>
                                 <div class="d-inline-block pt-30">
-                                    <input type="submit" class="button h-50 px-24 -dark-1 bg-blue-1 text-white" value="Thêm" form="myform">
+                                    <input type="submit" class="button h-50 px-24 -dark-1 bg-blue-1 text-white"
+                                        value="Thêm" form="myform">
                                     </input>
                                 </div>
                             </form>
