@@ -1,3 +1,5 @@
+
+
 //SELECT IMG
 const selectImage = document.querySelector(".select-image");
 const inputFile = document.querySelector("#file");
@@ -91,7 +93,6 @@ function chuyenTrang(nextSection) {
   step2.className = step1Class;
 }
 
-
 function handleSubmitAndChangeContent(event) {
   // Gọi hàm xử lý form
   submitForm();
@@ -115,8 +116,6 @@ function handleSubmitAndChangeContent(event) {
   // Ngăn chặn sự kiện mặc định của form submit
   event.preventDefault();
 }
-
-
 
 // Lắng nghe sự kiện submit của form
 // document.getElementById("thanhtoan").addEventListener("submit",  function (nextSection) {
@@ -143,7 +142,6 @@ function handleSubmitAndChangeContent(event) {
 //     step2.className = step1Class;
 //   }
 // );
-
 
 function submitForm() {
   // Lấy giá trị từ trường input trong form

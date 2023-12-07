@@ -51,6 +51,8 @@ function tour_update()
     $mang1 = explode('-', $diadiem);
     $iddiadiem = $mang1[0];
     $tendiadiem = $mang1[1];
+    $start = date('Y-m-d', strtotime(str_replace('/', '-', $_POST['batdau'])));
+    $end = date('Y-m-d', strtotime(str_replace('/', '-', $_POST['ketthuc'])));
 
     $id = $_POST['id'];
     if (!empty($_FILES['file']['tmp_name'])) {
@@ -76,6 +78,8 @@ function tour_update()
         'tour_status_id' => ($idtrangthai),
         'tour_status' => ($tentrangthai),
         'tour_image_url' => ($image),
+        'tour_start_date' => ($start),
+        'tour_end_date' => ($end),
     );
     update('tour', $id, $tour);
     //chuyển hướng nếu them dc
@@ -92,6 +96,8 @@ function tour_add()
     $mang1 = explode('-', $diadiem);
     $iddiadiem = $mang1[0];
     $tendiadiem = $mang1[1];
+    $start = date('Y-m-d', strtotime(str_replace('/', '-', $_POST['batdau'])));
+    $end = date('Y-m-d', strtotime(str_replace('/', '-', $_POST['ketthuc'])));
     $tentour = $_POST['tentour'];
     $tour = array(
         'tour_name' => $tentour,
@@ -108,6 +114,8 @@ function tour_add()
         'tour_status_id' => ($idtrangthai),
         'tour_status' => ($tentrangthai),
         'tour_image_url' => ($_FILES['file']['name']),
+        'tour_start_date' => ($start),
+        'tour_end_date' => ($end),
     );
     insert('tour', $tour);
     //chuyển hướng nếu them dc

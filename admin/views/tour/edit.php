@@ -5,7 +5,7 @@
         <div class="row y-gap-20 justify-between items-end pb-60 lg:pb-40 md:pb-32">
             <div class="col-auto">
 
-                <h1 class="text-30 lh-14 fw-600">Add Hotels</h1>
+                <h1 class="text-30 lh-14 fw-600">Edit Tour</h1>
                 <div class="text-15 text-light-1">Lorem ipsum dolor sit amet, consectetur.</div>
             </div>
 
@@ -92,7 +92,7 @@
                                                 <div class="form-input ">
                                                     <input name="gia" type="text" required
                                                         value="<?php echo $element['tour_price']; ?>">
-                                                    <label class="lh-1 text-16 text-light-1">Giá</label>
+                                                    <label class="lh-1 text-16 text-light-1">Giá(VND)</label>
                                                 </div>
                                             </div>
                                         </div>
@@ -135,20 +135,40 @@
                                                 </div>
                                             </div>
                                         </div>
+                                        <div class="row">
+                                            <div class="col-5">
+                                                <div class="text-18 fw-500 mb-10">Ngày bắt đầu:</div>
+                                                <div class="form-input ">
+                                                    <input name="batdau" type="date" required
+                                                        value="<?php echo $element['tour_start_date']; ?>">
+                                                    <label class="lh-1 text-16 text-light-1">Ngày bắt đầu</label>
+                                                </div>
+                                            </div>
+                                            <div class="col-5">
+                                                <div class="text-18 fw-500 mb-10">Ngày kết thúc:</div>
+                                                <div class="form-input ">
+                                                    <input name="ketthuc" type="date"
+                                                        value="<?php echo $element['tour_end_date']; ?>">
+                                                    <label class="lh-1 text-16 text-light-1">Ngày kết thúc</label>
+                                                </div>
+                                            </div>
+                                        </div>
                                     </div>
-                                    <div class="col-12">
+                                    <div class="row">
+                                    <div class="col-6">
                                         <div class="text-18 fw-500 mb-10">Mô tả tour</div>
                                         <div class="form-input ">
                                             <textarea name="mota" id="editor" value="">
-                                                        <?php echo $element['tour_description']; ?>    </textarea>
+                                                                <?php echo $element['tour_description']; ?>    </textarea>
                                         </div>
                                     </div>
-                                    <div class="col-12">
+                                    <div class="col-6">
                                         <div class="text-18 fw-500 mb-10">Giới thiệu tour</div>
                                         <div class="form-input ">
                                             <textarea name="gioithieu" id="editor1"
                                                 value=""> <?php echo $element['tour_introduction']; ?>       </textarea>
                                         </div>
+                                    </div>
                                     </div>
                                     <div class="mt-30">
                                         <div class="fw-500">Hình ảnh</div>

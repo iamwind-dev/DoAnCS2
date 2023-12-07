@@ -4,7 +4,7 @@
         <div class="pt-60 pb-60">
           <div class="row y-gap-40 justify-between xl:justify-start">
             <div class="col-xl-4 col-lg-6">
-              <img src="img/general/logo-light.svg" alt="image">
+              <img style='width:150px;'src="../../../public/img/general/logo.png" alt="image">
 
               <div class="row y-gap-30 justify-between pt-30">
                 <div class="col-sm-6">
@@ -121,4 +121,19 @@
         </div>
       </div>
     </footer>
+
+      </main>
+
+  <!-- JavaScript -->
+  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAAz77U5XQuEME6TpftaMdX0bBelQxXRlM"></script>
+  <script src="../../../unpkg.com/%40googlemaps/markerclusterer%402.5.1/dist/index.min.js"></script>
+
+  <script src="../../../public/js/vendors.js"></script>
+  <script src="../../../public/js/main.js"></script>
+  <script src="../../../public/js/main2.js"></script>
+</body>
+
+
+<!-- Mirrored from creativelayers.net/themes/gotrip-html/home-6.html by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 20 Nov 2023 12:12:23 GMT -->
+</html>
 

@@ -40,12 +40,13 @@
                                             <div class="form-input ">
                                                 <select name="diadiem" id="select1">
                                                     <?php foreach ($data as $element) { ?>
-                                                        <option id="op1" value="<?php echo $element['id'].'-'.$element['location_name']; ?>">
+                                                        <option id="op1"
+                                                            value="<?php echo $element['id'] . '-' . $element['location_name']; ?>">
                                                             <?php echo $element['location_name']; ?>
                                                         </option>
                                                     <?php } ?>
                                                 </select>
-                                                
+
                                             </div>
                                         </div>
                                         <div class="col-5">
@@ -53,7 +54,8 @@
                                             <div class="form-input ">
                                                 <select name="trangthai" id="select1">
                                                     <?php foreach ($data1 as $element) { ?>
-                                                        <option id="op1" value="<?php echo $element['id'] . '-' . $element['status_name']; ?>">
+                                                        <option id="op1"
+                                                            value="<?php echo $element['id'] . '-' . $element['status_name']; ?>">
                                                             <?php echo $element['status_name']; ?>
                                                         </option>
                                                     <?php } ?>
@@ -117,6 +119,24 @@
 
 
 
+                                    </div>
+
+                                    <div class="row">
+                                            <div class="col-5">
+                                                <div class="text-18 fw-500 mb-10">Ngày bắt đầu:</div>
+                                                <div class="form-input ">
+                                                    <input name="batdau" type="date" required
+                                                        value="">
+                                                <label class="lh-1 text-16 text-light-1">Ngày bắt đầu</label>
+                                            </div>
+                                        </div>
+                                        <div class="col-5">
+                                            <div class="text-18 fw-500 mb-10">Ngày kết thúc:</div>
+                                            <div class="form-input ">
+                                                <input name="ketthuc" type="date" value="">
+                                                <label class="lh-1 text-16 text-light-1">Ngày kết thúc</label>
+                                            </div>
+                                        </div>
                                     </div>
 
                                 </div>

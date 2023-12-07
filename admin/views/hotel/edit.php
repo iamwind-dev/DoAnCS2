@@ -111,7 +111,7 @@
                                         <div class="text-18 fw-500 mb-10">Mô tả Khách sạn</div>
                                         <div class="form-input ">
                                             <textarea name="mota" id="editor" value="">
-                                                    <?php echo $element['hotel_description']; ?>    </textarea>
+                                                        <?php echo $element['hotel_description']; ?>    </textarea>
                                         </div>
                                     </div>
                                     <div class="col-12">

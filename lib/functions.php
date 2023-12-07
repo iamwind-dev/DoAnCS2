@@ -7,3 +7,9 @@ function upload($folder)
     move_uploaded_file($_FILES["file"]["tmp_name"], $target_file);
 }
 
+
+function escape($str) {
+    global $conn;
+    return mysqli_real_escape_string($conn, $str);
+}
+

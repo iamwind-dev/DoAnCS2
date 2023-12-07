@@ -1,3 +1,5 @@
+<?php $user = get_a_record('users', $_SESSION['user']['id']); ?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -23,7 +25,7 @@
     <link rel="stylesheet" href="/public/css/main.css">
     
 
-    <title>GoTrip</title>
+    <title>WinK Travel</title>
 </head>
 
 <body data-barba="wrapper">
@@ -48,7 +50,7 @@
             </div>
         </div>
 
-        <div class="preloader__title">GoTrip</div>
+        <div class="preloader__title">WinK Travel</div>
     </div>
 
 
@@ -56,8 +58,8 @@
     <header data-add-bg="" class="header -dashboard bg-white js-header" data-x="header" data-x-toggle="is-menu-opened">
         <div data-anim="fade" class="header__container px-30 sm:px-20">
             <div class="-left-side">
-                <a href="index.html" class="header-logo" data-x="header-logo" data-x-toggle="is-logo-dark">
-                    <img src="/public/img/general/logo-dark.svg" alt="logo icon">
+                <a href="index.php" class="header-logo" data-x="header-logo" data-x-toggle="is-logo-dark">
+                    <img src="/public/img/general/logo1.png" alt="logo icon">
                     <img src="/public/img/general/logo-dark.svg" alt="logo icon">
                 </a>
             </div>
@@ -91,84 +93,39 @@
                                 <div class="menu js-navList">
                                     <ul class="menu__nav text-dark-1 fw-500 -is-active">
 
-                                        <a data-barba href="#">
-                                            <span class="mr-10">Home</span>
+                                        </ul>
+                                    </div>
 
-                                        </a>
-
-                                        <li>
-                                            <a data-barba href="#">
-                                                <span class="mr-10">Categories</span>
-
-                                            </a>
-
-                                        </li>
-
-                                        <li>
-                                            <a href="destinations.html">
-                                                Destinations
-                                            </a>
-                                        </li>
-
-
-                                        <li>
-                                            <a data-barba href="#">
-                                                <span class="mr-10">Blog</span>
-
-                                            </a>
-
-
-                                        </li>
-
-
-                                        <li>
-                                            <a data-barba href="#">
-                                                <span class="mr-10">Pages</span>
-
-                                            </a>
-
-
-
-                                        </li>
-
-
-                                        <li>
-                                            <a href="/admin.php">
-                                                <span class="mr-10">Dashboard</span>
-                                            </a>
-                                        </li>
-
-
-                                        <li>
-                                            <a href="contact.html">Contact</a>
-                                        </li>
-                                    </ul>
-                                </div>
-
-                                <div class="mobile-footer px-20 py-20 border-top-light js-mobile-footer">
+                                    <div class="mobile-footer px-20 py-20 border-top-light js-mobile-footer">
+                                    </div>
                                 </div>
                             </div>
+
+
+                            <div class="row items-center x-gap-5 y-gap-20 pl-20 lg:d-none">
+                                <div class="col-auto">
+                                    <button class="button -blue-1-05 size-50 rounded-22 flex-center">
+                                        <i class="icon-email-2 text-20"></i>
+                                    </button>
+                                </div>
+
+                                <div class="col-auto">
+                                    <button class="button -blue-1-05 size-50 rounded-22 flex-center">
+                                        <i class="icon-notification text-20"></i>
+                                    </button>
+                                </div><?php foreach($user as $u) { ?>
+                                    <div class="col-auto">
+                                        <?php echo $u['user_name'] ?>
+                                        <span style="margin-left:20px">(Admin)</span>
+                                    
+                                    </div>
+                                </div>
+                                <div class="pl-15"> <a href="">
+                                    <img src="/public/img/avatars/<?php echo $u['user_avatar'] ?>" alt="image" class="size-50 rounded-22 object-cover">
+                            
+                            </a>
                         </div>
-
-
-                        <div class="row items-center x-gap-5 y-gap-20 pl-20 lg:d-none">
-                            <div class="col-auto">
-                                <button class="button -blue-1-05 size-50 rounded-22 flex-center">
-                                    <i class="icon-email-2 text-20"></i>
-                                </button>
-                            </div>
-
-                            <div class="col-auto">
-                                <button class="button -blue-1-05 size-50 rounded-22 flex-center">
-                                    <i class="icon-notification text-20"></i>
-                                </button>
-                            </div>
-                        </div>
-
-                        <div class="pl-15">
-                            <img src="/public/img/avatars/3.png" alt="image" class="size-50 rounded-22 object-cover">
-                        </div>
-
+                    <?php } ?>
                         <div class="d-none xl:d-flex x-gap-20 items-center pl-20" data-x="header-mobile-icons"
                             data-x-toggle="text-white">
                             <div><button class="d-flex items-center icon-menu text-20"
@@ -341,8 +298,9 @@
                 <div class="sidebar__item ">
 
 
-                    <a href="#" class="sidebar__button d-flex items-center text-15 lh-1 fw-500">
-                        <img src="/public/img/dashboard/sidebar/user.png" alt="image" class="mr-15">
+                    <a href="admin.php?controller=user&action=index" class="sidebar__button d-flex items-center text-15 lh-1 fw-500">
+        
+                    <img src="/public/img/dashboard/sidebar/user.png" alt="image" class="mr-15">
                         Manage User
                     </a>
 
@@ -352,7 +310,7 @@
                 <div class="sidebar__item ">
 
 
-                    <a href="#" class="sidebar__button d-flex items-center text-15 lh-1 fw-500">
+                    <a href="/admin.php?controller=home&action=logout" class="sidebar__button d-flex items-center text-15 lh-1 fw-500">
                         <img src="/public/img/dashboard/sidebar/log-out.svg" alt="image" class="mr-15">
                         Logout
                     </a>

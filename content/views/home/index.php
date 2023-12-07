@@ -1,41 +1,38 @@
-<?php
-include("/DA/content/views/shared/header.php");
-?>
+
+  <?php
+  include("/DA/content/views/shared/header.php");
+  ?>
+  
 
 
     <section data-anim-wrap class="masthead -type-6">
       <div data-anim-child="fade" class="masthead__bg bg-dark-3">
-        <img src="/public/img/masthead/6/bg.png" alt="image">
+        <img src="../../../public/img/masthead/6/bg.png" alt="image">
       </div>
 
       <div class="container">
         <div class="row justify-center">
           <div class="col-xl-9">
             <div class="text-center">
-              <h1 data-anim-child="slide-up delay-4" class="text-60 lg:text-40 md:text-30 text-white">The World is
-                Waiting For You</h1>
-              <p data-anim-child="slide-up delay-5" class="text-white mt-5">Discover amzaing places at exclusive deals
-              </p>
+              <h1 data-anim-child="slide-up delay-4" class="text-60 lg:text-40 md:text-30 text-white">"Vì đất nước mình còn lạ, cần chi đâu nước ngoài"<br>"Đen vâu"</h1>
+              <h2 data-anim-child="slide-up delay-5" class="text-white mt-5">Đặt Lịch và khám phá ngay!</h2>
             </div>
 
-            <div data-anim-child="slide-up delay-6"
-              class="mainSearch -w-900 bg-white px-10 py-10 lg:px-20 lg:pt-5 lg:pb-20 rounded-100 mt-40">
+            <div data-anim-child="slide-up delay-6" class="mainSearch -w-900 bg-white px-10 py-10 lg:px-20 lg:pt-5 lg:pb-20 rounded-100 mt-40">
               <div class="button-grid items-center">
 
                 <div class="searchMenu-loc px-30 lg:py-20 lg:px-0 js-form-dd js-liverSearch">
 
                   <div data-x-dd-click="searchMenu-loc">
-                    <h4 class="text-15 fw-500 ls-2 lh-16">Location</h4>
+                    <h4 class="text-15 fw-500 ls-2 lh-16">Địa Điểm</h4>
 
                     <div class="text-15 text-light-1 ls-2 lh-16">
-                      <input autocomplete="off" type="search" placeholder="Where are you going?"
-                        class="js-search js-dd-focus" />
+                      <input autocomplete="off" type="search" placeholder="Where are you going?" class="js-search js-dd-focus" />
                     </div>
                   </div>
 
 
-                  <div class="searchMenu-loc__field shadow-2 js-popup-window" data-x-dd="searchMenu-loc"
-                    data-x-dd-toggle="-is-active">
+                  <div class="searchMenu-loc__field shadow-2 js-popup-window" data-x-dd="searchMenu-loc" data-x-dd-toggle="-is-active">
                     <div class="bg-white px-30 py-30 sm:px-0 sm:py-15 rounded-4">
                       <div class="y-gap-5 js-results">
 
@@ -108,7 +105,7 @@ include("/DA/content/views/shared/header.php");
                 <div class="searchMenu-date px-30 lg:py-20 lg:px-0 js-form-dd js-calendar">
 
                   <div data-x-dd-click="searchMenu-date">
-                    <h4 class="text-15 fw-500 ls-2 lh-16">Check in - Check out</h4>
+                    <h4 class="text-15 fw-500 ls-2 lh-16">Ngày Đến - Ngày Đi</h4>
 
                     <div class="text-15 text-light-1 ls-2 lh-16">
                       <span class="js-first-date">Wed 2 Mar</span>
@@ -118,31 +115,29 @@ include("/DA/content/views/shared/header.php");
                   </div>
 
 
-                  
                 </div>
 
 
                 <div class="searchMenu-guests px-30 lg:py-20 lg:px-0 js-form-dd js-form-counters">
 
                   <div data-x-dd-click="searchMenu-guests">
-                    <h4 class="text-15 fw-500 ls-2 lh-16">Guest</h4>
+                    <h4 class="text-15 fw-500 ls-2 lh-16">Số Lượng</h4>
 
                     <div class="text-15 text-light-1 ls-2 lh-16">
-                      <span class="js-count-adult">2</span> adults
+                      <span class="js-count-adult">2</span> Người Lớn
                       -
-                      <span class="js-count-child">1</span> childeren
+                      <span class="js-count-child">1</span> Trẻ Em
                       -
-                      <span class="js-count-room">1</span> room
+                      <span class="js-count-room">1</span> Phòng
                     </div>
                   </div>
 
 
-                  <div class="searchMenu-guests__field shadow-2" data-x-dd="searchMenu-guests"
-                    data-x-dd-toggle="-is-active">
+                  <div class="searchMenu-guests__field shadow-2" data-x-dd="searchMenu-guests" data-x-dd-toggle="-is-active">
                     <div class="bg-white px-30 py-30 rounded-4">
                       <div class="row y-gap-10 justify-between items-center">
                         <div class="col-auto">
-                          <div class="text-15 fw-500">Adults</div>
+                          <div class="text-15 fw-500">Người Lớn</div>
                         </div>
 
                         <div class="col-auto">
@@ -166,7 +161,7 @@ include("/DA/content/views/shared/header.php");
 
                       <div class="row y-gap-10 justify-between items-center">
                         <div class="col-auto">
-                          <div class="text-15 lh-12 fw-500">Children</div>
+                          <div class="text-15 lh-12 fw-500">Trẻ Em</div>
                           <div class="text-14 lh-12 text-light-1 mt-5">Ages 0 - 17</div>
                         </div>
 
@@ -191,7 +186,7 @@ include("/DA/content/views/shared/header.php");
 
                       <div class="row y-gap-10 justify-between items-center">
                         <div class="col-auto">
-                          <div class="text-15 fw-500">Rooms</div>
+                          <div class="text-15 fw-500">Phòng</div>
                         </div>
 
                         <div class="col-auto">
@@ -218,7 +213,7 @@ include("/DA/content/views/shared/header.php");
                 <div class="button-item">
                   <button class="mainSearch__submit button -dark-1 py-15 px-40 col-12 rounded-100 bg-blue-1 text-white">
                     <i class="icon-search text-20 mr-10"></i>
-                    Search
+                    Tìm Kiếm
                   </button>
                 </div>
               </div>
@@ -226,7 +221,11 @@ include("/DA/content/views/shared/header.php");
           </div>
         </div>
       </div>
-    </section>    
+    </section>
+
+    
+
+    
 
     
 
@@ -244,7 +243,7 @@ include("/DA/content/views/shared/header.php");
 
           <div class="col-auto">
             <a href="#" class="button -blue-1 -md bg-blue-1-05 text-blue-1">
-              View All Destinations
+              Xem Tất cả Tour
               <i class="icon-arrow-top-right ml-10"></i>
             </a>
           </div>
@@ -253,16 +252,16 @@ include("/DA/content/views/shared/header.php");
         <div data-anim-child="slide-up delay-2" class="pt-40 sm:pt-20 js-section-slider" data-gap="30" data-scrollbar
           data-slider-cols="xl-4 lg-3 md-2 sm-2 base-1">
           <div class="swiper-wrapper">
-
+<?php foreach ($a as $e) { ?>
             <div class="swiper-slide">
+            
+              <a href="../../../index.php?controller=tour&amp;action=index&amp;id=<?php echo $e['id']; ?>" class="activityCard -type-1 rounded-4 ">
+                <div class="activityCard__image">
 
-              <a href="activity-single.html" class="activityCard -type-1 rounded-4 ">
-              <div class="activityCard__image">
+                  <div class="cardImage ratio ratio-1:1">
+                    <div class="cardImage__content">
 
-                <div class="cardImage ratio ratio-1:1">
-                  <div class="cardImage__content">
-
-                    <img class="rounded-4 col-12" src="/public/img/activities/1.png" alt="image">
+                      <img class="rounded-4 col-12" src="../../../public/img/tours/<?php echo $e['tour_image_url'] ?>" alt="image">
 
 
                   </div>
@@ -276,7 +275,7 @@ include("/DA/content/views/shared/header.php");
 
                   <div class="cardImage__leftBadge">
                     <div class="py-5 px-15 rounded-right-4 text-12 lh-16 fw-500 uppercase bg-dark-1 text-white">
-                      LIKELY TO SELL OUT*
+                      nổi bật
                     </div>
                   </div>
 
@@ -288,10 +287,10 @@ include("/DA/content/views/shared/header.php");
                 <div class="text-14 lh-14 text-light-1 mb-5">6+ hours</div>
 
                 <h4 class="activityCard__title lh-16 fw-500 text-dark-1 text-18">
-                  <span>Golden Circle, Kerid Volcanic Crater, and Blue Lagoon Day Trip</span>
+                  <span><?php echo $e['tour_name'] ?></span>
                 </h4>
 
-                <p class="text-light-1 text-14 lh-14 mt-5">Westminster Borough, London</p>
+                <p class="text-light-1 text-14 lh-14 mt-5"><?php echo $e['tour_location_name'] ?></p>
 
                 <div class="row justify-between items-center pt-10">
                   <div class="col-auto">
@@ -307,7 +306,7 @@ include("/DA/content/views/shared/header.php");
 
                   <div class="col-auto">
                     <div class="text-14 text-light-1">
-                      From <span class="text-16 fw-500 text-dark-1">US$72</span>
+                      <span class="text-16 fw-500 text-dark-1"><?php echo number_format($e['tour_price'], 0, ',', '.') . ' VND'; ?></span>
                     </div>
                   </div>
                 </div>
@@ -315,254 +314,7 @@ include("/DA/content/views/shared/header.php");
             </a>
 
             </div>
-
-            <div class="swiper-slide">
-
-              <a href="activity-single.html" class="activityCard -type-1 rounded-4 ">
-              <div class="activityCard__image">
-
-                <div class="cardImage ratio ratio-1:1">
-                  <div class="cardImage__content">
-
-                    <img class="rounded-4 col-12" src="/public/img/activities/1.png" alt="image">
-
-
-                  </div>
-
-                  <div class="cardImage__wishlist">
-                    <button class="button -blue-1 bg-white size-30 rounded-full shadow-2">
-                      <i class="icon-heart text-12"></i>
-                    </button>
-                  </div>
-
-
-                  <div class="cardImage__leftBadge">
-                    <div class="py-5 px-15 rounded-right-4 text-12 lh-16 fw-500 uppercase bg-dark-1 text-white">
-                      LIKELY TO SELL OUT*
-                    </div>
-                  </div>
-
-                </div>
-
-              </div>
-
-              <div class="activityCard__content mt-10">
-                <div class="text-14 lh-14 text-light-1 mb-5">6+ hours</div>
-
-                <h4 class="activityCard__title lh-16 fw-500 text-dark-1 text-18">
-                  <span>Golden Circle, Kerid Volcanic Crater, and Blue Lagoon Day Trip</span>
-                </h4>
-
-                <p class="text-light-1 text-14 lh-14 mt-5">Westminster Borough, London</p>
-
-                <div class="row justify-between items-center pt-10">
-                  <div class="col-auto">
-                    <div class="d-flex items-center">
-                      <div class="icon-star text-yellow-1 text-10 mr-5"></div>
-
-                      <div class="text-14 text-light-1">
-                        <span class="text-15 text-dark-1 fw-500">4.82</span>
-                        94 reviews
-                      </div>
-                    </div>
-                  </div>
-
-                  <div class="col-auto">
-                    <div class="text-14 text-light-1">
-                      From <span class="text-16 fw-500 text-dark-1">US$72</span>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </a>
-
-            </div>
-
-            <div class="swiper-slide">
-
-              <a href="activity-single.html" class="activityCard -type-1 rounded-4 ">
-              <div class="activityCard__image">
-
-                <div class="cardImage ratio ratio-1:1">
-                  <div class="cardImage__content">
-
-                    <img class="rounded-4 col-12" src="/public/img/activities/1.png" alt="image">
-
-
-                  </div>
-
-                  <div class="cardImage__wishlist">
-                    <button class="button -blue-1 bg-white size-30 rounded-full shadow-2">
-                      <i class="icon-heart text-12"></i>
-                    </button>
-                  </div>
-
-
-                  <div class="cardImage__leftBadge">
-                    <div class="py-5 px-15 rounded-right-4 text-12 lh-16 fw-500 uppercase bg-dark-1 text-white">
-                      LIKELY TO SELL OUT*
-                    </div>
-                  </div>
-
-                </div>
-
-              </div>
-
-              <div class="activityCard__content mt-10">
-                <div class="text-14 lh-14 text-light-1 mb-5">6+ hours</div>
-
-                <h4 class="activityCard__title lh-16 fw-500 text-dark-1 text-18">
-                  <span>Golden Circle, Kerid Volcanic Crater, and Blue Lagoon Day Trip</span>
-                </h4>
-
-                <p class="text-light-1 text-14 lh-14 mt-5">Westminster Borough, London</p>
-
-                <div class="row justify-between items-center pt-10">
-                  <div class="col-auto">
-                    <div class="d-flex items-center">
-                      <div class="icon-star text-yellow-1 text-10 mr-5"></div>
-
-                      <div class="text-14 text-light-1">
-                        <span class="text-15 text-dark-1 fw-500">4.82</span>
-                        94 reviews
-                      </div>
-                    </div>
-                  </div>
-
-                  <div class="col-auto">
-                    <div class="text-14 text-light-1">
-                      From <span class="text-16 fw-500 text-dark-1">US$72</span>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </a>
-
-            </div>
-
-            <div class="swiper-slide">
-
-              <a href="activity-single.html" class="activityCard -type-1 rounded-4 ">
-              <div class="activityCard__image">
-
-                <div class="cardImage ratio ratio-1:1">
-                  <div class="cardImage__content">
-
-                    <img class="rounded-4 col-12" src="/public/img/activities/1.png" alt="image">
-
-
-                  </div>
-
-                  <div class="cardImage__wishlist">
-                    <button class="button -blue-1 bg-white size-30 rounded-full shadow-2">
-                      <i class="icon-heart text-12"></i>
-                    </button>
-                  </div>
-
-
-                  <div class="cardImage__leftBadge">
-                    <div class="py-5 px-15 rounded-right-4 text-12 lh-16 fw-500 uppercase bg-dark-1 text-white">
-                      LIKELY TO SELL OUT*
-                    </div>
-                  </div>
-
-                </div>
-
-              </div>
-
-              <div class="activityCard__content mt-10">
-                <div class="text-14 lh-14 text-light-1 mb-5">6+ hours</div>
-
-                <h4 class="activityCard__title lh-16 fw-500 text-dark-1 text-18">
-                  <span>Golden Circle, Kerid Volcanic Crater, and Blue Lagoon Day Trip</span>
-                </h4>
-
-                <p class="text-light-1 text-14 lh-14 mt-5">Westminster Borough, London</p>
-
-                <div class="row justify-between items-center pt-10">
-                  <div class="col-auto">
-                    <div class="d-flex items-center">
-                      <div class="icon-star text-yellow-1 text-10 mr-5"></div>
-
-                      <div class="text-14 text-light-1">
-                        <span class="text-15 text-dark-1 fw-500">4.82</span>
-                        94 reviews
-                      </div>
-                    </div>
-                  </div>
-
-                  <div class="col-auto">
-                    <div class="text-14 text-light-1">
-                      From <span class="text-16 fw-500 text-dark-1">US$72</span>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </a>
-
-            </div>
-
-            <div class="swiper-slide">
-
-              <a href="activity-single.html" class="activityCard -type-1 rounded-4 ">
-              <div class="activityCard__image">
-
-                <div class="cardImage ratio ratio-1:1">
-                  <div class="cardImage__content">
-
-                    <img class="rounded-4 col-12" src="/public/img/activities/1.png" alt="image">
-
-
-                  </div>
-
-                  <div class="cardImage__wishlist">
-                    <button class="button -blue-1 bg-white size-30 rounded-full shadow-2">
-                      <i class="icon-heart text-12"></i>
-                    </button>
-                  </div>
-
-
-                  <div class="cardImage__leftBadge">
-                    <div class="py-5 px-15 rounded-right-4 text-12 lh-16 fw-500 uppercase bg-dark-1 text-white">
-                      LIKELY TO SELL OUT*
-                    </div>
-                  </div>
-
-                </div>
-
-              </div>
-
-              <div class="activityCard__content mt-10">
-                <div class="text-14 lh-14 text-light-1 mb-5">6+ hours</div>
-
-                <h4 class="activityCard__title lh-16 fw-500 text-dark-1 text-18">
-                  <span>Golden Circle, Kerid Volcanic Crater, and Blue Lagoon Day Trip</span>
-                </h4>
-
-                <p class="text-light-1 text-14 lh-14 mt-5">Westminster Borough, London</p>
-
-                <div class="row justify-between items-center pt-10">
-                  <div class="col-auto">
-                    <div class="d-flex items-center">
-                      <div class="icon-star text-yellow-1 text-10 mr-5"></div>
-
-                      <div class="text-14 text-light-1">
-                        <span class="text-15 text-dark-1 fw-500">4.82</span>
-                        94 reviews
-                      </div>
-                    </div>
-                  </div>
-
-                  <div class="col-auto">
-                    <div class="text-14 text-light-1">
-                      From <span class="text-16 fw-500 text-dark-1">US$72</span>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </a>
-
-            </div>
+<?php } ?>
 
           </div>
 
@@ -740,7 +492,7 @@ include("/DA/content/views/shared/header.php");
                 <div class="cardImage ratio ratio-1:1">
                   <div class="cardImage__content">
 
-                    <img class="rounded-4 col-12" src="/public/img/activities/2/1.png" alt="image">
+                    <img class="rounded-4 col-12" src="img/activities/2/1.png" alt="image">
 
 
                   </div>
@@ -765,7 +517,7 @@ include("/DA/content/views/shared/header.php");
               <div class="activityCard__content mt-10">
                 <div class="text-14 lh-14 text-light-1 mb-5">6+ hours</div>
 
-                <h4 class="activityCard__title lh-16 fw-500 text-dark-1 text-16">
+                <h4 class="activityCard__title lh-16 fw-500 text-dark-1 text-18">
                   <span>Golden Circle, Kerid Volcanic Crater, and Blue Lagoon Day</span>
                 </h4>
 
@@ -802,7 +554,7 @@ include("/DA/content/views/shared/header.php");
                 <div class="cardImage ratio ratio-1:1">
                   <div class="cardImage__content">
 
-                    <img class="rounded-4 col-12" src="/public/img/activities/2/2.png" alt="image">
+                    <img class="rounded-4 col-12" src="img/activities/2/2.png" alt="image">
 
 
                   </div>
@@ -858,7 +610,7 @@ include("/DA/content/views/shared/header.php");
                 <div class="cardImage ratio ratio-1:1">
                   <div class="cardImage__content">
 
-                    <img class="rounded-4 col-12" src="/public/img/activities/2/3.png" alt="image">
+                    <img class="rounded-4 col-12" src="img/activities/2/3.png" alt="image">
 
 
                   </div>
@@ -920,7 +672,7 @@ include("/DA/content/views/shared/header.php");
                 <div class="cardImage ratio ratio-1:1">
                   <div class="cardImage__content">
 
-                    <img class="rounded-4 col-12" src="/public/img/activities/2/4.png" alt="image">
+                    <img class="rounded-4 col-12" src="img/activities/2/4.png" alt="image">
 
 
                   </div>
@@ -982,7 +734,7 @@ include("/DA/content/views/shared/header.php");
                 <div class="cardImage ratio ratio-1:1">
                   <div class="cardImage__content">
 
-                    <img class="rounded-4 col-12" src="/public/img/activities/2/5.png" alt="image">
+                    <img class="rounded-4 col-12" src="img/activities/2/5.png" alt="image">
 
 
                   </div>
@@ -1040,8 +792,6 @@ include("/DA/content/views/shared/header.php");
       </div>
     </section>
 
-
-  
-  <?php
-  include("/DA/content/views/shared/footer.php");
-  ?>
+    <?php
+    include("/DA/content/views/shared/footer.php");
+    ?>

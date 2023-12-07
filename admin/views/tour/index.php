@@ -39,12 +39,12 @@ include('/DA/admin/views/shared/header.php');
               <table class="table-4 -border-bottom col-12">
                 <thead class="bg-light-2">
                   <tr>
-                    <th>STT</th>
-                    <th>Name</th>
-                    <th style="width: 400px">Image</th>
-                    <th style="width: 400px">Schedule/Price</th>
-                    <th>Information/Location</th>
-                    <th style="width: 400px">Status</th>
+                    <th style="width: 100px !important">STT</th>
+                    <th style="width: 300px">Name</th>
+                    <th style="width: 300px"style="width: 300px">Image</th>
+                    <th style="width: 500px">Schedule/Price</th>
+                    <th style="width: 400px">Information/Location</th>
+                    <th style="width: 300px">Status</th>
                     <th>Rate</th>
                     <th>Action</th>
                   </tr>
@@ -61,27 +61,40 @@ include('/DA/admin/views/shared/header.php');
                         ?>
                       </td>
                       <td style="width: 400px">
-                        <img style="max-width: 200px; height: 150px"
+                        <img style=" border-radius:5%; max-width: 200px; height: 150px"
                           src="/public/img/tours/<?php echo $element['tour_image_url'] ?>" />
                       </td>
-                      <td style="width: 400px; height: 150px">
+                      <td style="width: 500px; height: 150px">
+
+                        <b>Hành Trình: </b>
+                        <?php echo $element['tour_journey']; ?><br><br>
                         <b>Lịch Trình:</b>
-                        <?php echo $element['tour_schedule']; ?><br /><b>Giá:</b>
-                        <?php echo $element['tour_price']; ?>
+                        <?php echo $element['tour_schedule']; ?><br><br>
+                        <b>Số người:</b>
+                        <?php echo $element['tour_max_capacity']; ?> <br>
+                        <br/><b>Giá:</b>
+                      <span class=" text-center text-14 fw-500 text-red-2"><?php echo number_format($element['tour_price'], 0, ',', '.').'VND'; ?></span>
+
+                        </td>
+                        <td>
+                          <b>Địa điểm:</b>
+                        <?php echo $element['tour_location_name']; ?><br><br><b>Di Chuyển:</b>
+                        <?php echo $element['tour_vehicle']; ?><br><br><b>Điểm Xuất Phát:</b>
+                        <?php echo $element['tour_starting_point']; ?><br><br><b>Ngày đi:
+                          </b>
+                        <?php echo date('d/m/Y', strtotime($element['tour_start_date'])); ?><br><br><b>Ngày về:
+                          </b>
+                        <?php echo date('d/m/Y', strtotime($element['tour_end_date'])); ?>
                       </td>
                       <td>
-                        <b>Địa điểm:</b>
-                        <?php echo $element['tour_location_name']; ?><br /><b>Di Chuyển:</b>
-                        <?php echo $element['tour_vehicle']; ?><br /><b>Điểm Xuất Phát:</b>
-                        <?php echo $element['tour_starting_point']; ?><br /><b>Ngày đi:
-                        </b>
-                        <?php echo $element['tour_start_date']; ?><br /><b>Ngày về:
-                        </b>
-                        <?php echo $element['tour_end_date']; ?>
-                      </td>
-                      <td>
+                        <?php if($element['tour_status_id']==2){ ?>
+                        <span class="rounded-100 py-4 px-10 text-center text-14 fw-500 bg-red-3 text-red-2"><?php echo $element['tour_status']; ?></span>
+                        <?php }else if($element['tour_status_id']==1){  ?>
+                        <span class="rounded-100 py-4 px-10 text-center text-14 fw-500 bg-blue-1-05 text-blue-1"><?php echo $element['tour_status']; ?></span>
+                        <?php }else if($element['tour_status_id']==3){  ?>
                         <span
-                          class="rounded-100 py-4 px-10 text-center text-14 fw-500 bg-success-4 text-success-4"><?php echo $element['tour_status']; ?></span>
+                          class="rounded-100 py-4 px-10 text-center text-14 fw-500 bg-yellow-4 text-yellow-3"><?php echo $element['tour_status']; ?></span>
+                          <?php } ?>
                       </td>
                       <td>
                         <div class="rounded-4 size-35 bg-blue-1 text-white flex-center text-12 fw-600">
@@ -91,7 +104,7 @@ include('/DA/admin/views/shared/header.php');
                       <td>
                         <div class="row x-gap-10 y-gap-10 items-center">
                           <div class="col-auto">
-                            <a href="../../../admin.php?controller=tour&amp;action=edit"><button
+                            <a href="../../../index.php?controller=tour&action=index&id=<?php echo $element['id']; ?>"><button
                                 class="flex-center bg-light-2 rounded-4 size-35">
                                 <i class="icon-eye text-16 text-light-1"></i>
                               </button>

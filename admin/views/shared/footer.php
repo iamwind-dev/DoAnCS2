@@ -3,7 +3,7 @@
         <div class="col-auto">
             <div class="row y-gap-20 items-center">
                 <div class="col-auto">
-                    <div class="text-14 lh-14 mr-30">© 2022 GoTrip LLC All rights reserved.</div>
+                    <div class="text-14 lh-14 mr-30">© 2023 WINK LLC All rights reserved.</div>
                 </div>
                 <div class="col-auto">
                     <div class="row x-gap-20 y-gap-10 items-center text-14">
@@ -23,8 +23,8 @@
 
         <div class="col-auto">
             <div class="d-flex x-gap-5 y-gap-5 items-center">
-                <button class="text-14 fw-500 underline">English (US)</button>
-                <button class="text-14 fw-500 underline">USD</button>
+                <button class="text-14 fw-500 underline">Việt Nam (VND)</button>
+                <button class="text-14 fw-500 underline">VND</button>
             </div>
         </div>
     </div>
@@ -32,52 +32,6 @@
 </div>
 </div>
 </div>
-
-<!-- JavaScript -->
-<!-- <script>
-            var selectElement = document.getElementById("select1");
- var hiddenField1 = document.getElementById("hiddenField1");
- var hiddenField2 = document.getElementById("hiddenField2");
-
-  // Lấy giá trị của tùy chọn đầu tiên khi trang được tải
-        var selectedValue = selectElement.options[selectElement.selectedIndex].value;
-
-        // Phân tách giá trị thành hai phần dựa trên dấu gạch ngang
-        var parts = selectedValue.split('-');
-        var value1 = parts[0];
-        var value2 = parts[1];
-
-        // Gán giá trị vào các trường ẩn trong form
-        hiddenField1.value = value1;
-        hiddenField2.value = value2;
-
- // Thêm sự kiện để lắng nghe sự thay đổi trong select
- selectElement.addEventListener("change", function () {
-   // Lấy giá trị của tùy chọn được chọn
-   var selectedValue = selectElement.options[selectElement.selectedIndex].value;
-
-   // Phân tách giá trị thành hai phần dựa trên dấu gạch ngang
-   var parts = selectedValue.split("-");
-   var diadiem = parts[0];
-   var iddiadiem = parts[1];
-
-   // Gán giá trị vào các trường ẩn trong form
-   hiddenField1.value = diadiem;
-   hiddenField2.value = iddiadiem;
- });
-        </script> -->
-<!-- <script>
-    ClassicEditor
-        .create(document.querySelector('#editor'))
-        .catch(error => {
-            console.error(error);
-        });
-    ClassicEditor
-        .create(document.querySelector('#editor1'))
-        .catch(error => {
-            console.error(error);
-        });
-</script> -->
 
 
     <script src="https://cdn.ckeditor.com/ckeditor5/40.1.0/classic/ckeditor.js"></script>

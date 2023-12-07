@@ -1,12 +1,16 @@
 <?php
 session_start();
-require_once('/DA/lib/config/database.php');
 
+require_once('/DA/lib/config/database.php');
+if(isset($_SESSION['user']) && $_SESSION['user']['role_id'] != 1) {
+    header('Location: index.php');
+    exit();
+}
 if (isset($_GET['controller']) && '' != $_GET['controller']) {
     $controller = $_GET['controller'];
 }
 else {
-    $controller = 'tour';
+    $controller = 'user';
 }
 
 if (isset($_GET['action']) && '' != $_GET['action']) {
@@ -16,7 +20,13 @@ else {
     $action = 'index';
 }
 
-$file = 'admin/controllers/' . $controller . '/' . $action . '.php';
+if(!isset($_SESSION['user'])) {
+    $controller = 'home';
+    $action = 'login';
+}
+
+    $file = 'admin/controllers/'.$controller.'/'.$action.'.php';
+
 if (file_exists($file)) {
     require($file);
 }

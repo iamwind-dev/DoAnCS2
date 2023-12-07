@@ -47,10 +47,10 @@ include('/DA/admin/views/shared/header.php');
                                     <tr>
 
                                         <th>STT</th>
-                                        <th>Name</th>
+                                        <th style="width: 400px">Name</th>
                                         <th style="width: 400px">Image</th>
                                         <th style="width: 400px">Price</th>
-                                        <th>Status</th>
+                                        <th style="width: 400px">Status</th>
                                         <th>Action</th>
                                     </tr>
                                 </thead>
@@ -70,11 +70,27 @@ include('/DA/admin/views/shared/header.php');
                         <img style="max-width: 200px; height: 150px"
                           src="/public/img/hotels/<?php echo $element['hotel_image_url'] ?>" />
                                                 </td>
-                                                <td class="text-blue-1 fw-500">
-                                                <?php echo $element['hotel_price']; ?>
+                                                <td class=" fw-500">Giá:
+                                                    <span class=" py-4 px-10 text-center text-14 fw-500  text-red-2">
+                                                <?php echo number_format($element['hotel_price'], 0, ',', '.') . 'VND'; ?>
+                                                    </span>
                                                     </td>
                                                     <td class="text-black-1 fw-500">
-                                                <?php echo $element['hotel_status']; ?>
+                                                <?php if ($element['hotel_status_id'] == 2) { ?>
+                                                        <span class="rounded-100 py-4 px-10 text-center text-14 fw-500 bg-red-3 text-red-2">
+                                                            <?php echo $element['hotel_status']; ?>
+                                                        </span>
+                                                    <?php }
+                                                    else if ($element['hotel_status_id'] == 1) { ?>
+                                                            <span class="rounded-100 py-4 px-10 text-center text-14 fw-500 bg-blue-1-05 text-blue-1">
+                                                            <?php echo $element['hotel_status']; ?>
+                                                            </span>
+                                                    <?php }
+                                                    else if ($element['hotel_status_id'] == 3) { ?>
+                                                                <span class="rounded-100 py-4 px-10 text-center text-14 fw-500 bg-yellow-4 text-yellow-3">
+                                                            <?php echo $element['hotel_status']; ?>
+                                                                </span>
+                                                    <?php } ?>
                                             </td>
                                             <td>
                                                 <div class="row x-gap-10 y-gap-10 items-center">
