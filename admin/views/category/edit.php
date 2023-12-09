@@ -58,7 +58,7 @@
                                     </div>
                                 </div>
                                 <div class="d-inline-block pt-30">
-                                    <input type="submit" class="button h-50 px-24 -dark-1 bg-blue-1 text-white" value="Luu" form="myform">
+                                    <input type="submit" class="button h-50 px-24 -dark-1 bg-blue-1 text-white" value="Lưu" form="myform">
                                     </input>
                                 </div>
                             </form>

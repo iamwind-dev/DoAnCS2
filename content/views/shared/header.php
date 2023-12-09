@@ -91,32 +91,32 @@
 
 
                       <li>
-                        <a href="contact.html">Tour</a>
+                        <a style='padding:10px' href="contact.html"><b>Tour</b></a>
                       </li>
 
                       <li>
-                        <a href="contact.html">Khách Sạn</a>
+                        <a style='padding:10px'href="contact.html"><b>Khách Sạn</b></a>
                       </li>
 
                       <li>
-                        <a href="contact.html">Bài viết</a>
+                        <a style='padding:10px'href="contact.html"><b>Bài viết</b></a>
                       </li>
 
                       <li>
-                        <a href="contact.html">Liên Hệ</a>
+                        <a style='padding:10px'href="contact.html"><b>Liên Hệ</b></a>
                       </li>
                       <li class="menu-item-has-children">
                         <div class="pl-15"> <a href="">
                           <?php foreach ($user as $u){ ?>
                             <img src="/public/img/avatars/<?php echo $u['user_avatar']  ?>" alt="image" class="size-40 rounded-22 object-cover">
-                            <?php echo $u['user_name'] ?>
-                            </a>
-                        </div>
+                            <b style='padding:10px'> <?php echo$u['user_name'] ?></b>
+                                </a>
+                            </div>
                             
-                        <ul class="subnav">
-                          <li class="subnav__backBtn js-nav-list-back">
-                            <a href="#"><i class="icon icon-chevron-sm-down"></i> Pages</a>
-                          </li>
+                            <ul class="subnav">
+                              <li class="subnav__backBtn js-nav-list-back">
+                                <a href="#"><i class="icon icon-chevron-sm-down"></i> Pages</a>
+                              </li>
 
                           
                           <?php if($u['role_id']==1){ ?>

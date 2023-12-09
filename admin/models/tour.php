@@ -55,6 +55,7 @@ function tour_update()
     $end = date('Y-m-d', strtotime(str_replace('/', '-', $_POST['ketthuc'])));
 
     $id = $_POST['id'];
+    //kiểm tra người dùng có thay đổi hình ảnh không
     if (!empty($_FILES['file']['tmp_name'])) {
         $image = $_FILES['file']['name'];
     }
@@ -96,6 +97,7 @@ function tour_add()
     $mang1 = explode('-', $diadiem);
     $iddiadiem = $mang1[0];
     $tendiadiem = $mang1[1];
+    //Format thời gian
     $start = date('Y-m-d', strtotime(str_replace('/', '-', $_POST['batdau'])));
     $end = date('Y-m-d', strtotime(str_replace('/', '-', $_POST['ketthuc'])));
     $tentour = $_POST['tentour'];

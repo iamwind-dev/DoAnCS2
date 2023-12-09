@@ -1,5 +1,6 @@
 <?php
 require_once('/DA/lib/config/database.php');
+//Lấy dữ liệu của 1 trường trong bảng theo id
 function get_a_record($table, $id)
 {
     global $conn;
@@ -17,19 +18,8 @@ function get_a_record($table, $id)
 }
 
 
-function get_a_recordd($table, $id)
-{
-    global $conn;
-    $id = intval($id);
-    $sql = "SELECT * FROM `$table` WHERE id =$id";
-    $query = mysqli_query($conn, $sql);
-    $data = array();
-    $row = mysqli_fetch_assoc($query);
-    return $row;
-}
 
-
-
+//thêm dữ liệu vào bảng
 function insert($table, $data = array())
 {
     $values = array();
@@ -41,7 +31,7 @@ function insert($table, $data = array())
     $sql = "INSERT INTO `$table` SET " . implode(',', $values);
     mysqli_query($conn, $sql);
 }
-
+//thêm dữ liệu vào bảng và trả về id
 function insert_get_id($table, $data = array())
 {
     $values = array();
@@ -59,7 +49,7 @@ function insert_get_id($table, $data = array())
 }
 
 
-
+//Cập nhật dữ liệu
 function update($table, $id, $data = array())
 {
     $values = array();
@@ -72,7 +62,7 @@ function update($table, $id, $data = array())
     mysqli_query($conn, $sql);
 }
 
-
+//Lấy tất cả dữ liệu của 1 bảng
 function get_all($table)
 {
     $sql = "SELECT * FROM `$table` ";
@@ -87,7 +77,7 @@ function get_all($table)
     }
     return $data;
 }
-
+//Xoá 1 bản ghi theo id
 function delete_record($id, $table)
 {
     global $conn;
@@ -96,7 +86,7 @@ function delete_record($id, $table)
     header("location:admin.php?controller=$table");
     return $query;
 }
-
+//Hiển thị danh sách location và status khác id của location hiện tại
 function showLocation($id)
 {
     $sql = "SELECT * FROM location WHERE id <> $id;  ";

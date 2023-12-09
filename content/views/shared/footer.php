@@ -128,6 +128,7 @@
   <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAAz77U5XQuEME6TpftaMdX0bBelQxXRlM"></script>
   <script src="../../../unpkg.com/%40googlemaps/markerclusterer%402.5.1/dist/index.min.js"></script>
 
+  <script src="../../../public/js/vendors2.js"></script>
   <script src="../../../public/js/vendors.js"></script>
   <script src="../../../public/js/main.js"></script>
   <script src="../../../public/js/main2.js"></script>

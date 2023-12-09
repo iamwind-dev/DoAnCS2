@@ -2,15 +2,17 @@
 session_start();
 
 require_once('/DA/lib/config/database.php');
+//kiểm tra có phiên đăng đăng nhập có phải admin không
 if(isset($_SESSION['user']) && $_SESSION['user']['role_id'] != 1) {
     header('Location: index.php');
     exit();
 }
+//Lấy controller và action từ url
 if (isset($_GET['controller']) && '' != $_GET['controller']) {
     $controller = $_GET['controller'];
 }
 else {
-    $controller = 'user';
+    $controller = 'tour';
 }
 
 if (isset($_GET['action']) && '' != $_GET['action']) {
@@ -25,7 +27,7 @@ if(!isset($_SESSION['user'])) {
     $action = 'login';
 }
 
-    $file = 'admin/controllers/'.$controller.'/'.$action.'.php';
+$file = 'admin/controllers/'.$controller.'/'.$action.'.php';
 
 if (file_exists($file)) {
     require($file);

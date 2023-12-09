@@ -6,7 +6,7 @@ include('/DA/admin/views/shared/header.php');
         <div class="row y-gap-20 justify-between items-end pb-60 lg:pb-40 md:pb-32">
             <div class="col-auto">
 
-                <h1 class="text-30 lh-14 fw-600">All Hotels</h1>
+                <h1 class="text-30 lh-14 fw-600">Tất cả khách sạn</h1>
                 <div class="text-15 text-light-1">Lorem ipsum dolor sit amet, consectetur.</div>
 
             </div>
@@ -16,7 +16,7 @@ include('/DA/admin/views/shared/header.php');
 
                 <a href="../../../admin.php?controller=hotel&amp;action=add"
                     class="button h-50 px-24 -dark-1 bg-blue-1 text-white">
-                    Add Hotel<div class="icon-arrow-top-right ml-15"></div>
+                    Thêm Khách sạn<div class="icon-arrow-top-right ml-15"></div>
                 </a>
 
 
@@ -31,7 +31,7 @@ include('/DA/admin/views/shared/header.php');
                     <div class="col-auto">
                         <button
                             class="tabs__button text-18 lg:text-16 text-light-1 fw-500 pb-5 lg:pb-0 js-tabs-button is-tab-el-active"
-                            data-tab-target=".-tab-item-1">All Location</button>
+                            data-tab-target=".-tab-item-1">Tất cả khách sạn</button>
                     </div>
 
 
@@ -47,11 +47,11 @@ include('/DA/admin/views/shared/header.php');
                                     <tr>
 
                                         <th>STT</th>
-                                        <th style="width: 400px">Name</th>
-                                        <th style="width: 400px">Image</th>
-                                        <th style="width: 400px">Price</th>
-                                        <th style="width: 400px">Status</th>
-                                        <th>Action</th>
+                                        <th style="width: 400px">Tên Khách Sạn</th>
+                                        <th style="width: 400px">Ảnh</th>
+                                        <th style="width: 400px">Giá</th>
+                                        <th style="width: 400px">Trạng Thái</th>
+                                        <th>Hành động</th>
                                     </tr>
                                 </thead>
                                 <tbody>

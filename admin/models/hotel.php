@@ -39,7 +39,8 @@ function hotel_update()
 }
 
 function hotel_add()
-{
+{   
+    //tách mảng trạng thái và địa điểm ra để lấy id
     $trangthai = $_POST['trangthai'];
     $mang = explode('-', $trangthai);
     $idtrangthai = $mang[0];
@@ -50,6 +51,7 @@ function hotel_add()
     $tendiadiem = $mang1[1];
     $tentour = $_POST['tentour'];
     $tenks = $_POST['tenks'];
+
     $hotel = array(
         'hotel_name' => $tenks,
         'hotel_description' => ($_POST['mota']),

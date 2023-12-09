@@ -5,7 +5,7 @@
         <div class="row y-gap-20 justify-between items-end pb-60 lg:pb-40 md:pb-32">
             <div class="col-auto">
 
-                <h1 class="text-30 lh-14 fw-600">Edit Hotel</h1>
+                <h1 class="text-30 lh-14 fw-600">Sửa Thông tin Khách sạn</h1>
                 <div class="text-15 text-light-1">Lorem ipsum dolor sit amet, consectetur.</div>
             </div>
 
@@ -21,7 +21,7 @@
                     <div class="col-auto">
                         <button
                             class="tabs__button text-18 lg:text-16 text-light-1 fw-500 pb-5 lg:pb-0 js-tabs-button is-tab-el-active"
-                            data-tab-target=".-tab-item-1">Content</button>
+                            data-tab-target=".-tab-item-1">Nội dung</button>
                     </div>
                 </div>
                 <div class="tabs__content pt-30 js-tabs-content">
@@ -132,7 +132,7 @@
                                                 <img src="../../../public/img/hotels/<?php echo $element['hotel_image_url']; ?>"
                                                     alt="">
                                             </div>
-                                            <button type="button" class="select-image">Select Image</button>
+                                            <button type="button" class="select-image">Chọn Ảnh</button>
                                         </div>
                                     </div>
                                     <input type="text" name="image" id="" value="<?php echo $element['hotel_image_url']; ?>"

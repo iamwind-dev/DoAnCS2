@@ -15,6 +15,6 @@ unset($_SESSION['user']);
 if($ul == 0) {
     header('location:index.php');
 }
-else {
+else{
     header('location:admin.php');
 }

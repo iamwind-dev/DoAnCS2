@@ -1,4 +1,5 @@
 <?php
+//Thêm danh mục
 function category_add()
 {
     $tendm = $_POST['tendm'];

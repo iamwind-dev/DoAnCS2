@@ -25,7 +25,7 @@
     <link rel="stylesheet" href="/public/css/main.css">
     
 
-    <title>WinK Travel</title>
+    <title>Administrator - WinK Travel</title>
 </head>
 
 <body data-barba="wrapper">
@@ -149,7 +149,7 @@
 
                     <a href="db-dashboard.html" class="sidebar__button d-flex items-center text-15 lh-1 fw-500">
                         <img src="/public/img/dashboard/sidebar/compass.svg" alt="image" class="mr-15">
-                        Dashboard
+                        Tổng quan
                     </a>
 
 
@@ -160,7 +160,7 @@
 
                     <a href="#" class="sidebar__button d-flex items-center text-15 lh-1 fw-500">
                         <img src="/public/img/dashboard/sidebar/booking.svg" alt="image" class="mr-15">
-                        Booking Manager
+                        Quản lí Booking
                     </a>
 
 
@@ -175,7 +175,7 @@
                                 <div class="sidebar__button col-12 d-flex items-center justify-between">
                                     <div class="d-flex items-center text-15 lh-1 fw-500">
                                         <img src="/public/img/dashboard/sidebar/category.png" alt="image" class="mr-10">
-                                        Manage Categories
+                                        Quản lí danh mục
                                     </div>
                                     <div class="icon-chevron-sm-down text-7"></div>
                                 </div>
@@ -185,11 +185,11 @@
                                 <ul class="list-disc pt-15 pb-5 pl-40">
 
                                     <li>
-                                        <a href="/admin.php?controller=category" class="text-15">All Categories</a>
+                                        <a href="/admin.php?controller=category" class="text-15">Tất cả danh mục</a>
                                     </li>
 
                                     <li>
-                                        <a href="/admin.php?controller=category&action=add" class="text-15">Add Category</a>
+                                        <a href="/admin.php?controller=category&action=add" class="text-15">Thêm danh mục</a>
                                     </li>
 
 
@@ -211,7 +211,7 @@
                                 <div class="sidebar__button col-12 d-flex items-center justify-between">
                                     <div class="d-flex items-center text-15 lh-1 fw-500">
                                         <img src="/public/img/dashboard/sidebar/map.svg" alt="image" class="mr-10">
-                                        Manage Tour
+                                        Quản lí Tour
                                     </div>
                                     <div class="icon-chevron-sm-down text-7"></div>
                                 </div>
@@ -221,11 +221,11 @@
                                 <ul class="list-disc pt-15 pb-5 pl-40">
 
                                     <li>
-                                        <a href="/admin.php?controller=tour" class="text-15">All Tours</a>
+                                        <a href="/admin.php?controller=tour" class="text-15">Tất cả Tour</a>
                                     </li>
 
                                     <li>
-                                        <a href="/admin.php?controller=tour&action=add" class="text-15">Add Tour</a>
+                                        <a href="/admin.php?controller=tour&action=add" class="text-15">Thêm Tour</a>
                                     </li>
                                 </ul>
                             </div>
@@ -244,7 +244,7 @@
                                 <div class="sidebar__button col-12 d-flex items-center justify-between">
                                     <div class="d-flex items-center text-15 lh-1 fw-500">
                                         <img src="/public/img/dashboard/sidebar/hotel.svg" alt="image" class="mr-10">
-                                        Manage Hotel
+                                        Quản lí Khách Sạn
                                     </div>
                                     <div class="icon-chevron-sm-down text-7"></div>
                                 </div>
@@ -254,11 +254,11 @@
                                 <ul class="list-disc pt-15 pb-5 pl-40">
 
                                     <li>
-                                        <a href="/admin.php?controller=hotel" class="text-15">All Hotels</a>
+                                        <a href="/admin.php?controller=hotel" class="text-15">Tất cả Khách Sạn</a>
                                     </li>
 
                                     <li>
-                                        <a href="/admin.php?controller=hotel&action=add" class="text-15">Add Hotel</a>
+                                        <a href="/admin.php?controller=hotel&action=add" class="text-15">Thêm Khách Sạn</a>
                                     </li>
 
 
@@ -273,23 +273,14 @@
 
 
 
-                <div class="sidebar__item ">
-
-
-                    <a href="db-dashboard.html" class="sidebar__button d-flex items-center text-15 lh-1 fw-500">
-                        <img src="/public/img/dashboard/sidebar/booking.svg" alt="image" class="mr-15">
-                        Manage Book Tour
-                    </a>
-
-
-                </div>
+                
 
                 <div class="sidebar__item ">
 
 
                     <a href="#" class="sidebar__button d-flex items-center text-15 lh-1 fw-500">
                         <img src="/public/img/dashboard/sidebar/comment.png" alt="image" class="mr-15">
-                        Manage Comment
+                        Quản lí bình luận
                     </a>
 
 
@@ -301,7 +292,7 @@
                     <a href="admin.php?controller=user&action=index" class="sidebar__button d-flex items-center text-15 lh-1 fw-500">
         
                     <img src="/public/img/dashboard/sidebar/user.png" alt="image" class="mr-15">
-                        Manage User
+                        Quản lí Người dùng
                     </a>
 
 
@@ -312,7 +303,7 @@
 
                     <a href="/admin.php?controller=home&action=logout" class="sidebar__button d-flex items-center text-15 lh-1 fw-500">
                         <img src="/public/img/dashboard/sidebar/log-out.svg" alt="image" class="mr-15">
-                        Logout
+                        Đăng Xuất
                     </a>
 
 
