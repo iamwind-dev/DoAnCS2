@@ -49,7 +49,7 @@ include('/DA/admin/views/shared/header.php');
                                         <th>STT</th>
                                         <th style="width: 400px">Tên Khách Sạn</th>
                                         <th style="width: 400px">Ảnh</th>
-                                        <th style="width: 400px">Giá</th>
+                                        <th style="width: 400px">Thông tin</th>
                                         <th style="width: 400px">Trạng Thái</th>
                                         <th>Hành động</th>
                                     </tr>
@@ -67,11 +67,15 @@ include('/DA/admin/views/shared/header.php');
                                                 <?php echo $element['hotel_name']; ?>
                                             </td>
                                             <td style="width: 400px">
-                        <img style="max-width: 200px; height: 150px"
+                        <img style="max-width: 200px; height: 150px; border-radius:10px;"
                           src="/public/img/hotels/<?php echo $element['hotel_image_url'] ?>" />
                                                 </td>
-                                                <td class=" fw-500">Giá:
-                                                    <span class=" py-4 px-10 text-center text-14 fw-500  text-red-2">
+                                                <td class=" fw-500">
+                                                    <b>Địa điểm: </b><?php echo $element['hotel_location']?><br>
+                                                    <b>Địa chỉ: </b><?php echo $element['hotel_address'] ?><br>
+                                                    <b>Số điện thoại: </b><?php echo $element['hotel_phone'] ?><br>
+                                                            Giá:
+                                                            <span class=" py-4 px-10 text-center text-14 fw-500  text-red-2">
                                                 <?php echo number_format($element['hotel_price'], 0, ',', '.') . 'VND'; ?>
                                                     </span>
                                                     </td>

@@ -165,7 +165,41 @@
 
 
                 </div>
+                    <div class="sidebar__item ">
 
+
+                    <div class="accordion -db-sidebar js-accordion">
+                        <div class="accordion__item">
+                            <div class="accordion__button">
+                                <div class="sidebar__button col-12 d-flex items-center justify-between">
+                                    <div class="d-flex items-center text-15 lh-1 fw-500">
+                                        <img src="/public/img/dashboard/sidebar/map.svg" alt="image" class="mr-10">
+                                        Quản lí Địa điểm
+                                    </div>
+                                    <div class="icon-chevron-sm-down text-7"></div>
+                                </div>
+                            </div>
+
+                            <div class="accordion__content">
+                                <ul class="list-disc pt-15 pb-5 pl-40">
+
+                                    <li>
+                                        <a href="/admin.php?controller=location" class="text-15">Tất cả Địa điểm</a>
+                                    </li>
+
+                                    <li>
+                                        <a href="/admin.php?controller=location&action=add" class="text-15">Thêm Địa điểm</a>
+                                    </li>
+
+
+
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+
+                </div>
                 <div class="sidebar__item ">
 
 
@@ -210,7 +244,7 @@
                             <div class="accordion__button">
                                 <div class="sidebar__button col-12 d-flex items-center justify-between">
                                     <div class="d-flex items-center text-15 lh-1 fw-500">
-                                        <img src="/public/img/dashboard/sidebar/map.svg" alt="image" class="mr-10">
+                                        <img src="/public/img/dashboard/sidebar/tour.png" alt="image" class="mr-10">
                                         Quản lí Tour
                                     </div>
                                     <div class="icon-chevron-sm-down text-7"></div>

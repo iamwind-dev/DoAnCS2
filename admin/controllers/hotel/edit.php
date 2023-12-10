@@ -15,5 +15,5 @@ foreach ($data as $e) {
     $status_id = $e['hotel_status_id'];
 }  
 $data1= showLocation($location_id);
-$data2 = showStatus($status_id);
+$data2 = showStatusHT($status_id);
 include('admin/views/hotel/edit.php');

@@ -9,5 +9,5 @@ if (!empty($_POST)) {
 }
 $table = 'location';
 $data = get_all($table);
-$data1 = get_all('status');
+$data1 = get_all('hotel_status');
 include('admin/views/hotel/add.php');

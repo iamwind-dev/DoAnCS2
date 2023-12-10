@@ -18,7 +18,7 @@
   <!-- Stylesheets -->
   <link rel="stylesheet" href="../../../public/css/vendors.css">
   <link rel="stylesheet" href="../../../public/css/main.css">
-
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
   <title>GoTrip</title>
 </head>
 
@@ -110,6 +110,9 @@
                               <?php foreach($user as $u) { ?>
                               
                                 <a>
+                                  <?php $avatar = $u['user_avatar'] ?>
+                                  <?php $name = $u['user_name'] ?>
+                                  <?php $id = $u['id'] ?>
                                   <img src="/public/img/avatars/<?php echo $u['user_avatar'] ?>" alt="image" class="size-40 rounded-22 object-cover">
                                       <b style='padding:10px'>
                                         <?php echo $u['user_name'] ?>

@@ -38,7 +38,7 @@
                                         <div class="text-18 fw-500 mb-10">Địa Chỉ</div>
                                         <div class="form-input ">
                                             <input name="diachi" type="text" required>
-                                            <label class="lh-1 text-16 text-light-1">Địa Chie</label>
+                                            <label class="lh-1 text-16 text-light-1">Địa Chỉ</label>
                                         </div>
                                     </div>
                                     <div class="row">
@@ -62,8 +62,8 @@
                                                 <select name="trangthai" id="select1">
                                                     <?php foreach ($data1 as $element) { ?>
                                                         <option id="op1"
-                                                            value="<?php echo $element['id'] . '-' . $element['status_name']; ?>">
-                                                            <?php echo $element['status_name']; ?>
+                                                            value="<?php echo $element['id'] . '-' . $element['hotel_status']; ?>">
+                                                            <?php echo $element['hotel_status']; ?>
                                                         </option>
                                                     <?php } ?>
                                                 </select>
@@ -90,6 +90,14 @@
 
 
                                 </div>
+                                <div class="text-18 fw-500 mb-10">Tiện ích khách sạn</div>
+                                <div class="row x-gap-20 y-gap-20">
+                                    <div class="col-12">
+                                        <div class="form-input ">
+                                            <input name="tienich" type="text" required>
+                                            <label class="lh-1 text-16 text-light-1">Tiện ích khách sạn</label>
+                                        </div>
+                                    </div>
 
 
 
@@ -125,7 +133,7 @@
                                     </div>
                                 </div>
                                 <div class="d-inline-block pt-30">
-                                    <input type="submit" class="button h-50 px-24 -dark-1 bg-blue-1 text-white"
+                                    <input style="width:10% !important" type="submit" class="button h-50 px-24 -dark-1 bg-blue-1 text-white"
                                         value="Thêm" form="myform">
 
                                     </input>

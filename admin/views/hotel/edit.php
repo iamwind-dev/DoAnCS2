@@ -78,8 +78,8 @@
                                                         </option>
                                                         <?php foreach ($data2 as $element1) { ?>
                                                             <option id="op1"
-                                                                value="<?php echo $element1['id'] . '-' . $element1['status_name']; ?>">
-                                                                <?php echo $element1['status_name']; ?>
+                                                                value="<?php echo $element1['id'] . '-' . $element1['hotel_status']; ?>">
+                                                                <?php echo $element1['hotel_status']; ?>
                                                             </option>
                                                         <?php } ?>
                                                     </select>
@@ -104,13 +104,21 @@
                                                 </div>
                                             </div>
                                         </div>
+                                    <div class="text-18 fw-500 mb-10">Tiện ích khách sạn</div>
+                                    
+                                        <div class="col-12">
+                                            <div class="form-input ">
+                                                <input name="tienich" type="text" required
+                                                    value="<?php echo $element['hotel_amenities']; ?>">
+                                                    <label class="lh-1 text-16 text-light-1">Tiện ích khách sạn</label>
+                                                </div>
+                                            </div>
 
-
-                                    </div>
-                                    <div class="col-12">
-                                        <div class="text-18 fw-500 mb-10">Mô tả Khách sạn</div>
-                                        <div class="form-input ">
-                                            <textarea name="mota" id="editor" value="">
+                                        
+                                        <div class="col-12">
+                                            <div class="text-18 fw-500 mb-10">Mô tả Khách sạn</div>
+                                            <div class="form-input ">
+                                                <textarea name="mota" id="editor" value="">
                                                         <?php echo $element['hotel_description']; ?>    </textarea>
                                         </div>
                                     </div>
@@ -138,7 +146,7 @@
                                     <input type="text" name="image" id="" value="<?php echo $element['hotel_image_url']; ?>"
                                         hidden>
                                     <div class="d-inline-block pt-30">
-                                        <input type="submit" class="button h-50 px-24 -dark-1 bg-blue-1 text-white"
+                                        <input style="width:10% !important"type="submit" class="button h-50 px-24 -dark-1 bg-blue-1 text-white"
                                             value="Lưu" form="myform">
                                         </input>
                                     </div>

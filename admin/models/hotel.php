@@ -31,7 +31,8 @@ function hotel_update()
         'hotel_status_id' => ($idtrangthai),
         'hotel_image_url' => ($image),
         'hotel_address' => ($_POST['diachi']),
-        'hotel_phone' => ($_POST['sdt'])
+        'hotel_phone' => ($_POST['sdt']),
+        'hotel_amenities' => ($_POST['tienich']),
     );
     update('hotel', $id, $hotel);
     //chuyển hướng nếu them dc
@@ -63,7 +64,8 @@ function hotel_add()
         'hotel_status_id' => ($idtrangthai),
         'hotel_image_url' => ($_FILES['file']['name']),
         'hotel_address' => ($_POST['diachi']),
-        'hotel_phone' => ($_POST['sdt'])
+        'hotel_phone' => ($_POST['sdt']),
+        'hotel_amenities' => ($_POST['tienich'])
     );
     insert('hotel', $hotel);
     //chuyển hướng nếu them dc
