@@ -564,8 +564,8 @@
                   }  ?></div>
                   
                 <div class="text-14 text-light-1 lh-15">
-                <?php $tgian =strtotime($b['time']);
-                echo TimeAgo($tgian) ?>
+                <?php 
+                echo TimeAgo($b['time']); ?>
                 </div>
               </div>
             </div>

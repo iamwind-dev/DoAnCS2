@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -80,8 +81,8 @@
                             
 
                             <div class="col-12">
-                                <div class="text-center px-30">Bằng cách tạo tài khoản, bạn đồng ý với Điều khoản dịch
-                                    vụ và Tuyên bố về quyền riêng tư của chúng tôi.</div>
+<p class="mt-10"> <a href="index.php"
+                                            class="text-blue-1">Trở lại trang chủ</a></p>
                             </div>
                         </div>
                     </div>

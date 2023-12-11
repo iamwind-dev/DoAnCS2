@@ -24,7 +24,7 @@
     <link rel="stylesheet" href="/public/css/vendors.css">
     <link rel="stylesheet" href="/public/css/main.css">
     
-
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <title>Administrator - WinK Travel</title>
 </head>
 
@@ -71,13 +71,7 @@
                             <i class="icon-menu-2 text-20"></i>
                         </button>
 
-                        <div class="single-field relative d-flex items-center md:d-none ml-30">
-                            <input class="pl-50 border-light text-dark-1 h-50 rounded-8" type="email"
-                                placeholder="Search">
-                            <button class="absolute d-flex items-center h-full">
-                                <i class="icon-search text-20 px-15 text-dark-1"></i>
-                            </button>
-                        </div>
+                        
                     </div>
                 </div>
 
@@ -158,7 +152,7 @@
                 <div class="sidebar__item ">
 
 
-                    <a href="#" class="sidebar__button d-flex items-center text-15 lh-1 fw-500">
+                    <a href="/admin.php?controller=booking" class="sidebar__button d-flex items-center text-15 lh-1 fw-500">
                         <img src="/public/img/dashboard/sidebar/booking.svg" alt="image" class="mr-15">
                         Quản lí Booking
                     </a>
@@ -312,7 +306,7 @@
                 <div class="sidebar__item ">
 
 
-                    <a href="#" class="sidebar__button d-flex items-center text-15 lh-1 fw-500">
+                    <a href="/admin.php?controller=comments" class="sidebar__button d-flex items-center text-15 lh-1 fw-500">
                         <img src="/public/img/dashboard/sidebar/comment.png" alt="image" class="mr-15">
                         Quản lí bình luận
                     </a>

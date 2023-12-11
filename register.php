@@ -87,7 +87,8 @@
 
                             <input type='submit' class="button py-20 -dark-1 bg-blue-1 text-white"
                                         name="dangnhap" value='Đăng kí' />
-
+<p class="mt-10"> <a href="index.php"
+                                            class="text-blue-1">Trở lại trang chủ</a></p>
                         </div>
                     </div>
             </form>

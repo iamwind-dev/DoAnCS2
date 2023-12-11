@@ -55,7 +55,7 @@
 
           <div class="col-auto">
             <div class="d-flex items-center">
-              <a href="index.php" class="header-logo mr-20" data-x="header-logo" data-x-toggle="is-logo-dark">
+              <a href="../../../index.php" class="header-logo mr-20" data-x="header-logo" data-x-toggle="is-logo-dark">
                 <img src="../../../public/img/general/logo.png" alt="logo icon">
                 <img src="img/general/logo-dark.svg.svg" alt="logo icon">
               </a>
@@ -91,20 +91,17 @@
           
           
                         <li>
-                        <a style='padding:10px' href="contact.html"><b>Tour</b></a>
+                        <a style='padding:10px' href="index.php?controller=alltour"><b>Tour</b></a>
                       </li>
 
-                      <li>
-                        <a style='padding:10px'href="contact.html"><b>Khách Sạn</b></a>
-                      </li>
+                      
 
-                      <li>
-                        <a style='padding:10px'href="contact.html"><b>Bài viết</b></a>
-                      </li>
+                    
 
                       <li>
                         <a style='padding:10px'href="contact.html"><b>Liên Hệ</b></a>
                       </li>
+                      
                         <li class="menu-item-has-children">
                           <div class="pl-15"> 
                               <?php foreach($user as $u) { ?>
@@ -130,11 +127,11 @@
                             <?php if($u['role_id'] == 1) { ?>
                                 <li><a href="admin.php">Admin</a></li>
                               <?php } ?>
-                            <li><a href="yeuthich.php">Yêu Thích</a></li>
+                          
           
-                            <li><a href="thongtinkhachhang.php">Thông tin của tôi</a></li>
+                            <li><a href="../../../index.php?controller=info">Thông tin của tôi</a></li>
           
-                            <li><a href="danhsachdiadiem.php">Danh sách tour</a></li>
+                          
           
                             <li><a href="#">Các Tour đã đặt</a></li>
                             <li><a href="index.php?controller=home&action=logout">Đăng Xuất</a></li>

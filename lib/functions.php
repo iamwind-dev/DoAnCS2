@@ -17,18 +17,19 @@ function timeAgo($timestamp)
 {
     date_default_timezone_set('Asia/Ho_Chi_Minh');
     $current_time = date('Y-m-d H:i:s'); // Thay đổi từ time() sang date('Y-m-d H:i:s')
-    $time_difference = strtotime($current_time) - $timestamp; // Chuyển đổi $current_time sang timestamp và tính khoảng cách thời gian
+    $time_difference = strtotime($current_time) - strtotime($timestamp); // Chuyển đổi $current_time sang timestamp và tính khoảng cách thời gian
 
     $seconds = $time_difference;
-    $minutes = round($seconds / 60);
-    $hours = round($seconds / 3600);
-    $days = round($seconds / 86400);
-    $weeks = round($seconds / 604800);
-    $months = round($seconds / 2629440);
-    $years = round($seconds / 31553280);
+    $minutes = intval($seconds / 60);
+    $hours = intval($seconds / 3600);
+    $days = intval($seconds / 86400);
+    $weeks = intval($seconds / 604800);
+    $months = intval($seconds / 2629440);
+    $years = intval($seconds / 31553280);
 
-    if ($seconds <= 60)
+    if($seconds <= 60) {
         return "Gần đây";
+    }
     else if ($minutes <= 60) {
         if ($minutes == 1)
             return "1 phút trước";

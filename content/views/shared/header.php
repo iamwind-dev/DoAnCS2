@@ -91,16 +91,12 @@
 
 
                       <li>
-                        <a style='padding:10px' href="contact.html"><b>Tour</b></a>
+                        <a style='padding:10px' href="index.php?controller=alltour"><b>Tour</b></a>
                       </li>
 
-                      <li>
-                        <a style='padding:10px'href="contact.html"><b>Khách Sạn</b></a>
-                      </li>
+                      
 
-                      <li>
-                        <a style='padding:10px'href="contact.html"><b>Bài viết</b></a>
-                      </li>
+                      
 
                       <li>
                         <a style='padding:10px'href="contact.html"><b>Liên Hệ</b></a>
@@ -122,11 +118,11 @@
                           <?php if($u['role_id']==1){ ?>
                           <li><a href="admin.php">Admin</a></li>
                           <?php } ?>
-                          <li><a href="yeuthich.php">Yêu Thích</a></li>
+                          
 
-                          <li><a href="thongtinkhachhang.php">Thông tin của tôi</a></li>
+                          <li><a href="index.php?controller=info">Thông tin của tôi</a></li>
 
-                          <li><a href="danhsachdiadiem.php">Danh sách tour</a></li>
+                        
 
                           <li><a href="#">Các Tour đã đặt</a></li>
                           <li><a href="index.php?controller=home&action=logout">Đăng Xuất</a></li>

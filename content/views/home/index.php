@@ -74,7 +74,7 @@
           </div>
 
           <div class="col-auto">
-            <a href="#" class="button -blue-1 -md bg-blue-1-05 text-blue-1">
+            <a href="../../../index.php?controller=alltour" class="button -blue-1 -md bg-blue-1-05 text-blue-1">
               Xem Tất cả Tour
               <i class="icon-arrow-top-right ml-10"></i>
             </a>
@@ -310,111 +310,167 @@ Tuyệt vời lắm !!!"
     </section> 
 
       <section class="layout-pt-md layout-pb-md">
-            <div data-anim-wrap class="container">
-                <div data-anim-child="slide-up delay-1" class="row justify-center text-center">
-                    <div class="col-auto">
-                        <div class="sectionTitle -md">
-                            <h2 class="sectionTitle__title">Các điểm đến của WinK Travel</h2>
-                            <p class=" sectionTitle__text mt-5 sm:mt-0">Những điểm đến phố biến này ở Việt Nam có rất nhiều điều thú vị</p>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="row y-gap-40 justify-between pt-40 sm:pt-20">
-
-                    <div data-anim-child="slide-up delay-3" class="col-xl-3 col-md-4 col-sm-6">
-
-                        <a href="#" class="citiesCard -type-3 d-block rounded-4 ">
-                            <div class="citiesCard__image ratio ratio-1:1">
-                                <img class="img-ratio js-lazy" src="#" data-src="img/destinations/2/1.png" alt="image">
-                            </div>
-
-                            <div class="citiesCard__content px-30 py-30">
-                                <h4 class="text-26 fw-600 text-white">Los Angeles</h4>
-                                <div class="text-15 text-white">1,714 properties</div>
-                            </div>
-                        </a>
-
-                    </div>
-
-                    <div data-anim-child="slide-up delay-4" class="col-xl-6 col-md-4 col-sm-6">
-
-                        <a href="#" class="citiesCard -type-3 d-block rounded-4 h-full">
-                            <div class="citiesCard__image ">
-                                <img class="img-ratio js-lazy" src="../../../public/img/tours/kinh-nghiem-du-lich-ha-long-1_1674039271.jpg" data-src="" alt="image">
-                            </div>
-
-                            <div class="citiesCard__content px-30 py-30">
-                                <h4 class="text-26 fw-600 text-white">London</h4>
-                                <div class="text-15 text-white">1,714 properties</div>
-                            </div>
-                        </a>
-
-                    </div>
-
-                    <div data-anim-child="slide-up delay-5" class="col-xl-3 col-md-4 col-sm-6">
-
-                        <a href="#" class="citiesCard -type-3 d-block rounded-4 ">
-                            <div class="citiesCard__image ratio ratio-1:1">
-                                <img class="img-ratio js-lazy" src="../../../public/img/tours/kinh-nghiem-du-lich-ha-long-1_1674039271.jpg" data-src="" alt="image">
-                            </div>
-
-                            <div class="citiesCard__content px-30 py-30">
-                                <h4 class="text-26 fw-600 text-white">Reykjavik</h4>
-                                <div class="text-15 text-white">1,714 properties</div>
-                            </div>
-                        </a>
-
-                    </div>
-
-                    <div data-anim-child="slide-up delay-6" class="col-xl-6 col-md-4 col-sm-6">
-
-                        <a href="#" class="citiesCard -type-3 d-block rounded-4 h-full">
-                            <div class="citiesCard__image ">
-                                <img class="img-ratio js-lazy" src="#" data-src="../../../public/img/destinations/2/4.png" alt="image">
-                            </div>
-
-                            <div class="citiesCard__content px-30 py-30">
-                                <h4 class="text-26 fw-600 text-white">Paris</h4>
-                                <div class="text-15 text-white">1,714 properties</div>
-                            </div>
-                        </a>
-
-                    </div>
-
-                    <div data-anim-child="slide-up delay-7" class="col-xl-3 col-md-4 col-sm-6">
-
-                        <a href="#" class="citiesCard -type-3 d-block rounded-4 ">
-                            <div class="citiesCard__image ratio ratio-1:1">
-                                <img class="img-ratio js-lazy" src="#" data-src="img/destinations/2/5.png" alt="image">
-                            </div>
-
-                            <div class="citiesCard__content px-30 py-30">
-                                <h4 class="text-26 fw-600 text-white">Amsterdam</h4>
-                                <div class="text-15 text-white">1,714 properties</div>
-                            </div>
-                        </a>
-
-                    </div>
-
-                    <div data-anim-child="slide-up delay-8" class="col-xl-3 col-md-4 col-sm-6">
-
-                        <a href="#" class="citiesCard -type-3 d-block rounded-4 ">
-                            <div class="citiesCard__image ratio ratio-1:1">
-                                <img class="img-ratio js-lazy" src="#" data-src="img/destinations/2/6.png" alt="image">
-                            </div>
-
-                            <div class="citiesCard__content px-30 py-30">
-                                <h4 class="text-26 fw-600 text-white">Istanbul</h4>
-                                <div class="text-15 text-white">1,714 properties</div>
-                            </div>
-                        </a>
-
-                    </div>
-
-                </div>
+      <div data-anim-wrap class="container">
+        <div data-anim-child="slide-up delay-1" class="row y-gap-20 justify-between items-end">
+          <div class="col-auto">
+            <div class="sectionTitle -md">
+              <h2 class="sectionTitle__title">Các điểm đến của WinK Travel</h2>
+              <p class=" sectionTitle__text mt-5 sm:mt-0">Những điểm đến phố biến này ở Việt Nam có rất nhiều điều thú vị</p>
             </div>
-        </section>
+          </div>
+
+          <div class="col-auto">
+
+            <div class="d-flex x-gap-15 items-center justify-center pt-40 sm:pt-20">
+              <div class="col-auto">
+                <button class="d-flex items-center text-24 arrow-left-hover js-places-prev">
+                  <i class="icon icon-arrow-left"></i>
+                </button>
+              </div>
+
+              <div class="col-auto">
+                <div class="pagination -dots text-border js-places-pag"></div>
+              </div>
+
+              <div class="col-auto">
+                <button class="d-flex items-center text-24 arrow-right-hover js-places-next">
+                  <i class="icon icon-arrow-right"></i>
+                </button>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+        <div class="pt-40 overflow-hidden js-section-slider" data-gap="30" data-slider-cols="xl-5 lg-3 md-2 sm-2 base-1" data-nav-prev="js-places-prev" data-pagination="js-places-pag" data-nav-next="js-places-next">
+          <div class="swiper-wrapper">
+            <?php foreach($noibat2 as $el){ ?>
+            <div data-anim-child="slide-left delay-4" class="swiper-slide">
+
+              <a href="#" class="citiesCard -type-2 ">
+                <div class="citiesCard__image rounded-4 ratio ratio-3:4">
+                  <img class="img-ratio rounded-4 js-lazy" data-src="../../../public/img/location/<?php echo $el['location_image_url'] ?>" src="#" alt="image">
+                </div>
+
+                <div class="citiesCard__content mt-10">
+                  <h4 class="text-18 lh-13 fw-500 text-dark-1"><?php echo $el['location_name']; ?></h4>
+                  
+                </div>
+              </a>
+
+            </div>
+<?php } ?>
+            
+
+            <!-- <div data-anim-child="slide-left delay-5" class="swiper-slide">
+
+              <a href="#" class="citiesCard -type-2 ">
+                <div class="citiesCard__image rounded-4 ratio ratio-3:4">
+                  <img class="img-ratio rounded-4 js-lazy" data-src="img/destinations/1/2.webp" src="#" alt="image">
+                </div>
+
+                <div class="citiesCard__content mt-10">
+                  <h4 class="text-18 lh-13 fw-500 text-dark-1">Italy</h4>
+                  <div class="text-14 text-light-1">147,681 travellers</div>
+                </div>
+              </a>
+
+            </div>
+
+            <div data-anim-child="slide-left delay-6" class="swiper-slide">
+
+              <a href="#" class="citiesCard -type-2 ">
+                <div class="citiesCard__image rounded-4 ratio ratio-3:4">
+                  <img class="img-ratio rounded-4 js-lazy" data-src="img/destinations/1/3.webp" src="#" alt="image">
+                </div>
+
+                <div class="citiesCard__content mt-10">
+                  <h4 class="text-18 lh-13 fw-500 text-dark-1">France</h4>
+                  <div class="text-14 text-light-1">147,681 travellers</div>
+                </div>
+              </a>
+
+            </div>
+
+            <div data-anim-child="slide-left delay-7" class="swiper-slide">
+
+              <a href="#" class="citiesCard -type-2 ">
+                <div class="citiesCard__image rounded-4 ratio ratio-3:4">
+                  <img class="img-ratio rounded-4 js-lazy" data-src="img/destinations/1/4.webp" src="#" alt="image">
+                </div>
+
+                <div class="citiesCard__content mt-10">
+                  <h4 class="text-18 lh-13 fw-500 text-dark-1">Turkey</h4>
+                  <div class="text-14 text-light-1">147,681 travellers</div>
+                </div>
+              </a>
+
+            </div>
+
+            <div data-anim-child="slide-left delay-8" class="swiper-slide">
+
+              <a href="#" class="citiesCard -type-2 ">
+                <div class="citiesCard__image rounded-4 ratio ratio-3:4">
+                  <img class="img-ratio rounded-4 js-lazy" data-src="img/destinations/1/5.webp" src="#" alt="image">
+                </div>
+
+                <div class="citiesCard__content mt-10">
+                  <h4 class="text-18 lh-13 fw-500 text-dark-1">Spain</h4>
+                  <div class="text-14 text-light-1">147,681 travellers</div>
+                </div>
+              </a>
+
+            </div>
+
+            <div data-anim-child="slide-left delay-9" class="swiper-slide">
+
+              <a href="#" class="citiesCard -type-2 ">
+                <div class="citiesCard__image rounded-4 ratio ratio-3:4">
+                  <img class="img-ratio rounded-4 js-lazy" data-src="img/destinations/1/1.webp" src="#" alt="image">
+                </div>
+
+                <div class="citiesCard__content mt-10">
+                  <h4 class="text-18 lh-13 fw-500 text-dark-1">United Kingdom</h4>
+                  <div class="text-14 text-light-1">147,681 travellers</div>
+                </div>
+              </a>
+
+            </div>
+
+            <div data-anim-child="slide-left delay-10" class="swiper-slide">
+
+              <a href="#" class="citiesCard -type-2 ">
+                <div class="citiesCard__image rounded-4 ratio ratio-3:4">
+                  <img class="img-ratio rounded-4 js-lazy" data-src="img/destinations/1/2.webp" src="#" alt="image">
+                </div>
+
+                <div class="citiesCard__content mt-10">
+                  <h4 class="text-18 lh-13 fw-500 text-dark-1">Italy</h4>
+                  <div class="text-14 text-light-1">147,681 travellers</div>
+                </div>
+              </a>
+
+            </div>
+
+            <div data-anim-child="slide-left delay-11" class="swiper-slide">
+
+              <a href="#" class="citiesCard -type-2 ">
+                <div class="citiesCard__image rounded-4 ratio ratio-3:4">
+                  <img class="img-ratio rounded-4 js-lazy" data-src="img/destinations/1/3.webp" src="#" alt="image">
+                </div>
+
+                <div class="citiesCard__content mt-10">
+                  <h4 class="text-18 lh-13 fw-500 text-dark-1">France</h4>
+                  <div class="text-14 text-light-1">147,681 travellers</div>
+                </div>
+              </a>
+
+            </div> -->
+
+          </div>
+        </div>
+      </div>
+    </section>
 
     <section class="layout-pt-md layout-pb-lg">
             <div data-anim-wrap class="container">
