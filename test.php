@@ -1,82 +1,66 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
-    <title>Lấy dữ liệu từ thẻ a</title>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <link rel="stylesheet" href="public/css/main.css">
-    <link rel="stylesheet" href="public/css/vendor.css">
+    <meta charset="UTF-8">
+    <title>See more with Animation</title>
+    <style>
+        .content {
+            max-height: 100px;
+            /* Chiều cao tối đa ban đầu */
+            overflow: hidden;
+            /* Ẩn phần nội dung vượt quá chiều cao tối đa */
+            transition: max-height 0.3s ease-out;
+            /* Hiệu ứng khi mở rộng nội dung */
+        }
+
+        .showContent {
+            max-height: 500px;
+            /* Chiều cao tối đa khi mở rộng toàn bộ nội dung */
+            transition: max-height 0.5s ease-in-out;
+            /* Hiệu ứng khi mở rộng */
+            animation-name: fadeIn;
+            animation-duration: 0.5s;
+        }
+
+        .seeMoreBtn {
+            cursor: pointer;
+            color: blue;
+            transition: color 0.3s ease;
+            /* Hiệu ứng khi hover vào nút */
+        }
+
+        .seeMoreBtn:hover {
+            color: darkblue;
+            /* Màu sắc khi hover vào nút */
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+
+            to {
+                opacity: 1;
+            }
+        }
+    </style>
 </head>
 
 <body>
-    <div class="dropdown js-dropdown js-actions-1-active">
-        <div class="dropdown__button d-flex items-center rounded-4 text-blue-1 bg-blue-1-05 text-14 px-15 py-5"
-            data-el-toggle=".js-actions-1-toggle"
-            data-el-toggle-active=".js-actions-1-active">
-            <span class="js-dropdown-title">Actions</span>
-            <i class="icon icon-chevron-sm-down text-7 ml-10"></i>
-        </div>
-    
-        <div class="toggle-element -dropdown-2 js-click-dropdown js-actions-1-toggle">
-            <div class="text-14 fw-500 js-dropdown-list">
-    
-                <div><a href="#" class="d-block js-dropdown-link">Tiếp nhận</a></div>
-    
-                <div><a href="#" class="d-block js-dropdown-link">Đã xác nhận</a></div>
-    
-                <div><a href="#" class="d-block js-dropdown-link">Đã thanh toán</a></div>
-    
-                <div><a href="#" class="d-block js-dropdown-link">Đã kết thúc</a></div>
-                <div><a href="#" class="d-block js-dropdown-link">Đã Huỷ</a></div>
-            </div>
-        </div>
+    <div class="content">
+        <!-- Phần nội dung được hiển thị ban đầu -->
+        <p>Đây là một phần của nội dung... Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dignissimos sit necessitatibus fugit maiores hic magni, eveniet totam mollitia consequatur fugiat. Amet ratione incidunt saepe nulla aliquam officia fugit temporibus sapiente!Lorem Lorem, ipsum dolor sit amet consectetur adipisicing elit. Et, architecto distinctio quidem ea vero quos ab ad officia hic, aliquam veniam iusto omnis eum eius quas deserunt tempora nam exercitationem? Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum assumenda ratione obcaecati saepe? Voluptatibus nam, odit fugit laboriosam ad doloremque ut quae aliquam expedita veniam provident suscipit! Optio, eius praesentium. Lorem ipsum dolor sit, amet consectetur adipisicing elit. Cupiditate molestias unde quia nobis vitae saepe suscipit perspiciatis sequi esse consequatur? Nulla, porro. Voluptatibus velit consectetur quia aut repellendus fuga magni. Lorem ipsum dolor sit amet consectetur adipisicing elit. Est nam sit quo, explicabo dolores aspernatur impedit perspiciatis quasi non deleniti, velit earum debitis modi id sapiente adipisci praesentium eligendi nulla?</p>
     </div>
-    
+    <div class="seeMoreBtn">See more</div>
+
     <script>
-        $(document).ready(function () {
-            $(".js-dropdown-link").click(function (event) {
-                event.preventDefault(); // Prevent the default action of the link
-
-                var linkText = $(this).text().trim(); // Extract text content from the clicked link
-                var dataToSend = 0; // Default value
-
-                switch (linkText) {
-                    case 'Tiếp nhận':
-                        dataToSend = 1;
-                        break;
-                    case 'Đã xác nhận':
-                        dataToSend = 2;
-                        break;
-                    case 'Đã thanh toán':
-                        dataToSend = 3;
-                        break;
-                    case 'Đã kết thúc':
-                        dataToSend = 4;
-                        break;
-                    case 'Đã Huỷ':
-                        dataToSend = 5;
-                        break;
-                    default:
-                        dataToSend = 0;
-                }
-
-                $.ajax({
-                    method: "POST",
-                    url: '/content/controllers/comment/postcomment.php',
-                    data: {
-                        value: dataToSend // Send the determined value
-                        // Add more data if needed
-                    },
-                })
-                    .done(function (data) {
-                        // Handle the AJAX response if needed
-                        console.log("Data sent: ", dataToSend);
-                    });
-            });
+        document.querySelector('.seeMoreBtn').addEventListener('click', function () {
+            const content = document.querySelector('.content');
+            content.classList.toggle('showContent'); // Thêm hoặc xóa lớp showContent để hiển thị hoặc ẩn nội dung
+            this.innerText = content.classList.contains('showContent') ? 'See less' : 'See more'; // Thay đổi văn bản của nút
         });
     </script>
-    <script src='public/js/main.js'></script>
-    <script src='public/js/vendors.js'></script>
 </body>
 
 </html>

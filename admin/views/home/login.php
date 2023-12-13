@@ -31,6 +31,7 @@
     <div class="preloader__title">WinK Travel</div>
   </div>
 <?php if($log === false){
+
     echo "<script>alert('Sai thông tin đăng nhập')</script>";
 } ?>
     <section class="layout-pt-lg layout-pb-lg bg-blue-2">

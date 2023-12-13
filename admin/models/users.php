@@ -1,7 +1,6 @@
 <?php
 
-use PHPMailer\PHPMailer\PHPMailer;
-use PHPMailer\PHPMailer\Exception;
+
 require_once('/DA/lib/functions.php');
 function userLogin($input,$password){
     global $conn;

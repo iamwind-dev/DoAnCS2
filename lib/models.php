@@ -132,3 +132,26 @@ function showStatusHT($id)
     return $data;
 }
 
+function get_total($table)
+{
+    global $conn;
+    $sql = "SELECT COUNT(*) as total FROM $table";
+    $query = mysqli_query($conn, $sql) or die(mysqli_error($conn));
+    $row = mysqli_fetch_assoc($query);
+    return $row['total'];
+}
+
+function get_all_pag($table,$start,$limit)
+{
+    $sql = "SELECT * FROM `$table` LIMIT $start,$limit";
+    global $conn;
+    $query = mysqli_query($conn, $sql);
+    $data = array();
+    if (mysqli_num_rows($query) > 0) {
+        while ($row = mysqli_fetch_assoc($query)) {
+            $data[] = $row;
+        }
+        mysqli_free_result($query);
+    }
+    return $data;
+}
