@@ -163,78 +163,60 @@
           <?php } ?>
         </div>
 
-        <div class="border-top-light mt-30 pt-30">
-          <div class="row x-gap-10 y-gap-20 justify-between md:justify-center">
-            <div class="col-auto md:order-1">
-              <button class="button -blue-1 size-40 rounded-full border-light">
-                <i class="icon-chevron-left text-12"></i>
-              </button>
-            </div>
-
-            <div class="col-md-auto md:order-3">
-              <div class="row x-gap-20 y-gap-20 items-center md:d-none">
-                <div class="col-auto">
-                  <div class="size-40 flex-center rounded-full">1</div>
-                </div>
-
-                <div class="col-auto">
-                  <div
-                    class="size-40 flex-center rounded-full bg-dark-1 text-white"
-                  >
-                    2
-                  </div>
-                </div>
-
-                <div class="col-auto">
-                  <div class="size-40 flex-center rounded-full">3</div>
-                </div>
-
-                <div class="col-auto">
-                  <div class="size-40 flex-center rounded-full bg-light-2">
-                    4
-                  </div>
-                </div>
-
-                <div class="col-auto">
-                  <div class="size-40 flex-center rounded-full">5</div>
-                </div>
-
-                <div class="col-auto">
-                  <div class="size-40 flex-center rounded-full">...</div>
-                </div>
-
-                <div class="col-auto">
-                  <div class="size-40 flex-center rounded-full">20</div>
-                </div>
-              </div>
-
-              <div
-                class="row x-gap-10 y-gap-20 justify-center items-center d-none md:d-flex"
-              >
-                <div class="col-auto">
-                  <div class="size-40 flex-center rounded-full">1</div>
-                </div>
-
-                <div class="col-auto">
-                  <div
-                    class="size-40 flex-center rounded-full bg-dark-1 text-white"
-                  >
-                    2
-                  </div>
-                </div>
-
-                <div class="col-auto">
-                  <div class="size-40 flex-center rounded-full">3</div>
-                </div>
-              </div>
-            </div>
-
-            <div class="col-auto md:order-2">
-              <button class="button -blue-1 size-40 rounded-full border-light">
-                <i class="icon-chevron-right text-12"></i>
-              </button>
-            </div>
-          </div>
+        <div class="border-top-light mt-30 pt-30"></div>
+          <?php  if($total_page >1){ ?>
+                            
+            <div class="row justify-between">
+              <div class="col-auto">
+                <?php if ($current_page > 1 && $total_page > 1) { ?>
+                                            <a href='../../../index.php?controller=alltour&acion=index&p=<?php echo $current_page - 1 ?> '
+                                                class="button -blue-1 size-40 rounded-full border-light">
+                                                <i class="icon-chevron-left text-12"></i>
+                                            </a>
+                                        <?php } ?>
+                                    </div>
+                            
+                                    <div class="col-auto">
+                                        <div class="row x-gap-20 y-gap-20 items-center">
+                                            <?php for ($i = 1; $i <= $total_page; $i++) {
+                                                if ($i == $current_page) { ?>
+                                                    <div class="col-auto">
+                            
+                                                        <a href="">
+                                                            <div class="size-40 flex-center rounded-full bg-dark-1 text-white">
+                                                                <?php echo $i ?>
+                                                            </div>
+                                                        </a>
+                            
+                                                    </div>
+                                                <?php }
+                                                else { ?>
+                                                    <div class="col-auto">
+                                                        <a href="../../../index.php?controller=alltour&acion=index&p=<?php echo $i ?> ">
+                                                            <div class="size-40 flex-center rounded-full">
+                                                                <?php echo $i ?>
+                                                            </div>
+                                                        </a>
+                                                    </div>
+                            
+                                                <?php }
+                                            } ?>
+                            
+                            
+                            
+                            
+                                        </div>
+                                    </div>
+                            
+                                    <div class="col-auto">
+                                        <a href='../../../index.php?controller=alltour&acion=index&p=<?php echo $current_page + 1 ?> '
+                                            class="button -blue-1 size-40 rounded-full border-light">
+                                            <i class="icon-chevron-right text-12"></i>
+                                        </a>
+                                    </div>
+                                </div>
+                            
+                            <?php } ?>
         </div>
       </div>
     </div>

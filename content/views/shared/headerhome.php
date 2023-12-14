@@ -19,7 +19,7 @@
   <link rel="stylesheet" href="../../../public/css/vendors.css">
   <link rel="stylesheet" href="../../../public/css/main.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
-  <title>GoTrip</title>
+  <title>WinK Travel</title>
 </head>
 
 <body>

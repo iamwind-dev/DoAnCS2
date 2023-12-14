@@ -582,6 +582,13 @@
       </div>
     </div>
   </div>
+  <!-- <?php
+  if($total_records > 5){
+  ?>
+  <button id="loadMoreComments">Hiển thị thêm</button>
+  <?php
+  }
+?> -->
 </section>
 
 
@@ -625,6 +632,30 @@
 <div class="container">
   <div class="mt-50 border-top-light"></div>
 </div>
+<script>
+$(document).ready(function(){
+            var offset = 1;
+            var limit = 5; 
+
+            // Hàm để tải thêm comment
+            function loadMoreComments() {
+                $.ajax({
+                    url: "/content/controllers/comment/loadcomment.php",
+                    type: "POST",
+                    data: {idt: $('#idtour').val(),offset: offset, limit: limit},
+                    success: function(data) {
+                        $('#binhluan').append(data); 
+                        offset += limit; 
+                    }
+                });
+            }
+
+            // Xử lý sự kiện khi nhấp vào nút "Hiển thị thêm"
+            $('#loadMoreComments').on('click', function() {
+                loadMoreComments();
+            });
+        });
+</script>
 <script>
             $("#btnGui").click(function () {
               // Lấy giá trị của #noidung

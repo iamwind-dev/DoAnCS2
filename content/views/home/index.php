@@ -272,14 +272,14 @@ Tuyệt vời lắm !!!"
 <?php for($i=1; $i<=1;$i++) { ?>
                   <div class="col-auto">
                     <div class="pagination__item is-active">
-                      <img src="/public/img/avatars/testimonials/1.png" alt="image">
+                      <img style="width:60px; border-radius: 50% " src="/public/img/avatars/author-auto.png" alt="image">
                     </div>
                   </div>
 <?php } ?>
 <?php for($i=1; $i<=5;$i++) { ?>
                   <div class="col-auto">
                     <div class="pagination__item ">
-                      <img src="/public/img/avatars/testimonials/2.png" alt="image">
+                      <img style='width:60px; border-radius:50%' src="/public/img/avatars/author-auto.png" alt="image">
                     </div>
                   </div>
 <?php } ?>
@@ -486,17 +486,15 @@ Tuyệt vời lắm !!!"
                 <div class="row y-gap-30 pt-40">
 
                     <div data-anim-child="slide-up delay-2" class="col-lg-6">
-                        <a href="blog-single-1.html" class="row y-gap-20 items-center">
+                        <a href="https://vinpearl.com/vi/kham-pha-co-do-voi-top-34-dia-diem-du-lich-hue-cuc-hap-dan" class="row y-gap-20 items-center" >
                             <div class="col-auto">
-                                <img class="size-250 rounded-4" src="img/blog/1.png" alt="image">
+                                <img class="size-250 rounded-4" src="../../../public/img/blog/dia-diem-du-lich-Hue-03.jpg" alt="image">
                             </div>
 
                             <div class="col">
-                                <div class="text-15 text-light-1">April 06, 2022</div>
-                                <h4 class="text-22 fw-600 text-dark-1 mt-10">10 European ski destinations you should
-                                    visit this winter</h4>
-                                <p class="mt-10">Ut enim ad minim veniam, quis nostrud exerc ullamco laboris nisi ut
-                                    aliquip.</p>
+                                <div class="text-15 text-light-1">14/12/2023</div>
+                                <h4 class="text-22 fw-600 text-dark-1 mt-10">Khám phá cố đô với TOP 34 địa điểm du lịch Huế hấp dẫn nhất 2023</h4>
+                                
                             </div>
                         </a>
                     </div>
@@ -504,15 +502,13 @@ Tuyệt vời lắm !!!"
                     <div data-anim-child="slide-up delay-3" class="col-lg-6">
                         <a href="blog-single-1.html" class="row y-gap-20 items-center">
                             <div class="col-auto">
-                                <img class="size-250 rounded-4" src="img/blog/2.png" alt="image">
+                                <img class="size-250 rounded-4" src="../../../public/img/blog/du-lich-vinh-Ha-Long-hinh-anh3_1625912082_1660489377.png" alt="image">
                             </div>
 
                             <div class="col">
                                 <div class="text-15 text-light-1">April 06, 2022</div>
-                                <h4 class="text-22 fw-600 text-dark-1 mt-10">Booking travel during Corona: good advice
-                                    in an uncertain time</h4>
-                                <p class="mt-10">Ut enim ad minim veniam, quis nostrud exerc ullamco laboris nisi ut
-                                    aliquip.</p>
+                                <h4 class="text-22 fw-600 text-dark-1 mt-10">Bỏ túi 16 địa điểm du lịch Hạ Long làm say lòng du khách 2023</h4>
+                                
                             </div>
                         </a>
                     </div>

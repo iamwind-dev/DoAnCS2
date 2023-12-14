@@ -155,3 +155,18 @@ function get_all_pag($table,$start,$limit)
     }
     return $data;
 }
+
+function get_all_pags($table, $start, $limit,$type)
+{
+    $sql = "SELECT * FROM `$table` WHERE `$type` <> 2 LIMIT $start,$limit";
+    global $conn;
+    $query = mysqli_query($conn, $sql);
+    $data = array();
+    if (mysqli_num_rows($query) > 0) {
+        while ($row = mysqli_fetch_assoc($query)) {
+            $data[] = $row;
+        }
+        mysqli_free_result($query);
+    }
+    return $data;
+}
