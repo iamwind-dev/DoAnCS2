@@ -39,11 +39,25 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div class="d-inline-block pt-30">
-                                    <input type="submit" class="button h-50 px-24 -dark-1 bg-blue-1 text-white" value="Lưu" form="myform">
-                                    </input>
-                                </div>
-                            </form>
+                                <div class="mt-30">
+                                        <div class="fw-500">Hình ảnh</div>
+                                        <div class="containerr">
+                                            <input type="file" name="file" id="file" accept="image/*" hidden>
+                                            <div class="img-area" data-img="">
+                                                <i class='bx bxs-cloud-upload icon'></i>
+                                                <h3>Upload Image</h3>
+                                                <p>Image size must be less than <span>2MB</span></p>
+                                                <img src="../../../public/img/location/<?php echo $element['location_image_url']; ?>" alt="">
+                                            </div>
+                                            <button type="button" class="select-image">Chọn Ảnh</button>
+                                        </div>
+                                    </div>
+                                    <input type="text" name="image" id="" value="<?php echo $element['location_image_url']; ?>" hidden>
+                                    <div class="d-inline-block pt-30">
+                                        <input type="submit" class="button h-50 px-24 -dark-1 bg-blue-1 text-white" value="Lưu" form="myform">
+                                        </input>
+                                    </div>
+                                </form>
                             <?php } ?>
                         </div>
                     </div>

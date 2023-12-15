@@ -97,11 +97,7 @@
 
                   </div>
 
-                  <div class="cardImage__wishlist">
-                    <button class="button -blue-1 bg-white size-30 rounded-full shadow-2">
-                      <i class="icon-heart text-12"></i>
-                    </button>
-                  </div>
+                
 
 
                   <div class="cardImage__leftBadge">
@@ -486,7 +482,7 @@ Tuyệt vời lắm !!!"
                 <div class="row y-gap-30 pt-40">
 
                     <div data-anim-child="slide-up delay-2" class="col-lg-6">
-                        <a href="https://vinpearl.com/vi/kham-pha-co-do-voi-top-34-dia-diem-du-lich-hue-cuc-hap-dan" class="row y-gap-20 items-center" >
+                        <a href="https://vinpearl.com/vi/kham-pha-co-do-voi-top-34-dia-diem-du-lich-hue-cuc-hap-dan" class="row y-gap-20 items-center" target="_blank">
                             <div class="col-auto">
                                 <img class="size-250 rounded-4" src="../../../public/img/blog/dia-diem-du-lich-Hue-03.jpg" alt="image">
                             </div>

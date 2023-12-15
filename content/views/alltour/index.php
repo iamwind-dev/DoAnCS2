@@ -99,8 +99,12 @@
                         alt="image"
                       />
                     </div>
-
-                  
+                <div class="cardImage__wishlist">
+                    <button id="addtourfav" class="button -blue-1 bg-white size-30 rounded-full shadow-2">
+                      <i class="icon-heart text-12"></i>
+                    </button>
+                  </div>
+                  <input type="text" id="idtour" value="<?php echo $e['id']   ?>">
                   </div>
                 </div>
 
@@ -222,6 +226,28 @@
     </div>
   </div>
 </section>
+<script>
+$(document).ready(function(){
+            
+
+            // Hàm để tải thêm comment
+            function addtourfav() {
+                $.ajax({
+                    url: "/content/controllers/info/addtourfav.php",
+                    type: "POST",
+                    data: {idt: $('#idtour').val(),idu:$('#idu').val()},
+                    success: function(data) {
+                        alert(data);
+                    }
+                });
+            }
+
+            // Xử lý sự kiện khi nhấp vào nút "Hiển thị thêm"
+            $('#addtourfav').on('click', function() {
+                addtourfav();
+            });
+        });
+</script>
 
 
 

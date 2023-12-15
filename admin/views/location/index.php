@@ -42,6 +42,7 @@ include('/DA/admin/views/shared/header.php');
                   <tr>
                     <th>STT</th>
                     <th>Tên</th>
+                    <th>Ảnh</th>
                     <th>Action</th>
                   </tr>
                 </thead>
@@ -55,10 +56,14 @@ include('/DA/admin/views/shared/header.php');
                       <?php echo $element['location_name']; ?>
                     </td>
                     <td>
-                      <div class="row x-gap-10 y-gap-10 items-center">
-                        <div class="col-auto">
-                          <a
-                            href="../../../admin.php?controller=location&amp;action=edit&amp;id=<?php echo $element['id'] ?>"><button
+                      <img style=" border-radius:5%; max-width: 200px; height: 150px"
+                          src="../../../public/img/location/<?php echo $element['location_image_url'] ?>" />
+                      </td>
+                      <td>
+                        <div class="row x-gap-10 y-gap-10 items-center">
+                          <div class="col-auto">
+                            <a
+                              href="../../../admin.php?controller=location&amp;action=edit&amp;id=<?php echo $element['id'] ?>"><button
                               class="flex-center bg-light-2 rounded-4 size-35">
                               <i class="icon-edit text-16 text-light-1"></i>
                             </button>

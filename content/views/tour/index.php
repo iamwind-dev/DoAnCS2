@@ -88,7 +88,20 @@
       </div>
 
       <div class="col-auto">
-        <div class="row x-gap-10 y-gap-10"></div>
+        <div class="row x-gap-10 y-gap-10">
+              
+
+              <div class="col-auto">
+                <button class="button px-15 py-10 -blue-1 bg-light-2">
+                  <i class="icon-heart mr-10"></i>
+                  Yêu tích
+                </button>
+                <button class="button px-15 py-10 text-light-2 bg-blue-1">
+                  <i class="icon-heart mr-10"></i>
+                  Yêu tích
+                </button>
+              </div>
+            </div>
       </div>
     </div>
   </div>
@@ -113,7 +126,7 @@
               />
             </div>
 
-            <div class="swiper-slide">
+            <!-- <div class="swiper-slide">
               <img
                 src="img/gallery/1/2.png"
                 alt="image"
@@ -135,7 +148,7 @@
                 alt="image"
                 class="rounded-4 col-12 h-full object-cover"
               />
-            </div>
+            </div> -->
           </div>
 
           <div class="absolute h-full col-11">
@@ -462,7 +475,7 @@
 <div class="container mt-40 mb-40">
   <div class="border-top-light"></div>
 </div>
-
+<?php  if($e['tour_description']!='') { ?>
 <section id="mysection" tabindex="0">
   <div class="container">
     <h3 class="text-22 fw-500 mb-20">Mô tả Tour</h3>
@@ -523,7 +536,7 @@
     </div>
   </div>
 </section>
-
+<?php } ?>
 <div class="container mt-40 mb-40">
   <div class="border-top-light"></div>
 </div>

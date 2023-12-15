@@ -42,7 +42,7 @@
       </div>
     </div>
 
-    <div class="preloader__title">GoTrip</div>
+    <div class="preloader__title">WinK Travel</div>
   </div>
 
   <main>
@@ -134,6 +134,7 @@
                           
           
                             <li><a href="#">Các Tour đã đặt</a></li>
+                            <li><a href="#">Các Tour yêu thích</a></li>
                             <li><a href="index.php?controller=home&action=logout">Đăng Xuất</a></li>
           <?php } ?>
                           </ul>
@@ -150,7 +151,7 @@
           
               <?php } ?>
           
-          
+          <input type="text"  id="idu" value="<?php echo $_SESSION['user']['id']; ?>" hidden>
           
           
           
