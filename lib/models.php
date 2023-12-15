@@ -86,6 +86,14 @@ function delete_record($id, $table)
     header("location:admin.php?controller=$table");
     return $query;
 }
+
+function delete_tourfv($id1, $id2)
+{
+    global $conn;
+    $sql = "DELETE  from tourfav where user_id=$id1 AND tour_id=$id2";
+    $query = mysqli_query($conn, $sql);
+    return $query;
+}
 //Hiển thị danh sách location và status khác id của location hiện tại
 function showLocation($id)
 {
@@ -159,6 +167,21 @@ function get_all_pag($table,$start,$limit)
 function get_all_pags($table, $start, $limit,$type)
 {
     $sql = "SELECT * FROM `$table` WHERE `$type` <> 2 LIMIT $start,$limit";
+    global $conn;
+    $query = mysqli_query($conn, $sql);
+    $data = array();
+    if (mysqli_num_rows($query) > 0) {
+        while ($row = mysqli_fetch_assoc($query)) {
+            $data[] = $row;
+        }
+        mysqli_free_result($query);
+    }
+    return $data;
+}
+
+function get_all_tour_location( $start, $limit,$idl)
+{
+    $sql = "SELECT * FROM tour WHERE tour_status_id <> 2 AND tour_location_id = $idl LIMIT $start,$limit";
     global $conn;
     $query = mysqli_query($conn, $sql);
     $data = array();

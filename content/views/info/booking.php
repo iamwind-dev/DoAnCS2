@@ -9,7 +9,7 @@ include("/DA/content/views/shared/headerhome.php");
                 <div class="row y-gap-20 justify-between items-end pb-60 lg:pb-40 md:pb-32">
                     <div class="col-auto">
     
-                        <h1 class="text-30 lh-14 fw-600">Danh sách yêu thích</h1>
+                        <h1 class="text-30 lh-14 fw-600">Tour đã đặt</h1>
                         
     
                     </div>
@@ -60,13 +60,7 @@ include("/DA/content/views/shared/headerhome.php");
     
                                                         </div>
     
-                                                        <div class="cardImage__wishlist">
-                                                            <a href="index.php?controller=info&action=removetourfav&idt=<?php echo $e['id'] ?>"
-                                                                class="button -blue-1 bg-white size-30 rounded-full shadow-2">
-                                                                <i class="icon-close text-12"></i>
-                                                            </a>
-                                                            
-                                                        </div>
+                                                        
                                                         
     
     
@@ -91,23 +85,46 @@ include("/DA/content/views/shared/headerhome.php");
     
                                                     </div> -->
     
-                                                    <div class="row x-gap-10 y-gap-10 items-center pt-20">
+                                                    
+                                                <div class="row x-gap-10 y-gap-10 items-center pt-20">
                                                         <div class="col-auto">
-                                                            <p class="text-14">
-                                                                <?php echo $e['tour_location_name'] ?>
-                                                                
-                                                            </p>
+                                                            <?php if ($b['status_id'] == 5) { ?>
+                                                    <span
+                                                        class="rounded-100 py-4 px-10 text-center text-14 fw-500 bg-red-3 text-red-2">
+                                                        <?php echo $b['booktour_status']; ?>
+                                                    </span>
+                                                <?php }
+                                                else if ($b['status_id'] == 1) { ?>
+                                                        <span
+                                                            class="rounded-100 py-4 px-10 text-center text-14 fw-500 bg-light-1 text-light-2">
+                                                        <?php echo $b['booktour_status']; ?>
+                                                        </span>
+                                                <?php }
+                                                else if ($b['status_id'] == 4) { ?>
+                                                            <span
+                                                                class="rounded-100 py-4 px-10 text-center text-14 fw-500 bg-yellow-4 text-yellow-3">
+                                                        <?php echo $b['booktour_status']; ?>
+                                                            </span>
+                                                <?php }else if ($b['status_id'] == 2) { ?>
+                                                        <span
+                                                            class="rounded-100 py-4 px-10 text-center text-14 fw-500 bg-blue-1-05 text-blue-1">
+                                                        <?php echo $b['booktour_status']; ?>
+                                                        </span><?php }
+                                                else if ($b['status_id'] == 3) { ?>
+                                                        <span
+                                                            class="rounded-100 py-4 px-10 text-center text-14 fw-500 bg-success-2 text-light-2   ">
+                                                        <?php echo $b['booktour_status']; ?>
+                                                        </span> <?php }?>
+                                                            </div>
+                                                
+                                                
+                                                        </div>  
+                                                    
                                                         </div>
     
-                                                        
-                                                    </div>
-    
-                                                    
-                                                </div>
-    
-                                                <div class="col-md-auto text-right md:text-left">
-                                                    <div class="d-flex flex-column justify-between h-full">
-                                                        <!-- <div
+                                                        <div class="col-md-auto text-right md:text-left">
+                                                            <div class="d-flex flex-column justify-between h-full">
+                                                                <!-- <div
                                                             class="row x-gap-10 y-gap-10 justify-end items-center md:justify-start">
                                                             <div class="col-auto">
                                                                 <div class="text-14 lh-14 fw-500">Exceptional</div>
@@ -120,11 +137,14 @@ include("/DA/content/views/shared/headerhome.php");
                                                             </div>
                                                         </div> -->
     
-                                                        <div class="pt-24">
-                                                            <div class="fw-500">Từ </div>
-                                                            <span class="fw-500 text-blue-1"><?php echo number_format($e['tour_price'], 0, ',', '.') . 'VND'; ?></span> 
-                                                            <a
-                    href="../../../index.php?controller=tour&action=index&id=<?php echo $e['id'] ?>"
+                                                                <div class="pt-24">
+                                                                    
+                                                                    <b>Tổng giá:</b>
+                                                        <span class=" text-center text-14 fw-500 text-red-2">
+                                                    <?php echo number_format($b['total'], 0, ',', '.') . 'VND'; ?>
+                                                                            </span>
+                                                                    <a
+                            href="../../../index.php?controller=info&action=bookinginfo&idb=<?php echo $b['id'] ?>"
                                                                         class="button -md -dark-1 bg-blue-1 text-white mt-24">
                                                                         Xem chi tiết
                                                                         <div class="icon-arrow-top-right ml-15"></div>

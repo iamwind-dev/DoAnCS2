@@ -73,7 +73,11 @@
         <div class="row y-gap-10 items-center justify-between">
           <div class="col-auto">
             <div class="text-18">
-              <span class="fw-500">Tìm thấy 56 kết quả</span>
+              <?php if ($result > 0) { ?>
+              <span class="fw-500">Có <?php echo $result  ?> tour</span>
+              <?php } else if($result ==0){?>
+                <span class="fw-500">Không tìm thấy tour</span>
+                <?php }?>
             </div>
           </div>
 
@@ -85,7 +89,9 @@
         <div class="mt-30"></div>
 
         <div class="row y-gap-30">
-          <?php foreach($a as $e){ ?>
+          <?php
+          if ($result > 0) {
+            foreach ($a as $e) { ?>
           <div class="col-12">
             <div class="border-top-light pt-30">
               <div class="row x-gap-20 y-gap-20">
@@ -95,16 +101,16 @@
                     <div class="cardImage__content">
                       <img
                         class="rounded-4 col-12"
-                        src="../../../public/img/tours/<?php echo $e['tour_image_url']  ?>"
+                        src="../../../public/img/tours/<?php echo $e['tour_image_url'] ?>"
                         alt="image"
                       />
                     </div>
-                <div class="cardImage__wishlist">
+                <!-- <div class="cardImage__wishlist">
                     <button id="addtourfav" class="button -blue-1 bg-white size-30 rounded-full shadow-2">
                       <i class="icon-heart text-12"></i>
                     </button>
-                  </div>
-                  <input type="text" id="idtour" value="<?php echo $e['id']   ?>">
+                  </div> -->
+                  <input type="text" id="idtour" value="<?php echo $e['id'] ?>">
                   </div>
                 </div>
 
@@ -118,7 +124,7 @@
                   </div>
 
                   <h3 class="text-18 lh-16 fw-500">
-                    <?php echo $e['tour_name']   ?>
+                    <?php echo $e['tour_name'] ?>
                   </h3>
                   <p class="text-14 lh-14 mt-5"><?php echo $e['tour_location_name'] ?></p>
 
@@ -164,11 +170,12 @@
               </div>
             </div>
           </div>
-          <?php } ?>
+          <?php }
+            ?>
         </div>
 
         <div class="border-top-light mt-30 pt-30"></div>
-          <?php  if($total_page >1){ ?>
+          <?php if ($total_page > 1) { ?>
                             
             <div class="row justify-between">
               <div class="col-auto">
@@ -183,7 +190,7 @@
                                     <div class="col-auto">
                                         <div class="row x-gap-20 y-gap-20 items-center">
                                             <?php for ($i = 1; $i <= $total_page; $i++) {
-                                                if ($i == $current_page) { ?>
+                                              if ($i == $current_page) { ?>
                                                     <div class="col-auto">
                             
                                                         <a href="">
@@ -194,7 +201,7 @@
                             
                                                     </div>
                                                 <?php }
-                                                else { ?>
+                                              else { ?>
                                                     <div class="col-auto">
                                                         <a href="../../../index.php?controller=alltour&acion=index&p=<?php echo $i ?> ">
                                                             <div class="size-40 flex-center rounded-full">
@@ -220,7 +227,8 @@
                                     </div>
                                 </div>
                             
-                            <?php } ?>
+                            <?php }
+          } ?>
         </div>
       </div>
     </div>

@@ -1,7 +1,7 @@
 <?php
 include("/DA/content/views/shared/headerhome.php");
 ?>
-    <div class="dashboard -is-sidebar-open" data-x="dashboard" data-x-toggle="-is-sidebar-open">
+    <div class="dashboard -is-sidebar-open" data-x="dashboard"data-x-toggle="-is-sidebar-open">
 <?php foreach ($a as $u) { ?>
         <div class="dashboard__main">
             <div class="dashboard__content bg-light-2">

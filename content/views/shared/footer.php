@@ -1,5 +1,5 @@
 
-<footer class="footer -type-2 bg-dark-2 text-white">
+<footer id="ft"class="footer -type-2 bg-dark-2 text-white">
       <div class="container">
         <div class="pt-60 pb-60">
           <div class="row y-gap-40 justify-between xl:justify-start">
@@ -125,6 +125,53 @@
       </main>
 
   <!-- JavaScript -->
+  <script>
+$(document).ready(function(){
+          
+
+            // Hàm để tải thêm comment
+            function addtourfav() {
+                $.ajax({
+                    url: "/content/controllers/info/addtourfav.php",
+                    type: "POST",
+                    data: {idt: $('#idtour').val(),idu:$('#idu').val()},
+                    success: function(data) {
+                      alert("Đã thêm vào danh sách yêu thích");
+                        
+                    }
+                });
+            }
+
+            function removetourfav() {
+                $.ajax({
+                    url: "/content/controllers/info/removetourfav.php",
+                    type: "POST",
+                    data: {idt: $('#idtour').val(),idu:$('#idu').val()},
+                    success: function(data) {
+                      alert("Đã xóa khỏi danh sách yêu thích")
+                        
+                    }
+                });
+            }
+
+            // Xử lý sự kiện khi nhấp vào nút "Hiển thị thêm"
+            $('#addtourfav').on('click', function() {
+                addtourfav();
+    
+          $('#add').hide();
+          $('#remove').show();
+          
+            });
+
+            $('#removetourfav').on('click', function() {
+                removetourfav();
+        
+            $('#remove').hide();
+              $('#add').show();
+            });
+        });
+</script>
+
   <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAAz77U5XQuEME6TpftaMdX0bBelQxXRlM"></script>
   <script src="../../../unpkg.com/%40googlemaps/markerclusterer%402.5.1/dist/index.min.js"></script>
 

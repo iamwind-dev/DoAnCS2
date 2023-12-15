@@ -11,4 +11,14 @@ if (!empty($_POST)) {
         $data1 = get_a_record('hotel', $idks);
     }
     require("content/views/booking/final.php");
+} else {
+    $idb=$_GET['idb'];
+    $idt = $_GET['idt'];
+    $idks = $_GET['idks'];
+    $data = get_a_record('tour', $idt);
+    $data2 = get_a_record('book_tour', $idb);
+    if ($idks != '') {
+        $data1 = get_a_record('hotel', $idks);
+    }
+    require("content/views/booking/final.php");
 }

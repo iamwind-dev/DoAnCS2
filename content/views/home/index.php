@@ -172,7 +172,29 @@ người đã trải nghiệm</h2>
           <div class="col-xl-7 col-lg-10">
             <div class="overflow-hidden js-testimonials-slider">
               <div class="swiper-wrapper">
-      <?php for($i=1; $i<=5;$i++) { ?>
+                                <div class="swiper-slide">
+                  <div class="testimonials -type-2 text-center">
+                    <div class="mb-40">
+                      <img src="/public/img/misc/quote.svg" alt="quote">
+                    </div>
+
+                    <div class="text-22 md:text-18 fw-600 text-dark-1">
+                      "<?php echo $noibat4['comment'];
+                      $c = get_a_record('users', $noibat4['user_id']);
+                      foreach ($c as $p) {
+                        ?>"
+                                    </div>
+                                
+                                    <div class="mt-40">
+                                      <h5 class="text-17 lh-15 fw-500">Bạn <?php echo $p['user_name'] ?> -</h5>
+                                
+                                    </div>
+                                  </div>
+                                </div>
+      <?php }foreach ($noibat3 as $o) {
+        $y = get_a_record('users', $o['user_id']);
+        foreach ($y as $n) {
+          ?>
                 <div class="swiper-slide">
                   <div class="testimonials -type-2 text-center">
                     <div class="mb-40">
@@ -180,105 +202,41 @@ người đã trải nghiệm</h2>
                     </div>
 
                     <div class="text-22 md:text-18 fw-600 text-dark-1">
-                      "Cảm ơn team đã cho mình trải nghiệm quá ưng ý.
-Đi đúng hôm thời tiết đẹp,ngắm cảnh vịnh Hạ Long đẹp tuyệt vời.
-Nhân viên tư vấn nhiệt tình còn note lại khách dị ứng món gì,phục vụ chu đáo, buffet hải sản tươi ngon,phòng ốc đẹp
-Tuyệt vời lắm !!!"
+                      "<?php echo $o['comment'] ?>"
                     </div>
 
                     <div class="mt-40">
-                      <h5 class="text-17 lh-15 fw-500">Bạn Thanh Quân -</h5>
+                      <h5 class="text-17 lh-15 fw-500">Bạn <?php echo $n['user_name'] ?> -</h5>
                       
                     </div>
                   </div>
                 </div>
-<?php } ?>
-                <!-- <div class="swiper-slide">
-                  <div class="testimonials -type-2 text-center">
-                    <div class="mb-40">
-                      <img src="/public/img/misc/quote.svg" alt="quote">
-                    </div>
-
-                    <div class="text-22 md:text-18 fw-600 text-dark-1">
-                      "Our family was traveling via bullet train between cities in Japan with our luggage - the location for this hotel made that so easy. Agoda price was fantastic."
-                    </div>
-
-                    <div class="mt-40">
-                      <h5 class="text-17 lh-15 fw-500">Ali Tufan</h5>
-                      <div class="">Product Manager, Apple Inc</div>
-                    </div>
-                  </div>
-                </div>
-
-                <div class="swiper-slide">
-                  <div class="testimonials -type-2 text-center">
-                    <div class="mb-40">
-                      <img src="/public/img/misc/quote.svg" alt="quote">
-                    </div>
-
-                    <div class="text-22 md:text-18 fw-600 text-dark-1">
-                      "Our family was traveling via bullet train between cities in Japan with our luggage - the location for this hotel made that so easy. Agoda price was fantastic."
-                    </div>
-
-                    <div class="mt-40">
-                      <h5 class="text-17 lh-15 fw-500">Ali Tufan</h5>
-                      <div class="">Product Manager, Apple Inc</div>
-                    </div>
-                  </div>
-                </div>
-
-                <div class="swiper-slide">
-                  <div class="testimonials -type-2 text-center">
-                    <div class="mb-40">
-                      <img src="/public/img/misc/quote.svg" alt="quote">
-                    </div>
-
-                    <div class="text-22 md:text-18 fw-600 text-dark-1">
-                      "Our family was traveling via bullet train between cities in Japan with our luggage - the location for this hotel made that so easy. Agoda price was fantastic."
-                    </div>
-
-                    <div class="mt-40">
-                      <h5 class="text-17 lh-15 fw-500">Ali Tufan</h5>
-                      <div class="">Product Manager, Apple Inc</div>
-                    </div>
-                  </div>
-                </div>
-
-                <div class="swiper-slide">
-                  <div class="testimonials -type-2 text-center">
-                    <div class="mb-40">
-                      <img src="/public/img/misc/quote.svg" alt="quote">
-                    </div>
-
-                    <div class="text-22 md:text-18 fw-600 text-dark-1">
-                      "Our family was traveling via bullet train between cities in Japan with our luggage - the location for this hotel made that so easy. Agoda price was fantastic."
-                    </div>
-
-                    <div class="mt-40">
-                      <h5 class="text-17 lh-15 fw-500">Ali Tufan</h5>
-                      <div class="">Product Manager, Apple Inc</div>
-                    </div>
-                  </div>
-                </div> -->
+<?php }
+      } ?>
+                
 
               </div>
 
               <div class="pt-60 lg:pt-40">
                 <div class="pagination -avatars row x-gap-40 y-gap-20 justify-center js-testimonials-pagination">
-<?php for($i=1; $i<=1;$i++) { ?>
+<?php 
+$d=get_a_record('users',$noibat4['user_id']);
+foreach($d as $q) { ?>
                   <div class="col-auto">
                     <div class="pagination__item is-active">
-                      <img style="width:60px; border-radius: 50% " src="/public/img/avatars/author-auto.png" alt="image">
+                      <img style="width:60px; border-radius: 50% " src="/public/img/avatars/<?php echo $q['user_avatar']  ?>" alt="image">
                     </div>
                   </div>
 <?php } ?>
-<?php for($i=1; $i<=5;$i++) { ?>
+<?php foreach($noibat3 as $i)  {
+  $w= get_a_record('users', $i['user_id']);
+  foreach($w as $t) { ?>
                   <div class="col-auto">
                     <div class="pagination__item ">
-                      <img style='width:60px; border-radius:50%' src="/public/img/avatars/author-auto.png" alt="image">
+                      <img style='width:60px; border-radius:50%' src="/public/img/avatars/<?php echo $t['user_avatar'] ?>" alt="image">
                     </div>
                   </div>
-<?php } ?>
+<?php }}?>
                   <!-- <div class="col-auto">
                     <div class="pagination__item ">
                       <img src="/public/img/avatars/testimonials/3.png" alt="image">
@@ -343,7 +301,7 @@ Tuyệt vời lắm !!!"
             <?php foreach($noibat2 as $el){ ?>
             <div data-anim-child="slide-left delay-4" class="swiper-slide">
 
-              <a href="#" class="citiesCard -type-2 ">
+              <a href="index.php?controller=alltour&idl=<?php echo $el['id'] ?>" class="citiesCard -type-2 ">
                 <div class="citiesCard__image rounded-4 ratio ratio-3:4">
                   <img class="img-ratio rounded-4 js-lazy" data-src="../../../public/img/location/<?php echo $el['location_image_url'] ?>" src="#" alt="image">
                 </div>

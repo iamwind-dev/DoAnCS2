@@ -99,7 +99,7 @@
                       
 
                       <li>
-                        <a style='padding:10px'href="contact.html"><b>Liên Hệ</b></a>
+                        <a style='padding:10px'href="#ft"><b>Liên Hệ</b></a>
                       </li>
                       <li class="menu-item-has-children">
                         <div class="pl-15"> <a href="">
@@ -116,7 +116,7 @@
 
                           
                           <?php if($u['role_id']==1){ ?>
-                          <li><a href="admin.php">Admin</a></li>
+                          <li><a href="admin.php" target="_blank">Admin</a></li>
                           <?php } ?>
                           
 
@@ -124,7 +124,8 @@
 
                         
 
-                          <li><a href="#">Các Tour đã đặt</a></li>
+                          <li><a href="index.php?controller=info&action=booking">Các Tour đã đặt</a></li>
+                            <li><a href="index.php?controller=info&action=tourfav">Các Tour yêu thích</a></li>
                           <li><a href="index.php?controller=home&action=logout">Đăng Xuất</a></li>
                           <?php } ?>
 

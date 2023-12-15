@@ -40,7 +40,7 @@ include("/DA/content/views/shared/headerhome.php");
                                 <h2 class="text-22 fw-500 mt-40 md:mt-24">Hãy cho WinKTravel biết bạn là ai</h2>
                                 <div class="col-12">
                                     <form id="myform" action="../../../index.php?controller=booking&amp;action=final" method="post"
-                                enctype="multipart/form-data">
+                                enctype="multipart/form-data" target="_blank">
                                     <div class="form-input ">
                                         <input type="text" name="idt" value="<?php echo $idt ?>" hidden>
                                         <?php if (!empty($_POST['idks'])) { ?>
@@ -85,7 +85,7 @@ include("/DA/content/views/shared/headerhome.php");
                                 <div class="col-12">
 
                                     <div class="form-input ">
-                                        <textarea required name="ghichu" rows="3"></textarea>
+                                        <textarea  name="ghichu" rows="3"></textarea>
                                         <label class="lh-1 text-16 text-light-1">Ghi chú</label>
                                     </div>
 

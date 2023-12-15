@@ -15,7 +15,7 @@
             <div class=""></div>
           </div>
           <div class="col-auto">
-            <a href="index.php">
+            <a href="index.php?controller=alltour&idl=<?php echo $e['tour_location_id'] ?>">
               <div class="">
                 <?php echo $e['tour_location_name'] ?>
               </div>
@@ -34,7 +34,7 @@
       </div>
 
       <div class="col-auto">
-        <a href="#" class="text-14 text-blue-1 underline"
+        <a href="index.php?controller=alltour&idl=<?php echo $e['tour_location_id'] ?>" class="text-14 text-blue-1 underline"
           >Tất cả Tour
           <?php echo $e['tour_location_name'] ?>
         </a>
@@ -88,39 +88,61 @@
       </div>
 
       <div class="col-auto">
-        <div class="row x-gap-10 y-gap-10">
-              
-
-              <div class="col-auto">
-                <button class="button px-15 py-10 -blue-1 bg-light-2">
+        <div id="tourfav" class="row x-gap-10 y-gap-10">
+        <?php $data3 = get_tourfv($_SESSION['user']['id'], $e['id']);
+        if($data3==false){ 
+        ?>
+              <div id="remove" class="col-auto" style="display: none ;">
+                <button id="removetourfav" class="button px-15 py-10 text-light-2 bg-blue-1">
                   <i class="icon-heart mr-10"></i>
-                  Yêu tích
-                </button>
-                <button class="button px-15 py-10 text-light-2 bg-blue-1">
-                  <i class="icon-heart mr-10"></i>
-                  Yêu tích
+                  Yêu thích
                 </button>
               </div>
-            </div>
+              <div id="add" class="col-auto">
+                <button id="addtourfav" class="button px-15 py-10 -blue-1 bg-light-2" >
+                  <i class="icon-heart mr-10"></i>
+                  Yêu thích
+                </button>
+                
+              </div>
+<?php }else{ ?>
+                <div id="remove" class="col-auto">
+                <button id="removetourfav" class="button px-15 py-10 text-light-2 bg-blue-1" >
+                  <i class="icon-heart mr-10"></i>
+                  Yêu thích
+                </button>
+              </div>
+              <div id="add" class="col-auto" style="display: none ;">
+                <button id="addtourfav" class="button px-15 py-10 -blue-1 bg-light-2">
+                  <i class="icon-heart mr-10"></i>
+                  Yêu thích
+                </button>
+                
+              </div>
+              
+              <?php  } ?>
+                </div>
+              </div>
+              <input type="text" id="idtour" value="<?php echo $e['id'] ?>" hidden>
+          </div>
+        </div>
       </div>
-    </div>
-  </div>
-</section>
+    </section>
 
-<section class="pt-40 js-pin-container">
-  <div class="container">
-    <div class="row y-gap-30">
-      <div class="col-lg-8">
-        <div
-          class="relative d-flex justify-center overflow-hidden js-section-slider"
-          data-slider-cols="base-1"
-          data-nav-prev="js-img-prev"
-          data-nav-next="js-img-next"
-        >
-          <div class="swiper-wrapper">
-            <div class="swiper-slide">
-              <img
-                src="../../../public/img/tours/<?php echo $e['tour_image_url'] ?>"
+    <section class="pt-40 js-pin-container">
+      <div class="container">
+        <div class="row y-gap-30">
+          <div class="col-lg-8">
+            <div
+              class="relative d-flex justify-center overflow-hidden js-section-slider"
+              data-slider-cols="base-1"
+              data-nav-prev="js-img-prev"
+              data-nav-next="js-img-next"
+            >
+              <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                  <img
+                    src="../../../public/img/tours/<?php echo $e['tour_image_url'] ?>"
                 alt="image"
                 class="rounded-4 col-12 h-full object-cover"
               />
@@ -151,51 +173,9 @@
             </div> -->
           </div>
 
-          <div class="absolute h-full col-11">
-            <button
-              class="section-slider-nav -prev flex-center button -blue-1 bg-white shadow-1 size-40 rounded-full sm:d-none js-img-prev"
-            >
-              <i class="icon icon-chevron-left text-12"></i>
-            </button>
+          
 
-            <button
-              class="section-slider-nav -next flex-center button -blue-1 bg-white shadow-1 size-40 rounded-full sm:d-none js-img-next"
-            >
-              <i class="icon icon-chevron-right text-12"></i>
-            </button>
-          </div>
-
-          <div
-            class="absolute h-full col-12 z-2 px-20 py-20 d-flex justify-end items-end"
-          >
-            <a
-              href="../../../public/img/tours/<?php echo $e['tour_image_url'] ?>"
-              class="button -blue-1 px-24 py-15 bg-white text-dark-1 js-gallery"
-              data-gallery="gallery2"
-            >
-              See All 90 Photos
-            </a>
-            <a
-              href="img/gallery/1/2.png"
-              class="js-gallery"
-              data-gallery="gallery2"
-            ></a>
-            <a
-              href="img/gallery/1/3.png"
-              class="js-gallery"
-              data-gallery="gallery2"
-            ></a>
-            <a
-              href="img/gallery/1/4.png"
-              class="js-gallery"
-              data-gallery="gallery2"
-            ></a>
-            <a
-              href="img/gallery/1/5.png"
-              class="js-gallery"
-              data-gallery="gallery2"
-            ></a>
-          </div>
+          
         </div>
 
 

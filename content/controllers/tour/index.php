@@ -3,6 +3,7 @@ require_once('/DA/lib/functions.php');
 require_once('/DA/lib/models.php');
 require_once('/DA/content/models/tour.php');
 require_once('/DA/content/models/comment.php');
+require_once('/DA/content/models/user.php');
 
 
 $result = get_total_comment('comment', $_GET['id']);

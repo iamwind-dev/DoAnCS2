@@ -22,3 +22,12 @@ function userUpdate1()
         header('Location:index.php?controller=info&action=index');
     
 }
+function get_tourfv($id1,$id2){
+    global $conn;
+    $sql = "SELECT * FROM tourfav WHERE user_id =$id1 AND tour_id =$id2";
+    $query = mysqli_query($conn, $sql);
+    if (mysqli_num_rows($query) > 0) {
+        return true;
+    }
+    return false;
+}
