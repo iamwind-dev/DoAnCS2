@@ -95,20 +95,7 @@
                                                         </div>
                                                     </div>
                                                 </div>
-                                                <div class="mt-30">
-                                        <div class="fw-500">avatar</div>
-                                        <div class="containerr">
-                                            <input type="file" name="file" id="file" accept="image/*" hidden>
-                                            <div style="margin-left:50px;border-radius:300px;width:70% !important" class="img-area" data-img="">
-                                                <i class='bx bxs-cloud-upload icon'></i>
-                                                <h3>Upload Image</h3>
-                                                <p>Image size must be less than <span>2MB</span></p>
-                                                <img style="border-radius:50px !important" src="../../../public/img/avatars/<?php echo $element['user_avatar']; ?>" alt="">
-                                                            </div>
-                                                            <button type="button" class="select-image">Select Image</button>
-                                                        </div>
-                                                    </div>
-                                                    <input type="text" name="avatar" id="" value="<?php echo $element['user_avatar']; ?>" hidden>
+                                                
                                                         <div class="d-inline-block pt-30">
                                                             <input type="submit" class="button h-50 px-24 -dark-1 bg-blue-1 text-white" value="Lưu" form="myform">
                                                             </input>

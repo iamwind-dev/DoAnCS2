@@ -172,12 +172,7 @@ function userUpdate(){
     $tenvaitro = $mang1[1];
 
     $id = $_POST['id'];
-    if(!empty($_FILES['file']['tmp_name'])) {
-        $image = $_FILES['file']['name'];
-    }
-    else {
-        $image = $_POST['avatar'];
-    }
+    
 
     $user_update = array(
         'user_name' => escape($_POST['ten']),
@@ -187,7 +182,7 @@ function userUpdate(){
         'user_role' => $tenvaitro,
         'user_status_id' => $idtrangthai,
         'user_status' => $tentrangthai,
-        'user_avatar' => $image,
+        
     );
     global $conn;
     $email = addslashes($_POST['email']);
