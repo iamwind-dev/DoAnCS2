@@ -43,6 +43,8 @@ include("/DA/content/views/shared/headerhome.php");
                                 enctype="multipart/form-data" target="_blank">
                                     <div class="form-input ">
                                         <input type="text" name="idt" value="<?php echo $idt ?>" hidden>
+                                        <input type="date" name="ngaydi" value="<?php echo $ngaydi ?>" hidden>
+                                        <input type="date" name="ngayve" value="<?php echo $ngayve ?>" hidden>
                                         <?php if (!empty($_POST['idks'])) { ?>
                                         <input type="text" name="idks" value="<?php echo $idks ?>" 
                                         hidden>
@@ -170,7 +172,7 @@ include("/DA/content/views/shared/headerhome.php");
                                 <div class="row y-gap-20 justify-between">
                                     <div class="col-auto">
                                         <div class="text-15">Ngày đi</div>
-                                        <div class="fw-500"><?php echo $e['tour_start_date']; ?></div>
+                                        <div class="fw-500"><?php echo $ngaydi; ?></div>
                                         
                                     </div>
 
@@ -180,7 +182,7 @@ include("/DA/content/views/shared/headerhome.php");
 
                                     <div class="col-auto text-right md:text-left">
                                         <div class="text-15">Ngày về</div>
-                                        <div class="fw-500"><?php echo $e['tour_end_date']; ?></div>
+                                        <div class="fw-500"><?php echo $ngayve; ?></div>
                                         
                                     </div>
                                 </div>

@@ -1,66 +1,26 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
-    <title>See more with Animation</title>
-    <style>
-        .content {
-            max-height: 100px;
-            /* Chiều cao tối đa ban đầu */
-            overflow: hidden;
-            /* Ẩn phần nội dung vượt quá chiều cao tối đa */
-            transition: max-height 0.3s ease-out;
-            /* Hiệu ứng khi mở rộng nội dung */
-        }
-
-        .showContent {
-            max-height: 500px;
-            /* Chiều cao tối đa khi mở rộng toàn bộ nội dung */
-            transition: max-height 0.5s ease-in-out;
-            /* Hiệu ứng khi mở rộng */
-            animation-name: fadeIn;
-            animation-duration: 0.5s;
-        }
-
-        .seeMoreBtn {
-            cursor: pointer;
-            color: blue;
-            transition: color 0.3s ease;
-            /* Hiệu ứng khi hover vào nút */
-        }
-
-        .seeMoreBtn:hover {
-            color: darkblue;
-            /* Màu sắc khi hover vào nút */
-        }
-
-        @keyframes fadeIn {
-            from {
-                opacity: 0;
-            }
-
-            to {
-                opacity: 1;
-            }
-        }
-    </style>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="public/css/style.css">
+    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css">
+    
+    <title>Document</title>
 </head>
-
 <body>
-    <div class="content">
-        <!-- Phần nội dung được hiển thị ban đầu -->
-        <p>Đây là một phần của nội dung... Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dignissimos sit necessitatibus fugit maiores hic magni, eveniet totam mollitia consequatur fugiat. Amet ratione incidunt saepe nulla aliquam officia fugit temporibus sapiente!Lorem Lorem, ipsum dolor sit amet consectetur adipisicing elit. Et, architecto distinctio quidem ea vero quos ab ad officia hic, aliquam veniam iusto omnis eum eius quas deserunt tempora nam exercitationem? Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum assumenda ratione obcaecati saepe? Voluptatibus nam, odit fugit laboriosam ad doloremque ut quae aliquam expedita veniam provident suscipit! Optio, eius praesentium. Lorem ipsum dolor sit, amet consectetur adipisicing elit. Cupiditate molestias unde quia nobis vitae saepe suscipit perspiciatis sequi esse consequatur? Nulla, porro. Voluptatibus velit consectetur quia aut repellendus fuga magni. Lorem ipsum dolor sit amet consectetur adipisicing elit. Est nam sit quo, explicabo dolores aspernatur impedit perspiciatis quasi non deleniti, velit earum debitis modi id sapiente adipisci praesentium eligendi nulla?</p>
-    </div>
-    <div class="seeMoreBtn">See more</div>
-
-    <script>
-        document.querySelector('.seeMoreBtn').addEventListener('click', function () {
-            const content = document.querySelector('.content');
-            content.classList.toggle('showContent'); // Thêm hoặc xóa lớp showContent để hiển thị hoặc ẩn nội dung
-            this.innerText = content.classList.contains('showContent') ? 'See less' : 'See more'; // Thay đổi văn bản của nút
-        });
-    </script>
+    
+<fieldset class="rating">
+    <input type="radio" id="star5" name="rating" value="5" /><label class = "full" for="star5" title="Awesome - 5 stars"></label>
+    <input type="radio" id="star4half" name="rating" value="4 and a half" /><label class="half" for="star4half" title="Pretty good - 4.5 stars"></label>
+    <input type="radio" id="star4" name="rating" value="4" /><label class = "full" for="star4" title="Pretty good - 4 stars"></label>
+    <input type="radio" id="star3half" name="rating" value="3 and a half" /><label class="half" for="star3half" title="Meh - 3.5 stars"></label>
+    <input type="radio" id="star3" name="rating" value="3" /><label class = "full" for="star3" title="Meh - 3 stars"></label>
+    <input type="radio" id="star2half" name="rating" value="2 and a half" /><label class="half" for="star2half" title="Kinda bad - 2.5 stars"></label>
+    <input type="radio" id="star2" name="rating" value="2" /><label class = "full" for="star2" title="Kinda bad - 2 stars"></label>
+    <input type="radio" id="star1half" name="rating" value="1 and a half" /><label class="half" for="star1half" title="Meh - 1.5 stars"></label>
+    <input type="radio" id="star1" name="rating" value="1" /><label class = "full" for="star1" title="Sucks big time - 1 star"></label>
+    <input type="radio" id="starhalf" name="rating" value="half" /><label class="half" for="starhalf" title="Sucks big time - 0.5 stars"></label>
+</fieldset>
 </body>
-
 </html>

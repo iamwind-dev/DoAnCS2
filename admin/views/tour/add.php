@@ -67,14 +67,14 @@
                                         <div class="col-5">
                                             <div class="text-18 fw-500 mb-10">Số lượng người tham gia</div>
                                             <div class="form-input ">
-                                                <input name="sltg" type="text" required>
+                                                <input name="sltg" type="number" required min="1">
                                                 <label class="lh-1 text-16 text-light-1">Số lượng người tham gia</label>
                                             </div>
                                         </div>
                                         <div class="col-5">
                                             <div class="text-18 fw-500 mb-10">Giá</div>
                                             <div class="form-input ">
-                                                <input name="gia" type="text" required>
+                                                <input name="gia" type="number" required min="100000">
                                                 <label class="lh-1 text-16 text-light-1">Giá</label>
                                             </div>
                                         </div>
@@ -90,6 +90,15 @@
                                             </div>
                                         </div>
                                         <div class="col-5">
+                                            <div class="text-18 fw-500 mb-10">Hành trình:</div>
+                                            <div class="form-input ">
+                                                <input name="hanhtrinh" type="text" required>
+                                                <label class="lh-1 text-16 text-light-1">Hành trình</label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-4">
                                             <div class="text-18 fw-500 mb-10">Địa điểm xuất phát</div>
                                             <div class="form-input ">
                                                 <input name="diemxp" type="text" required>
@@ -97,26 +106,24 @@
                                                     phát</label>
                                             </div>
                                         </div>
-                                    </div>
-                                    <div class="row">
-                                        <div class="col-5">
-                                            <div class="text-18 fw-500 mb-10">Hành trình:</div>
-                                            <div class="form-input ">
-                                                <input name="hanhtrinh" type="text" required>
-                                                <label class="lh-1 text-16 text-light-1">Hành trình</label>
-                                            </div>
-                                        </div>
-                                        <div class="col-5">
+                                        <div class="col-4">
                                             <div class="text-18 fw-500 mb-10">Lịch Trình</div>
                                             <div class="form-input ">
                                                 <input name="lichtrinh" type="text" required>
-                                                <label class="lh-1 text-16 text-light-1">Địa Điểm xuất
-                                                    phát</label>
+                                                <label class="lh-1 text-16 text-light-1">Lịch trình</label>
                                             </div>
 
 
                                         </div>
+                                            <div class="col-4">
+                                            <div class="text-18 fw-500 mb-10">Thời lượng tour</div>
+                                            <div class="form-input ">
+                                                <input name="thoiluong" type="number" required>
+                                                <label class="lh-1 text-16 text-light-1">Ngày</label>
+                                            </div>
 
+
+                                        </div>
 
 
                                     </div>
@@ -143,8 +150,8 @@
 
 
 
-
-                                <div class="col-12">
+                                                        <div class="row">
+                                <div class="col-6">
                                     <div class="text-18 fw-500 mb-10">Mô tả tour</div>
                                     <div class="form-input ">
                                         <textarea name="mota" id="editor"></textarea>
@@ -152,7 +159,7 @@
                                     </div>
 
                                 </div>
-                                <div class="col-12">
+                                <div class="col-6">
                                     <div class="text-18 fw-500 mb-10">Giới thiệu tour</div>
                                     <div class="form-input ">
                                         <textarea name="gioithieu" id="editor1"></textarea>
@@ -160,6 +167,7 @@
                                     </div>
 
                                 </div>
+                                                        </div>
 
                                 <div class="mt-30">
                                     <div class="fw-500">Hình ảnh</div>

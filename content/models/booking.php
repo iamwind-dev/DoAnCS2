@@ -18,6 +18,8 @@ function booking_add()
         'capacity' => intval($_SESSION['songuoi']),
         'room' => intval($_SESSION['sophong']),
         'user_id' => intval($_SESSION['user']['id']),
+        'date_start' => $_POST['ngaydi'],
+        'date_end' => $_POST['ngayve'],
     );
     $idb=insert_get_id('book_tour', $book);
     return $idb;

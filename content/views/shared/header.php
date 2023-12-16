@@ -14,10 +14,11 @@
   <link rel="preconnect" href="https://fonts.googleapis.com/">
   <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Jost:wght@400;500;600&amp;display=swap" rel="stylesheet">
-
+<link rel="stylesheet" href="https://netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css">
   <!-- Stylesheets -->
   <link rel="stylesheet" href="../../../public/css/vendors.css">
   <link rel="stylesheet" href="../../../public/css/main.css">
+  <link rel="icon" href="../../../public/img/general/logo.ico" type="image/ico">
   <script>window.addEventListener("scroll", function () {
   var header = document.querySelector("header");
   header.classList.toggle("is-sticky", window.scrollY > 0);
@@ -102,7 +103,7 @@
                         <a style='padding:10px'href="#ft"><b>Liên Hệ</b></a>
                       </li>
                       <li class="menu-item-has-children">
-                        <div class="pl-15"> <a href="">
+                        <div class="pl-15"> <a href="index.php?controller=info">
                           <?php foreach ($user as $u){ ?>
                             <img src="/public/img/avatars/<?php echo $u['user_avatar']  ?>" alt="image" class="size-40 rounded-22 object-cover">
                             <b style='padding:10px'> <?php echo$u['user_name'] ?></b>

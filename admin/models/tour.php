@@ -43,6 +43,8 @@ require_once('/DA/lib/config/database.php');
 
 function tour_update()
 {
+    date_default_timezone_set('Asia/Ho_Chi_Minh');
+    $currentDateTime = date("Y-m-d H:i:s");
     $trangthai = $_POST['trangthai'];
     $mang = explode('-', $trangthai);
     $idtrangthai = $mang[0];
@@ -81,6 +83,8 @@ function tour_update()
         'tour_image_url' => ($image),
         'tour_start_date' => ($start),
         'tour_end_date' => ($end),
+        'tour_duration' => intval($_POST['thoiluong']),
+        'tour_edit_date' => $currentDateTime,
     );
     update('tour', $id, $tour);
     //chuyển hướng nếu them dc
@@ -89,6 +93,8 @@ function tour_update()
 
 function tour_add()
 {
+    date_default_timezone_set('Asia/Ho_Chi_Minh');
+    $currentDateTime = date("Y-m-d H:i:s");
     $trangthai = $_POST['trangthai'];
     $mang = explode('-', $trangthai);
     $idtrangthai = $mang[0];
@@ -118,6 +124,8 @@ function tour_add()
         'tour_image_url' => ($_FILES['file']['name']),
         'tour_start_date' => ($start),
         'tour_end_date' => ($end),
+        'tour_duration' => intval($_POST['thoiluong']),
+        'tour_create_date' => $currentDateTime,
     );
     insert('tour', $tour);
     //chuyển hướng nếu them dc

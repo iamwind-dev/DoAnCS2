@@ -5,7 +5,7 @@ require_once('/DA/content/models/tour.php');
 require_once('/DA/content/models/comment.php');
 require_once('/DA/content/models/user.php');
 
-
+increaseValue('tour', 'tour_total_view', $_GET['id']);
 $result = get_total_comment('comment', $_GET['id']);
 $total_records = $result;
 

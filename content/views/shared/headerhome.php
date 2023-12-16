@@ -14,10 +14,12 @@
   <link rel="preconnect" href="https://fonts.googleapis.com/">
   <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Jost:wght@400;500;600&amp;display=swap" rel="stylesheet">
-
+<link rel="icon" href="../../../public/img/general/logo.ico" type="image/ico">
   <!-- Stylesheets -->
+  <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css">
   <link rel="stylesheet" href="../../../public/css/vendors.css">
   <link rel="stylesheet" href="../../../public/css/main.css">
+  <link rel="stylesheet" href="../../../public/css/style.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
   <title>WinK Travel</title>
 </head>
@@ -106,7 +108,7 @@
                           <div class="pl-15"> 
                               <?php foreach($user as $u) { ?>
                               
-                                <a>
+                                <a href="index.php?controller=info">
                                   <?php $avatar = $u['user_avatar'] ?>
                                   <?php $name = $u['user_name'] ?>
                                   <?php $id = $u['id'] ?>
@@ -125,7 +127,7 @@
           
           
                             <?php if($u['role_id'] == 1) { ?>
-                                <li><a href="admin.php" target="_blank"></a>Admin</a></li>
+                                <li><a href="admin.php" target="_blank">Admin</li>
                               <?php } ?>
                           
           
@@ -148,10 +150,10 @@
           
                   </div>
                 </div>
-          
+          <input type="text"  id="idu" value="<?php echo $_SESSION['user']['id']; ?>" hidden>
               <?php } ?>
           
-          <input type="text"  id="idu" value="<?php echo $_SESSION['user']['id']; ?>" hidden>
+          
           
           
           

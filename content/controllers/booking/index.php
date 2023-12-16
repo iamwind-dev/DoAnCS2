@@ -28,7 +28,9 @@ if (isset($_SESSION['user'])) {
 
     $_SESSION['total'] = $giatour * $_SESSION['songuoi'] + $giaks * $_SESSION['sophong'];
     $total = $_SESSION['total'];
-
+    $tourduration = $_POST['thoiluong'];
+    $ngaydi = $_POST['ngaydi'];
+    $ngayve = date('Y-m-d', strtotime($ngaydi . ' + ' . $tourduration . ' days'));
     require("content/views/booking/index.php");
 } else {
     

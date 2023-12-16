@@ -149,6 +149,15 @@ function get_total($table)
     return $row['total'];
 }
 
+function get_total_id($table,$id,$type)
+{
+    global $conn;
+    $sql = "SELECT COUNT(*) as total FROM $table WHERE $type=$id";
+    $query = mysqli_query($conn, $sql) or die(mysqli_error($conn));
+    $row = mysqli_fetch_assoc($query);
+    return $row['total'];
+}
+
 function get_all_pag($table,$start,$limit)
 {
     $sql = "SELECT * FROM `$table` LIMIT $start,$limit";
@@ -193,3 +202,15 @@ function get_all_tour_location( $start, $limit,$idl)
     }
     return $data;
 }
+
+
+function increaseValue($table,$field,$id) {
+    global $conn;
+
+    // Tăng giá trị của trường 'quantity' cho sản phẩm có 'product_id' là $productId
+    $sql = "UPDATE `$table` SET `$field` = `$field` + 1 WHERE id = $id";
+
+    mysqli_query($conn, $sql);
+
+}
+

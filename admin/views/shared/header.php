@@ -21,9 +21,10 @@
     <link rel="shortcut icon" type="image/png" href="/DA/public/img/logo-dark-3.png" />
 
     <!-- Stylesheets -->
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css">
     <link rel="stylesheet" href="/public/css/vendors.css">
     <link rel="stylesheet" href="/public/css/main.css">
-    
+    <link rel="icon" href="../../../public/img/general/logo.ico" type="image/ico">
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <title>Administrator - WinK Travel</title>
 </head>
@@ -110,7 +111,7 @@
                                 </div><?php foreach($user as $u) { ?>
                                     <div class="col-auto">
                                         <?php echo $u['user_name'] ?>
-                                        <span style="margin-left:20px">(Admin)</span>
+                                        <span style="margin-left:20px"><b>(<?php echo $u['user_role'] ?>)</b></span>
                                     
                                     </div>
                                 </div>
@@ -175,7 +176,7 @@
                             </div>
 
                             <div class="accordion__content">
-                                <ul class="list-disc pt-15 pb-5 pl-40">
+                                <ul  class="list-disc pt-15 pb-5 pl-40">
 
                                     <li>
                                         <a href="/admin.php?controller=location" class="text-15">Tất cả Địa điểm</a>

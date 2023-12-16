@@ -12,7 +12,7 @@
             </a>
           </div>
           <div class="col-auto">
-            <div class=""></div>
+            <div class="">/</div>
           </div>
           <div class="col-auto">
             <a href="index.php?controller=alltour&idl=<?php echo $e['tour_location_id'] ?>">
@@ -23,7 +23,7 @@
           </div>
           <div class="col-auto">
             <div class="">
-              >
+              /
               <?php echo $e['tour_name'] ?>
             </div>
           </div>
@@ -57,27 +57,23 @@
           <div class="col-auto">
             <div class="d-flex items-center">
               <div class="d-flex x-gap-5 items-center">
+                <?php for($i=1; $i<=$e['tour_star']; $i++){ ?>
                 <i class="icon-star text-10 text-yellow-1"></i>
-
-                <i class="icon-star text-10 text-yellow-1"></i>
-
-                <i class="icon-star text-10 text-yellow-1"></i>
-
-                <i class="icon-star text-10 text-yellow-1"></i>
-
-                <i class="icon-star text-10 text-yellow-1"></i>
+                <?php } ?>
+                
               </div>
 
-              <div class="text-14 text-light-1 ml-10">3,014 reviews</div>
+              <div class="text-14 text-light-1 ml-10"><?php echo get_total_id('comment', $e['id'], 'tour_id') ?> bình luận | <?php echo $e['tour_total_view'] ?> lượt xem</div>
+              </div>
+            
             </div>
-          </div>
 
-          <div class="col-auto">
-            <div class="row x-gap-10 items-center">
-              <div class="col-auto">
-                <div class="d-flex x-gap-5 items-center">
-                  <i class="icon-placeholder text-16 text-light-1"></i>
-                  <div class="text-15 text-light-1">
+            <div class="col-auto">
+              <div class="row x-gap-10 items-center">
+                <div class="col-auto">
+                  <div class="d-flex x-gap-5 items-center">
+                    <i class="icon-placeholder text-16 text-light-1"></i>
+                    <div class="text-15 text-light-1">
                     <?php echo $e['tour_location_name'] ?>
                   </div>
                 </div>
@@ -94,7 +90,7 @@
         ?>
               <div id="remove" class="col-auto" style="display: none ;">
                 <button id="removetourfav" class="button px-15 py-10 text-light-2 bg-blue-1">
-                  <i class="icon-heart mr-10"></i>
+                  <i class="icon-heart mr-10" style='content: "\e902";'></i>
                   Yêu thích
                 </button>
               </div>
@@ -256,9 +252,10 @@
         <div class="d-flex justify-end js-pin-content">
           <div class="w-360 lg:w-full d-flex flex-column items-center">
             <div class="px-30 py-30 rounded-4 border-light bg-white shadow-4">
-              <div class="text-14 text-light-1">
-                <span class="text-20 fw-500 text-dark-1 ml-5"
-                  >Giá: <br />
+              <div class="text-20 text-light-1">
+                Giá:
+                <span class="text-20 fw-500 text-blue-1 ml-5"
+                  > <br />
                   <?php echo number_format($e['tour_price'], 0, ',', '.').'VND'; ?>
                 </span>
                 <input type="text" hidden name="idt" value="<?php echo $_GET['id'] ?>">
@@ -270,12 +267,11 @@
                     class="searchMenu-date px-20 py-10 border-light rounded-4 -right js-form-dd js-calendar"
                   >
                     <div data-x-dd-click="searchMenu-date">
-                      <h4 class="text-15 fw-500 ls-2 lh-16">Ngày đi - Ngày về</h4>
+                      <h4 class="text-15 fw-500 ls-2 lh-16">Ngày đi</h4>
 
                       <div class="text-15 text-light-1 ls-2 lh-16">
-                        <span class="js-first-date"><?php echo date("d-m-Y", strtotime($e['tour_start_date'])) ?></span>
-                        -
-                        <span class="js-last-date"><?php echo date("d-m-Y",strtotime($e['tour_end_date'])) ?></span>
+                        <input type="date" name="ngaydi" min="<?php echo $e['tour_start_date'] ?>" max="<?php echo $e['tour_end_date'] ?>">
+                        <input type="number" name="thoiluong" value="<?php echo $e['tour_duration'] ?>" hidden>
                       </div>
                     </div>
 
@@ -295,7 +291,7 @@
                       </h4>
 
                       <div class="text-15 text-light-1 ls-2 lh-16">
-                        <input type="text" name="songuoi" required>
+                        <input type="number" name="songuoi" min="1" max="<?php echo $e['tour_max_capacity'] ?>"required>
                       </div>
 
                       
@@ -314,7 +310,7 @@
                       </h4>
 
                       <div class="text-15 text-light-1 ls-2 lh-16">
-                        <input type="text" name="sophong" >
+                        <input type="number" name="sophong" min="1">
                       </div>
 
                       
@@ -345,7 +341,7 @@
                   <div
                     class="searchMenu-date px-20 py-10 border-light rounded-4 -right js-form-dd js-calendar">
                     <div data-x-dd-click="searchMenu-date">
-                          <input
+                          <input 
                             style="width: auto !important"
                             type="checkbox"
                             name="idks"
@@ -356,7 +352,7 @@
                       />
                     
                       <b><?php echo $a['hotel_name'] ?></b><br>
-                    Giá:  <?php echo number_format($a['hotel_price'], 0, ',', '.') . 'VND'; ?>
+                     <div class="text-15 text-blue-1 ls-2 lh-16"> <?php echo number_format($a['hotel_price'], 0, ',', '.') . 'VND'; ?> </div>
                       <div class="text-15 text-light-1 ls-2 lh-16">
                         <?php if($a['hotel_status_id']==2){ ?>
                         Trạng Thái:<span class="rounded-100 py-4 px-10 text-center text-14 fw-500 bg-red-3 text-red-2"><?php echo $a['hotel_status']; ?></span>
@@ -382,7 +378,7 @@
           </div>
         </div>
       </div>
-      </form>
+      
     </div>
   </div>
 </section>
@@ -502,7 +498,7 @@
                         data-open-change-title="See less"
                         class="d-block lh-15 text-14 text-blue-1 underline fw-500 mt-5"
                       >
-                        See details & photo
+                        See more
                       </button>
                     </div>
                   </div>
@@ -530,9 +526,29 @@
         <div class="d-flex items-center mt-20">
           <div
             class="flex-center bg-blue-1 rounded-4 size-70 text-22 fw-600 text-white">
-            4.8
+            <?php echo number_format($e['tour_star'],1)  ?>
           </div>
           
+                <fieldset class="rating">
+    <input type="radio" id="star5" name="rating" value="5" /><label class = "full" for="star5" title="Awesome - 5 stars"></label>
+    <input type="radio" id="star4half" name="rating" value="4.5" /><label class="half" for="star4half" title="Pretty good - 4.5 stars"></label>
+    <input type="radio" id="star4" name="rating" value="4" /><label class = "full" for="star4" title="Pretty good - 4 stars"></label>
+    <input type="radio" id="star3half" name="rating" value="3.5" /><label class="half" for="star3half" title="Meh - 3.5 stars"></label>
+    <input type="radio" id="star3" name="rating" value="3" /><label class = "full" for="star3" title="Meh - 3 stars"></label>
+    <input type="radio" id="star2half" name="rating" value="2.5" /><label class="half" for="star2half" title="Kinda bad - 2.5 stars"></label>
+    <input type="radio" id="star2" name="rating" value="2" /><label class = "full" for="star2" title="Kinda bad - 2 stars"></label>
+    <input type="radio" id="star1half" name="rating" value="1.5" /><label class="half" for="star1half" title="Meh - 1.5 stars"></label>
+    <input type="radio" id="star1" name="rating" value="1" /><label class = "full" for="star1" title="Sucks big time - 1 star"></label>
+    <input type="radio" id="starhalf" name="rating" value="half" /><label class="half" for="starhalf" title="Sucks big time - 0.5 stars"></label>
+    <input type="number"  id="num" value="<?php echo $e['tour_number_of_rating'] ?>" hidden>
+    <input type="number"  id="rating" value="<?php echo $e['tour_star'] ?>" hidden>
+</fieldset>
+              </form>
+
+                
+
+                
+              
         </div>
       </div>
 
@@ -652,6 +668,8 @@ $(document).ready(function(){
 <script>
             $("#btnGui").click(function () {
               // Lấy giá trị của #noidung
+              var rating = $('input[name="rating"]:checked').val();
+        
     var noidung = $('#noidung').val();
 
     // Kiểm tra noidung có rỗng không
@@ -663,10 +681,10 @@ $(document).ready(function(){
                     method: "POST",
                     url: '/content/controllers/comment/postcomment.php',
                     // data: { idtour: $('#idtour').val(), noidung: $('#noidung').val(),iduser: $('#iduser').val() ,avatar: $('#avatar').val() ,name: $('#name').val(), time : $('#time').val()},
-                    data: { idt: $('#idtour').val(), noidung: $('#noidung').val(),idu: $('#iduser').val() },
+                    data: { idt: $('#idtour').val(), noidung: $('#noidung').val(),idu: $('#iduser').val() ,rating: $('input[name="rating"]:checked').val(),num: $('#num').val(),rate: $('#rating').val()},
                 })
                     .done(function (data) {
-
+                      
                       function formatTimeAgo(commentTime) {
     var now = new Date(); // Thời gian hiện tại
     var difference = now - commentTime; // Độ chênh lệch thời gian
@@ -704,6 +722,7 @@ var timeAgo = formatTimeAgo(commentTime);
                         var content =$('#noidung').val();
                         var comment = '<div class="col-12"><div class="row x-gap-20 y-gap-20 items-center"><div class="col-auto"><img style="width:50px; border-radius:50%" src="../../../public/img/avatars/' + avatar + '" alt="image" /></div><div class="col-auto"><div class="fw-500 lh-15">' + name + '</div><div class="text-14 text-light-1 lh-15">'+timeAgo+'</div>  </div></div><p class="text-15 text-dark-1 mt-10">' + content + '  </p></div>'
                           $("#binhluan").prepend(comment);
+                            
                       });
                       
               })

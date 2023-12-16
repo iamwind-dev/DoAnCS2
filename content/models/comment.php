@@ -14,10 +14,7 @@ function comment_add()
 
 }
 
-function showCommentt($id,$limit,$offset){
-    
-    
-}
+
 
 function get_total_comment($table,$id)
 {

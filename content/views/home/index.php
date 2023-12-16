@@ -19,17 +19,62 @@
                         </div>
 
                         <div data-anim-child="slide-up delay-6"
-                            class="mainSearch -w-900 bg-white px-10 py-10 lg:px-20 lg:pt-5 lg:pb-20 rounded-100 mt-40">
-                            <div class="button-grid items-center">
+                            class="mainSearch -w-1000 bg-white px-10 py-10 lg:px-20 lg:pt-5 lg:pb-20 rounded-100 mt-40">
+                            <form action="index.php?controller=alltour" method="post">
 
+                              <div class="button-grid items-center">
+                                
+                                <div class="searchMenu-loc px-30 lg:py-20 lg:px-0 js-form-dd js-liverSearch">
+                                  
+
+                                    <div data-x-dd-click="searchMenu-loc">
+                                        <h4 class="text-15 fw-500 ls-2 lh-16">Địa điểm</h4>
+
+                                        <div class="text-15 text-light-1 ls-2 lh-16">
+                                            <input autocomplete="off" name="diadiem" type="search" placeholder="Bạn muốn đi đâu?"
+                                                class="js-search js-dd-focus" />
+                                        </div>
+                                    </div>
+
+
+                                    <div class="searchMenu-loc__field shadow-2 js-popup-window"
+                                        data-x-dd="searchMenu-loc" data-x-dd-toggle="-is-active">
+                                        
+                                    </div>
+                                </div>
                                 <div class="searchMenu-loc px-30 lg:py-20 lg:px-0 js-form-dd js-liverSearch">
 
                                     <div data-x-dd-click="searchMenu-loc">
-                                        <h4 class="text-15 fw-500 ls-2 lh-16">Địa Điểm</h4>
+                                        <h4 class="text-15 fw-500 ls-2 lh-16">Ngày</h4>
 
                                         <div class="text-15 text-light-1 ls-2 lh-16">
-                                            <input autocomplete="off" type="search" placeholder="Bạn muốn đi đâu?"
+                                            <input autocomplete="off" name="ngay" type="date" 
                                                 class="js-search js-dd-focus" />
+                                        </div>
+                                    </div>
+
+
+                                    <div class="searchMenu-loc__field shadow-2 js-popup-window"
+                                        data-x-dd="searchMenu-loc" data-x-dd-toggle="-is-active">
+                                        
+                                    </div>
+                                </div>
+                                <div class="searchMenu-loc px-30 lg:py-20 lg:px-0 js-form-dd js-liverSearch">
+
+                                    <div data-x-dd-click="searchMenu-loc">
+                                        <h4 class="text-15 fw-500 ls-2 lh-16">Mức giá</h4>
+
+                                        <div class="text-15 text-light-1 ls-2 lh-16">
+                                            <select name="gia">
+                                                      <option value="">Chọn giá tour</option>
+                                                      <option value="0 - 2000000">Dưới 2tr</option>
+                                                      <option value="2000000 - 4000000">Từ 2tr - 4tr</option>
+                                                      <option value="4000000 - 6000000">Từ 4tr - 6tr</option>
+                                                      <option value="6000000 - 10000000">Từ 6tr - 10tr</option>
+                                                      <option value="10000000 - 20000000">Từ 10tr - 20tr</option>
+                                                      <option value="20000000 - 50000000">Từ 20tr - 50tr</option>
+                                                      <option value="50000000 - 80000000">Trên 50tr</option>
+                                              </select>
                                         </div>
                                     </div>
 
@@ -49,6 +94,7 @@
                                     </button>
                                 </div>
                             </div>
+                            </form>
                         </div>
                     </div>
                 </div>
@@ -111,7 +157,7 @@
               </div>
 
               <div class="activityCard__content mt-10">
-                <div class="text-14 lh-14 text-light-1 mb-5">6+ hours</div>
+                <div class="text-14 lh-14 text-light-1 mb-5"><?php echo TimeAgo($e['tour_create_date'])  ?></div>
 
                 <h4 class="activityCard__title lh-16 fw-500 text-dark-1 text-18">
                   <span><?php echo $e['tour_name'] ?></span>
@@ -125,8 +171,8 @@
                       <div class="icon-star text-yellow-1 text-10 mr-5"></div>
 
                       <div class="text-14 text-light-1">
-                        <span class="text-15 text-dark-1 fw-500">4.82</span>
-                        94 reviews
+                        <span class="text-15 text-dark-1 fw-500"><?php number_format($e['tour_star'], 1) ?></span>
+                        <?php echo get_total_id('comment',$e['id'],'tour_id') ?> bình luận
                       </div>
                     </div>
                   </div>

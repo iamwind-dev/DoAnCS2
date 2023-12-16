@@ -2358,7 +2358,7 @@ h6 {
 
 .masthead.-type-6 {
   position: relative;
-  padding-top: 360px;
+  padding-top: 200px;
   padding-bottom: 300px;
 }
 
@@ -3990,7 +3990,7 @@ h6 {
 
 .mainSearch .button-grid {
   display: grid;
-  grid-template-columns: 1fr 250px  auto;
+  grid-template-columns: 250px 250px 250px 190px;
 }
 
 .mainSearch .button-grid > * + * {

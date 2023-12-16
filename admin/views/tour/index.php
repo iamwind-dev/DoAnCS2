@@ -39,7 +39,7 @@ include('/DA/admin/views/shared/header.php');
               <table class="table-4 -border-bottom col-12">
                 <thead class="bg-light-2">
                   <tr>
-                    <th style="width: 100px !important">STT</th>
+                    <th style="width: 50px !important">STT</th>
                     <th style="width: 300px">Tên Tour</th>
                     <th style="width: 300px"style="width: 300px">Ảnh</th>
                     <th style="width: 500px">Lịch Trình/Giá</th>
@@ -80,9 +80,9 @@ include('/DA/admin/views/shared/header.php');
                           <b>Địa điểm:</b>
                         <?php echo $element['tour_location_name']; ?><br><br><b>Di Chuyển:</b>
                         <?php echo $element['tour_vehicle']; ?><br><br><b>Điểm Xuất Phát:</b>
-                        <?php echo $element['tour_starting_point']; ?><br><br><b>Ngày đi:
+                        <?php echo $element['tour_starting_point']; ?><br><br><b>Ngày bắt đầu:
                           </b>
-                        <?php echo date('d/m/Y', strtotime($element['tour_start_date'])); ?><br><br><b>Ngày về:
+                        <?php echo date('d/m/Y', strtotime($element['tour_start_date'])); ?><br><br><b>Ngày kết thúc:
                           </b>
                         <?php echo date('d/m/Y', strtotime($element['tour_end_date'])); ?>
                       </td>
@@ -98,7 +98,7 @@ include('/DA/admin/views/shared/header.php');
                       </td>
                       <td>
                         <div class="rounded-4 size-35 bg-blue-1 text-white flex-center text-12 fw-600">
-                          4.8
+                          <?php echo number_format($element['tour_star'], 1, ',', '.');  ?>
                         </div>
                       </td>
                       <td>

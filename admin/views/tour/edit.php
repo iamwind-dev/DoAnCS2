@@ -81,7 +81,7 @@
                                             <div class="col-5">
                                                 <div class="text-18 fw-500 mb-10">Số lượng người tham gia</div>
                                                 <div class="form-input ">
-                                                    <input name="sltg" type="text" required
+                                                    <input name="sltg" type="number" required min="1"
                                                         value="<?php echo $element['tour_max_capacity']; ?>">
                                                     <label class="lh-1 text-16 text-light-1">Số lượng người tham
                                                         gia</label>
@@ -90,8 +90,8 @@
                                             <div class="col-5">
                                                 <div class="text-18 fw-500 mb-10">Giá</div>
                                                 <div class="form-input ">
-                                                    <input name="gia" type="text" required
-                                                        value="<?php echo $element['tour_price']; ?>">
+                                                    <input name="gia" type="number" required
+                                                        value="<?php echo $element['tour_price']; ?>" min="100000" >
                                                     <label class="lh-1 text-16 text-light-1">Giá(VND)</label>
                                                 </div>
                                             </div>
@@ -107,40 +107,47 @@
                                                 </div>
                                             </div>
                                             <div class="col-5">
-                                                <div class="text-18 fw-500 mb-10">Địa điểm xuất phát</div>
-                                                <div class="form-input ">
-                                                    <input name="diemxp" type="text" required
-                                                        value="<?php echo $element['tour_starting_point']; ?>">
-                                                    <label class="lh-1 text-16 text-light-1">Địa Điểm xuất
-                                                        phát</label>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="row">
-                                            <div class="col-5">
                                                 <div class="text-18 fw-500 mb-10">Hành trình:</div>
                                                 <div class="form-input ">
                                                     <input name="hanhtrinh" type="text" required
                                                         value="<?php echo $element['tour_journey']; ?>">
-                                                    <label class="lh-1 text-16 text-light-1">Hành trình</label>
+                                                        <label class="lh-1 text-16 text-light-1">Hành trình</label>
+                                                    </div>
                                                 </div>
                                             </div>
-                                            <div class="col-5">
-                                                <div class="text-18 fw-500 mb-10">Lịch Trình</div>
+                                            <div class="row">
+                                            <div class="col-4">
+                                                <div class="text-18 fw-500 mb-10">Địa điểm xuất phát</div>
                                                 <div class="form-input ">
-                                                    <input name="lichtrinh" type="text"
-                                                        value="<?php echo $element['tour_schedule']; ?>">
-                                                    <label class="lh-1 text-16 text-light-1">Địa Điểm xuất
-                                                        phát</label>
+                                                    <input name="diemxp" type="text" required
+                                                        value="<?php echo $element['tour_starting_point']; ?>">
+                                                        <label class="lh-1 text-16 text-light-1">Địa Điểm xuất
+                                                            phát</label>
+                                                    </div>
+                                                </div>
+                                                    <div class="col-4">
+                                                        <div class="text-18 fw-500 mb-10">Lịch Trình</div>
+                                                        <div class="form-input ">
+                                                            <input name="lichtrinh" type="text"
+                                                                value="<?php echo $element['tour_schedule']; ?>">
+                                                    <label class="lh-1 text-16 text-light-1">Lịch trình</label>
                                                 </div>
                                             </div>
-                                        </div>
-                                        <div class="row">
-                                            <div class="col-5">
-                                                <div class="text-18 fw-500 mb-10">Ngày bắt đầu:</div>
+                                            <div class="col-4">
+                                                <div class="text-18 fw-500 mb-10">Thời lượng tour:</div>
                                                 <div class="form-input ">
-                                                    <input name="batdau" type="date" required
-                                                        value="<?php echo $element['tour_start_date']; ?>">
+                                                    <input name="thoiluong" type="number" required
+                                                        value="<?php echo $element['tour_duration']; ?>" min="1">
+                                                        <label class="lh-1 text-16 text-light-1">Ngày</label>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col-5">
+                                                    <div class="text-18 fw-500 mb-10">Ngày bắt đầu:</div>
+                                                    <div class="form-input ">
+                                                        <input name="batdau" type="date" required
+                                                            value="<?php echo $element['tour_start_date']; ?>">
                                                     <label class="lh-1 text-16 text-light-1">Ngày bắt đầu</label>
                                                 </div>
                                             </div>

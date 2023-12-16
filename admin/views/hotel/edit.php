@@ -98,7 +98,7 @@
                                             <div class="col-5">
                                                 <div class="text-18 fw-500 mb-10">Giá</div>
                                                 <div class="form-input ">
-                                                    <input name="gia" type="text" required
+                                                    <input name="gia" type="number" required min="100000"
                                                         value="<?php echo $element['hotel_price']; ?>">
                                                     <label class="lh-1 text-16 text-light-1">Giá</label>
                                                 </div>

@@ -3,8 +3,8 @@
 
 <section class="pt-40 pb-40 bg-light-2">
   <div class="container">
-    <div class="row">
-      <div class="col-12">
+    <div class="row justify-center">
+      <div class="col-9">
         <div class="text-center">
           <h1 class="text-30 fw-600">Bạn muốn đi đâu?</h1>
           <p>Hơn 100 tour du lịch giá tốt đang chờ bạn</p>
@@ -15,38 +15,57 @@
         >
           <div class="button-grid items-center">
             <div class="d-flex" data-x-dd-click="searchMenu-loc">
-              <i
-                ><svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="24"
-                  height="24"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                >
-                  <path
-                    d="M11 6C13.7614 6 16 8.23858 16 11M16.6588 16.6549L21 21M19 11C19 15.4183 15.4183 19 11 19C6.58172 19 3 15.4183 3 11C3 6.58172 6.58172 3 11 3C15.4183 3 19 6.58172 19 11Z"
-                    stroke="black"
-                    stroke-width="2"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                  ></path></svg></i>
+              <form action="index.php?controller=alltour" method="post">
 
               <div class="ml-10">
-                <h4 class="text-15 fw-500 ls-2 lh-16">Tour</h4>
+                <h4 class="text-15 fw-500 ls-2 lh-16">Địa điểm</h4>
 
                 <div class="text-15 text-light-1 ls-2 lh-16">
                   <input
                     autocomplete="off"
+                    name="diadiem"
                     type="search"
                     placeholder="Bạn muốn đi đâu?"
                     class="js-search js-dd-focus"
                   />
                 </div>
               </div>
-            </div>
-
             
+            </div>
+  <div class="d-flex" data-x-dd-click="searchMenu-loc">
+              
 
+              <div class="ml-10">
+            
+<h4 class="text-15 fw-500 ls-2 lh-16">Ngày</h4>
+
+                                        <div class="text-15 text-light-1 ls-2 lh-16">
+                                            <input autocomplete="off" type="date" name="ngay"
+                                                class="js-search js-dd-focus" />
+                                        </div>
+              </div>
+            </div>
+            
+  <div class="d-flex" data-x-dd-click="searchMenu-loc">
+              
+
+              <div class="ml-10">
+                <h4 class="text-15 fw-500 ls-2 lh-16">Mức giá</h4>
+
+                                        <div class="text-15 text-light-1 ls-2 lh-16">
+                                            <select name="gia">
+                                                      <option value="">Chọn giá tour</option>
+                                                      <option value="0 - 2000000">Dưới 2tr</option>
+                                                      <option value="2000000 - 4000000">Từ 2tr - 4tr</option>
+                                                      <option value="4000000 - 6000000">Từ 4tr - 6tr</option>
+                                                      <option value="6000000 - 10000000">Từ 6tr - 10tr</option>
+                                                      <option value="10000000 - 20000000">Từ 10tr - 20tr</option>
+                                                      <option value="20000000 - 50000000">Từ 20tr - 50tr</option>
+                                                      <option value="50000000 - 80000000">Trên 50tr</option>
+                                              </select>
+                                        </div>
+              </div>
+            </div>
             
 
             <div class="button-item">
@@ -56,6 +75,7 @@
                 <i class="icon-search text-20 mr-10"></i>
                 Search
               </button>
+                </form>
             </div>
           </div>
         </div>
@@ -117,7 +137,7 @@
                 <div class="col-md">
                   <div class="row x-gap-10 items-center">
                     <div class="col-auto">
-                      <p class="text-14 lh-14 mb-5">6+ hours</p>    
+                      <p class="text-14 lh-14 mb-5"><?php echo TimeAgo($e['tour_create_date']) ?></p>    
                     </div>
                     
                     
@@ -137,26 +157,23 @@
                 </div>
 
                 <div class="col-md-auto text-right md:text-left">
-                  <!-- <div
+                  <div
                     class="d-flex x-gap-5 items-center justify-end md:justify-start"
                   >
-                    <i class="icon-star text-10 text-yellow-1"></i>
+                    <?php for ($i = 1; $i <= $e['tour_star']; $i++) { ?>
+                          <i class="icon-star text-10 text-yellow-1"></i>
+                        <?php } ?>
+                  </div>
 
-                    <i class="icon-star text-10 text-yellow-1"></i>
+                  <div class="text-14 lh-14 text-light-1 mt-10">
+                    <?php echo get_total_id('comment', $e['id'], 'tour_id') ?> bình luận
+                      </div>
+                        <div class="text-14 lh-14 text-light-1 mt-10">
+                    <?php echo $e['tour_total_view']?> lượt xem
+                            </div>
 
-                    <i class="icon-star text-10 text-yellow-1"></i>
-
-                    <i class="icon-star text-10 text-yellow-1"></i>
-
-                    <i class="icon-star text-10 text-yellow-1"></i>
-                  </div> -->
-
-                  <!-- <div class="text-14 lh-14 text-light-1 mt-10">
-                    3,014 reviews
-                  </div> -->
-
-                  <div class="text-14 text-light-1 mt-50 md:mt-20">Từ</div>
-                  <div class="text-22 lh-12 fw-600 mt-5"><?php echo number_format($e['tour_price'], 0, ',', '.') . ' VND'; ?></div>
+                          <div class="text-14 text-light-1 mt-50 md:mt-20">Từ</div>
+                          <div class="text-22 lh-12 fw-600 mt-5"><?php echo number_format($e['tour_price'], 0, ',', '.') . ' VND'; ?></div>
                   <div class="text-14 text-light-1 mt-5">mỗi người</div>
 
                   <a

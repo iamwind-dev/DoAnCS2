@@ -5108,7 +5108,7 @@ iframe.wait-autoplay {
     background: #000;
   }
 }
-@font-face {
+/* @font-face {
   font-family: icomoon;
   src: url(../fonts/icomoonf78a.eot?ibiouq);
   src: url(../fonts/icomoonf78a.eot?ibiouq#iefix) format("embedded-opentype"),
@@ -5130,9 +5130,11 @@ iframe.wait-autoplay {
   line-height: 1;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-}
+} */
+@import url(//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css);
+
 .icon-menu-2:before {
-  content: "\e95e";
+  content: "\f0c9";
 }
 .icon-play:before {
   content: "\e95d";
@@ -5147,16 +5149,16 @@ iframe.wait-autoplay {
   content: "\e951";
 }
 .icon-clock:before {
-  content: "\e952";
+  content: "\f017";
 }
 .icon-customer:before {
-  content: "\e953";
+  content: "\f0c0";
 }
 .icon-route:before {
-  content: "\e954";
+  content: "\f018";
 }
 .icon-access-denied:before {
-  content: "\e955";
+  content: "\f05e";
 }
 .icon-compass:before {
   content: "\e956";
@@ -5165,7 +5167,7 @@ iframe.wait-autoplay {
   content: "\e957";
 }
 .icon-placeholder:before {
-  content: "\e958";
+  content: "\f041";
 }
 .icon-group:before {
   content: "\e959";
@@ -5264,28 +5266,28 @@ iframe.wait-autoplay {
   content: "\e938";
 }
 .icon-arrow-right:before {
-  content: "\e930";
+  content: "\f061";
 }
 .icon-edit:before {
-  content: "\e92c";
+  content: "\f040";
 }
 .icon-eye:before {
-  content: "\e92d";
+  content: "\f06e";
 }
 .icon-trash-2:before {
-  content: "\e92e";
+  content: "\f014";
 }
 .icon-upload-file:before {
-  content: "\e92f";
+  content: "\f01b";
 }
 .icon-email-2:before {
-  content: "\e94b";
+  content: "\f003";
 }
 .icon-notification:before {
   content: "\e94c";
 }
 .icon-arrow-left:before {
-  content: "\e92b";
+  content: "\f060";
 }
 .icon-arrow-sm-left:before {
   content: "\e929";
@@ -5300,7 +5302,7 @@ iframe.wait-autoplay {
   content: "\e901";
 }
 .icon-heart:before {
-  content: "\e902";
+  content: "\f08a";
 }
 .icon-hiking:before {
   content: "\e903";
@@ -5336,7 +5338,7 @@ iframe.wait-autoplay {
   content: "\e90d";
 }
 .icon-search:before {
-  content: "\e90e";
+  content: "\f002";
 }
 .icon-ski:before {
   content: "\e90f";
@@ -5345,7 +5347,7 @@ iframe.wait-autoplay {
   content: "\e910";
 }
 .icon-star:before {
-  content: "\e911";
+  content: "\f005";
 }
 .icon-tickets:before {
   content: "\e912";
@@ -5381,10 +5383,10 @@ iframe.wait-autoplay {
   content: "\e91c";
 }
 .icon-chevron-sm-down:before {
-  content: "\e91d";
+  content: "\f078";
 }
 .icon-arrow-top-right:before {
-  content: "\e91e";
+  content: "\f124";
 }
 .icon-beach-umbrella:before {
   content: "\e91f";
@@ -5399,10 +5401,10 @@ iframe.wait-autoplay {
   content: "\e922";
 }
 .icon-chevron-left:before {
-  content: "\e923";
+  content: "\f053";
 }
 .icon-chevron-right:before {
-  content: "\e924";
+  content: "\f054";
 }
 .icon-city:before {
   content: "\e925";

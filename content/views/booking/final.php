@@ -193,7 +193,7 @@ include("/DA/content/views/shared/headerhome.php");
                                         <div class="col-auto">
                                             <div class="text-15">Ngày đi</div>
                                             <div class="fw-500">
-                                                <?php echo $e['tour_start_date']; ?>
+                                                <?php echo $_POST['ngaydi']; ?>
                                             </div>
                     
                                         </div>
@@ -205,7 +205,7 @@ include("/DA/content/views/shared/headerhome.php");
                                         <div class="col-auto text-right md:text-left">
                                             <div class="text-15">Ngày về</div>
                                             <div class="fw-500">
-                                                <?php echo $e['tour_end_date']; ?>
+                                                <?php echo $_POST['ngayve']; ?>
                                             </div>
                     
                                         </div>
