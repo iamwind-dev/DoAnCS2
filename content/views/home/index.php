@@ -178,7 +178,7 @@ include("content/views/shared/header.php");
 
                       <div class="text-14 text-light-1">
                         <span class="text-15 text-dark-1 fw-500">
-                          <?php number_format($e['tour_star'], 1) ?>
+                          <?php echo number_format($e['tour_star'], 1) ?>
                         </span>
                         <?php echo get_total_id('comment', $e['id'], 'tour_id') ?> bình luận
                       </div>

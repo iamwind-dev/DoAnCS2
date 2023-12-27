@@ -4,7 +4,9 @@ require_once('content/models/home.php');
 require_once('content/models/alltour.php');
 require_once('content/models/search.php');
 if (isset($_GET['idl'])) {
+    
     $result = get_total_tour_location($_GET['idl']);
+    echo $result;
     if ($result > 0) {
         $total_records = $result;
         $current_page = isset($_GET['p']) ? $_GET['p'] : 1;
