@@ -228,7 +228,8 @@ include('admin/views/shared/header.php');
                     },
                 })
                     .done(function (data) {
-                        alert('Bạn có muốn lưu dữ liệu?');
+
+                        alert('Xác nhận lưu dữ liệu');
                         window.location.reload(); // Reload the page after the action is completed
                         
                     });

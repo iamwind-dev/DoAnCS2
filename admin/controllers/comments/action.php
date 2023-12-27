@@ -1,5 +1,5 @@
 <?php
-require_once('lib/config/database.php');
+require_once('../../../lib/config/database.php');
 $id = $_POST['id'];
 $idt = $_POST['idt'];
 $ac = $_POST['ac'];

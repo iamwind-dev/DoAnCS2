@@ -1,7 +1,7 @@
 <?php
-include('lib/config/database.php');
-include('lib/functions.php');
-include('lib/models.php');
+
+include('../../../lib/functions.php');
+include('../../../lib/models.php');
 if (isset($_POST['idt'])) {
     $id = $_POST['idu'];
     echo $id;

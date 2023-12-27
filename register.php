@@ -7,7 +7,7 @@
     <title>Đăng Kí</title>
     <link rel="stylesheet" href="../../../public/css/main.css">
     <link rel="stylesheet" href="../../../public/css/vendors.css">
-    
+      <link rel="icon" href="../../../public/img/general/logo.ico" type="image/ico">
 </head>
 
 <body>

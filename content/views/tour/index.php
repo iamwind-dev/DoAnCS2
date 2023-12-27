@@ -689,7 +689,7 @@
         data: { idt: $('#idtour').val(), noidung: $('#noidung').val(), idu: $('#iduser').val(), rating: $('input[name="rating"]:checked').val(), num: $('#num').val(), rate: $('#rating').val() },
       })
         .done(function (data) {
-          alert(data);
+          
           function formatTimeAgo(commentTime) {
             var now = new Date(); // Thời gian hiện tại
             var difference = now - commentTime; // Độ chênh lệch thời gian

@@ -1,7 +1,7 @@
 <?php
 session_start();
 
-require_once('lib/config/database.php');
+
 //kiểm tra có phiên đăng đăng nhập có phải admin không
 if (isset($_SESSION['user']) && $_SESSION['user']['role_id'] != 1) {
     header('Location: index.php');
