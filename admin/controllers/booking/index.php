@@ -1,5 +1,5 @@
 <?php
-require_once('/DA/lib/models.php');
+require_once('lib/models.php');
 $result = get_total('book_tour');
 $total_records = $result;
 $current_page = isset($_GET['p']) ? $_GET['p'] : 1;
@@ -15,7 +15,7 @@ else if ($current_page < 1) {
 $start = ($current_page - 1) * $limit;
 
 $data = get_all_pag('book_tour', $start, $limit);
-foreach ($data as $a){
-    $idtour=$a['tour_id'];
+foreach ($data as $a) {
+    $idtour = $a['tour_id'];
 }
 include('admin/views/booking/index.php');

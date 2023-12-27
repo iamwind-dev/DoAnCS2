@@ -1,5 +1,5 @@
 <?php
-include("/DA/content/views/shared/headerhome.php");
+include("content/views/shared/headerhome.php");
 ?>
 
 
@@ -46,11 +46,12 @@ include("/DA/content/views/shared/headerhome.php");
                                         <input type="date" name="ngaydi" value="<?php echo $ngaydi ?>" hidden>
                                         <input type="date" name="ngayve" value="<?php echo $ngayve ?>" hidden>
                                         <?php if (!empty($_POST['idks'])) { ?>
-                                        <input type="text" name="idks" value="<?php echo $idks ?>" 
-                                        hidden>
-                                        <?php }else{ ?>
-                                            <input type="text" name="idks" value="" 
-                                        hidden>
+                                            <input type="text" name="idks" value="<?php echo $idks ?>" 
+                                            hidden>
+                                        <?php }
+                                        else { ?>
+                                                <input type="text" name="idks" value="" 
+                                            hidden>
                                         <?php } ?>
                                         <input type="text" name="hoten" required>
                                         <label class="lh-1 text-16 text-light-1">Họ và Tên</label>
@@ -125,14 +126,14 @@ include("/DA/content/views/shared/headerhome.php");
                             <div class="px-30 py-30 border-light rounded-4">
                                 <div class="text-20 fw-500 mb-30">Thông tin booking của bạn</div>
                         <?php foreach ($data as $e) { ?>
-                                <div class="row x-gap-15 y-gap-20">
-                                    <div class="col-auto">
-                                        <img src="../../../public/img/tours/<?php echo $e['tour_image_url'] ?>" alt="image"
-                                            class="size-140 rounded-4 object-cover">
-                                    </div>
+                                    <div class="row x-gap-15 y-gap-20">
+                                        <div class="col-auto">
+                                            <img src="../../../public/img/tours/<?php echo $e['tour_image_url'] ?>" alt="image"
+                                                class="size-140 rounded-4 object-cover">
+                                        </div>
 
-                                    <div class="col">
-                                        <!-- <div class="d-flex x-gap-5 pb-10">
+                                        <div class="col">
+                                            <!-- <div class="d-flex x-gap-5 pb-10">
 
                                             <i class="icon-star text-yellow-1 text-10"></i>
 
@@ -146,89 +147,89 @@ include("/DA/content/views/shared/headerhome.php");
 
                                         </div> -->
                             
-                                        <div class="lh-17 fw-500"><?php echo $e['tour_name']; ?></div>
-                                        <div class="text-14 lh-15 mt-5"><?php echo $e['tour_location_name']; ?></div>
+                                            <div class="lh-17 fw-500"><?php echo $e['tour_name']; ?></div>
+                                            <div class="text-14 lh-15 mt-5"><?php echo $e['tour_location_name']; ?></div>
 
-                                        <div class="row x-gap-10 y-gap-10 items-center pt-10">
-                                            <div class="col-auto">
-                                                <div class="d-flex items-center">
-                                                    <div class="size-30 flex-center bg-blue-1 rounded-4">
-                                                        <div class="text-12 fw-600 text-white">4.8</div>
+                                            <div class="row x-gap-10 y-gap-10 items-center pt-10">
+                                                <div class="col-auto">
+                                                    <div class="d-flex items-center">
+                                                        <div class="size-30 flex-center bg-blue-1 rounded-4">
+                                                            <div class="text-12 fw-600 text-white">4.8</div>
+                                                        </div>
+
+                                                        <div class="text-14 fw-500 ml-10">Exceptional</div> 
                                                     </div>
-
-                                                    <div class="text-14 fw-500 ml-10">Exceptional</div> 
                                                 </div>
-                                            </div>
 
-                                            <!-- <div class="col-auto">
+                                                <!-- <div class="col-auto">
                                                 <div class="text-14">3,014 reviews</div>
                                             </div> -->
+                                            </div>
                                         </div>
                                     </div>
-                                </div>
 
-                                <div class="border-top-light mt-30 mb-20"></div>
+                                    <div class="border-top-light mt-30 mb-20"></div>
 
-                                <div class="row y-gap-20 justify-between">
-                                    <div class="col-auto">
-                                        <div class="text-15">Ngày đi</div>
-                                        <div class="fw-500"><?php echo $ngaydi; ?></div>
+                                    <div class="row y-gap-20 justify-between">
+                                        <div class="col-auto">
+                                            <div class="text-15">Ngày đi</div>
+                                            <div class="fw-500"><?php echo $ngaydi; ?></div>
                                         
-                                    </div>
+                                        </div>
 
-                                    <div class="col-auto md:d-none">
-                                        <div class="h-full w-1 bg-border"></div>
-                                    </div>
+                                        <div class="col-auto md:d-none">
+                                            <div class="h-full w-1 bg-border"></div>
+                                        </div>
 
-                                    <div class="col-auto text-right md:text-left">
-                                        <div class="text-15">Ngày về</div>
-                                        <div class="fw-500"><?php echo $ngayve; ?></div>
+                                        <div class="col-auto text-right md:text-left">
+                                            <div class="text-15">Ngày về</div>
+                                            <div class="fw-500"><?php echo $ngayve; ?></div>
                                         
+                                        </div>
                                     </div>
-                                </div>
 
-                                <div class="border-top-light mt-30 mb-20"></div>
+                                    <div class="border-top-light mt-30 mb-20"></div>
 
-                                <div class="">
-                                    <div class="text-15">Lịch Trình:</div>
-                                    <div class="fw-500"><?php echo $e['tour_schedule']; ?></div>
+                                    <div class="">
+                                        <div class="text-15">Lịch Trình:</div>
+                                        <div class="fw-500"><?php echo $e['tour_schedule']; ?></div>
                                     
-                                </div>
-                            <?php if (!empty($_POST['idks'])) { ?>
-                                <div class="border-top-light mt-30 mb-20"></div>
-                                
-                                <div class="row y-gap-20 justify-between items-center">
-                                    <div class="col-auto">
-                                        <div class="text-15">Bạn đã chọn:</div>
-                                        <?php foreach ($data1 as $e1) { ?>
-                                        <div class="fw-500"><?php echo $e1['hotel_name'] ?></div>
-                                        <?php } ?>
                                     </div>
-
-                                    <div class="col-auto">
-                                        <div class="text-15"><?php echo $_POST['sophong'] ?> phòng, <?php echo $_POST['songuoi'] ?> người</div>
-                                    </div>
-                                </div>
-                                <?php } ?>
-                            </div>
-
-                            <div class="px-30 py-30 border-light rounded-4 mt-30">
-                                <div class="text-20 fw-500 mb-20">Tổng tiền</div>
-
+                                <?php if (!empty($_POST['idks'])) { ?>
+                                        <div class="border-top-light mt-30 mb-20"></div>
                                 
+                                        <div class="row y-gap-20 justify-between items-center">
+                                            <div class="col-auto">
+                                                <div class="text-15">Bạn đã chọn:</div>
+                                                <?php foreach ($data1 as $e1) { ?>
+                                                    <div class="fw-500"><?php echo $e1['hotel_name'] ?></div>
+                                                <?php } ?>
+                                            </div>
 
-                                <div class="px-20 py-20 bg-blue-2 rounded-4 mt-20">
-                                    <div class="row y-gap-5 justify-between">
-                                        <div class="col-auto">
-                                            <div class="text-18 lh-13 fw-500">Giá</div>
+                                            <div class="col-auto">
+                                                <div class="text-15"><?php echo $_POST['sophong'] ?> phòng, <?php echo $_POST['songuoi'] ?> người</div>
+                                            </div>
                                         </div>
-                                        <div class="col-auto">
-                                            <div class="text-18 lh-13 fw-500"><?php echo number_format($total, 0, ',', '.') . ' VND'; ?></div>
+                                    <?php } ?>
+                                </div>
+
+                                <div class="px-30 py-30 border-light rounded-4 mt-30">
+                                    <div class="text-20 fw-500 mb-20">Tổng tiền</div>
+
+                                
+
+                                    <div class="px-20 py-20 bg-blue-2 rounded-4 mt-20">
+                                        <div class="row y-gap-5 justify-between">
+                                            <div class="col-auto">
+                                                <div class="text-18 lh-13 fw-500">Giá</div>
+                                            </div>
+                                            <div class="col-auto">
+                                                <div class="text-18 lh-13 fw-500"><?php echo number_format($total, 0, ',', '.') . ' VND'; ?></div>
                                             
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
-                            </div>
                         <?php } ?>
                         </div>
                     </div>
@@ -239,7 +240,7 @@ include("/DA/content/views/shared/headerhome.php");
         
 
 
-        <?php include('/DA/content/views/shared/footer.php') ?>
+        <?php include('content/views/shared/footer.php') ?>
 
     </main>
 

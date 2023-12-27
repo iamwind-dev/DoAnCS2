@@ -1,7 +1,7 @@
 <?php
-require_once('/DA/lib/models.php');
+require_once('lib/models.php');
 include('admin/models/hotel.php');
-require_once('/DA/lib/functions.php');
+require_once('lib/functions.php');
 if (!empty($_POST)) {
     $folder = 'hotels/';
     upload($folder);

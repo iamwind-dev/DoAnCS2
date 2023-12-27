@@ -1,4 +1,4 @@
-<?php include('/DA/admin/views/shared/header.php') ?>
+<?php include('admin/views/shared/header.php') ?>
 
 <div class="dashboard__main">
     <div class="dashboard__content bg-light-2">
@@ -107,4 +107,4 @@
                 </div>
             </div>
         </div>
-        <?php include('/DA/admin/views/shared/footer.php') ?>
+        <?php include('admin/views/shared/footer.php') ?>

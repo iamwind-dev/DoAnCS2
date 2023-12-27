@@ -1,5 +1,5 @@
 <?php
-include_once('/DA/lib/models.php');
+include_once('lib/models.php');
 $result = get_total('hotel');
 $total_records = $result;
 $current_page = isset($_GET['p']) ? $_GET['p'] : 1;
@@ -15,5 +15,5 @@ else if ($current_page < 1) {
 $start = ($current_page - 1) * $limit;
 
 $data = get_all_pag('hotel', $start, $limit);
-include_once('/DA/admin/views/hotel/index.php');
+include_once('admin/views/hotel/index.php');
 

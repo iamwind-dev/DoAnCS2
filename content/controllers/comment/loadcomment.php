@@ -1,23 +1,23 @@
 <?php
-include('/DA/lib/config/database.php');
-include('/DA/lib/functions.php');
-include('/DA/content/models/tour.php');
-include('/DA/content/models/comment.php');
-$offset = $_POST['offset']; 
+include('lib/config/database.php');
+include('lib/functions.php');
+include('content/models/tour.php');
+include('content/models/comment.php');
+$offset = $_POST['offset'];
 $limit = $_POST['limit'];
-$idt=$_POST['idt'];
-$total_comment = get_total_comment('comment',$idt);
+$idt = $_POST['idt'];
+$total_comment = get_total_comment('comment', $idt);
 $sql = "SELECT * FROM comment WHERE tour_id = $idt ORDER BY time DESC LIMIT $offset, $limit";
 $result = mysqli_query($conn, $sql);
 
 $data = array();
-    if (mysqli_num_rows($result) > 0) {
-        while ($row = mysqli_fetch_assoc($result)) {
-            $data[] = $row;
-        }
-        mysqli_free_result($result);
+if (mysqli_num_rows($result) > 0) {
+    while ($row = mysqli_fetch_assoc($result)) {
+        $data[] = $row;
     }
-                
+    mysqli_free_result($result);
+}
+
 $output = '';
 foreach ($data as $b) {
     $data3 = showUser($b['user_id']);

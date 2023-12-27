@@ -1,8 +1,8 @@
 <?php
-require_once('/DA/lib/models.php');
-require_once('/DA/admin/models/category.php');
+require_once('lib/models.php');
+require_once('admin/models/category.php');
 if (!empty($_POST)) {
-    
+
     category_add();
 }
 

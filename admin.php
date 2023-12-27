@@ -1,9 +1,9 @@
 <?php
 session_start();
 
-require_once('/DA/lib/config/database.php');
+require_once('lib/config/database.php');
 //kiểm tra có phiên đăng đăng nhập có phải admin không
-if(isset($_SESSION['user']) && $_SESSION['user']['role_id'] != 1) {
+if (isset($_SESSION['user']) && $_SESSION['user']['role_id'] != 1) {
     header('Location: index.php');
     exit();
 }
@@ -22,12 +22,12 @@ else {
     $action = 'index';
 }
 
-if(!isset($_SESSION['user'])) {
+if (!isset($_SESSION['user'])) {
     $controller = 'home';
     $action = 'login';
 }
 
-$file = 'admin/controllers/'.$controller.'/'.$action.'.php';
+$file = 'admin/controllers/' . $controller . '/' . $action . '.php';
 
 if (file_exists($file)) {
     require($file);

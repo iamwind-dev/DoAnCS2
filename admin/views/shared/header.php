@@ -18,14 +18,14 @@
         href="https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,600;1,700;1,800;1,900&amp;display=swap"
         rel="stylesheet">
 
-    <link rel="shortcut icon" type="image/png" href="/DA/public/img/logo-dark-3.png" />
+    <link rel="shortcut icon" type="image/png" href="public/img/logo-dark-3.png" />
 
     <!-- Stylesheets -->
     <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css">
     <link rel="stylesheet" href="/public/css/vendors.css">
     <link rel="stylesheet" href="/public/css/main.css">
     <link rel="icon" href="../../../public/img/general/logo.ico" type="image/ico">
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <title>Administrator - WinK Travel</title>
 </head>
 
@@ -72,7 +72,7 @@
                             <i class="icon-menu-2 text-20"></i>
                         </button>
 
-                        
+
                     </div>
                 </div>
 
@@ -88,39 +88,43 @@
                                 <div class="menu js-navList">
                                     <ul class="menu__nav text-dark-1 fw-500 -is-active">
 
-                                        </ul>
-                                    </div>
+                                    </ul>
+                                </div>
 
-                                    <div class="mobile-footer px-20 py-20 border-top-light js-mobile-footer">
-                                    </div>
+                                <div class="mobile-footer px-20 py-20 border-top-light js-mobile-footer">
                                 </div>
                             </div>
-
-
-                            <div class="row items-center x-gap-5 y-gap-20 pl-20 lg:d-none">
-                                <div class="col-auto">
-                                    <button class="button -blue-1-05 size-50 rounded-22 flex-center">
-                                        <i class="icon-email-2 text-20"></i>
-                                    </button>
-                                </div>
-
-                                <div class="col-auto">
-                                    <button class="button -blue-1-05 size-50 rounded-22 flex-center">
-                                        <i class="icon-notification text-20"></i>
-                                    </button>
-                                </div><?php foreach($user as $u) { ?>
-                                    <div class="col-auto">
-                                        <?php echo $u['user_name'] ?>
-                                        <span style="margin-left:20px"><b>(<?php echo $u['user_role'] ?>)</b></span>
-                                    
-                                    </div>
-                                </div>
-                                <div class="pl-15"> <a href="">
-                                    <img src="/public/img/avatars/<?php echo $u['user_avatar'] ?>" alt="image" class="size-50 rounded-22 object-cover">
-                            
-                            </a>
                         </div>
-                    <?php } ?>
+
+
+                        <div class="row items-center x-gap-5 y-gap-20 pl-20 lg:d-none">
+                            <div class="col-auto">
+                                <button class="button -blue-1-05 size-50 rounded-22 flex-center">
+                                    <i class="icon-email-2 text-20"></i>
+                                </button>
+                            </div>
+
+                            <div class="col-auto">
+                                <button class="button -blue-1-05 size-50 rounded-22 flex-center">
+                                    <i class="icon-notification text-20"></i>
+                                </button>
+                            </div>
+                            <?php foreach ($user as $u) { ?>
+                                <div class="col-auto">
+                                    <?php echo $u['user_name'] ?>
+                                    <span style="margin-left:20px"><b>(
+                                            <?php echo $u['user_role'] ?>)
+                                        </b></span>
+
+                                </div>
+                            </div>
+                            <div class="pl-15"> <a href="">
+                                    <img src="/public/img/avatars/<?php echo $u['user_avatar'] ?>" alt="image"
+                                        class="size-50 rounded-22 object-cover">
+
+                                </a>
+                            </div>
+                        <?php } ?>
                         <div class="d-none xl:d-flex x-gap-20 items-center pl-20" data-x="header-mobile-icons"
                             data-x-toggle="text-white">
                             <div><button class="d-flex items-center icon-menu text-20"
@@ -153,14 +157,15 @@
                 <div class="sidebar__item ">
 
 
-                    <a href="/admin.php?controller=booking" class="sidebar__button d-flex items-center text-15 lh-1 fw-500">
+                    <a href="/admin.php?controller=booking"
+                        class="sidebar__button d-flex items-center text-15 lh-1 fw-500">
                         <img src="/public/img/dashboard/sidebar/booking.svg" alt="image" class="mr-15">
                         Quản lí Booking
                     </a>
 
 
                 </div>
-                    <div class="sidebar__item ">
+                <div class="sidebar__item ">
 
 
                     <div class="accordion -db-sidebar js-accordion">
@@ -176,14 +181,15 @@
                             </div>
 
                             <div class="accordion__content">
-                                <ul  class="list-disc pt-15 pb-5 pl-40">
+                                <ul class="list-disc pt-15 pb-5 pl-40">
 
                                     <li>
                                         <a href="/admin.php?controller=location" class="text-15">Tất cả Địa điểm</a>
                                     </li>
 
                                     <li>
-                                        <a href="/admin.php?controller=location&action=add" class="text-15">Thêm Địa điểm</a>
+                                        <a href="/admin.php?controller=location&action=add" class="text-15">Thêm Địa
+                                            điểm</a>
                                     </li>
 
 
@@ -218,7 +224,8 @@
                                     </li>
 
                                     <li>
-                                        <a href="/admin.php?controller=category&action=add" class="text-15">Thêm danh mục</a>
+                                        <a href="/admin.php?controller=category&action=add" class="text-15">Thêm danh
+                                            mục</a>
                                     </li>
 
 
@@ -287,7 +294,8 @@
                                     </li>
 
                                     <li>
-                                        <a href="/admin.php?controller=hotel&action=add" class="text-15">Thêm Khách Sạn</a>
+                                        <a href="/admin.php?controller=hotel&action=add" class="text-15">Thêm Khách
+                                            Sạn</a>
                                     </li>
 
 
@@ -302,12 +310,13 @@
 
 
 
-                
+
 
                 <div class="sidebar__item ">
 
 
-                    <a href="/admin.php?controller=comments" class="sidebar__button d-flex items-center text-15 lh-1 fw-500">
+                    <a href="/admin.php?controller=comments"
+                        class="sidebar__button d-flex items-center text-15 lh-1 fw-500">
                         <img src="/public/img/dashboard/sidebar/comment.png" alt="image" class="mr-15">
                         Quản lí bình luận
                     </a>
@@ -318,9 +327,10 @@
                 <div class="sidebar__item ">
 
 
-                    <a href="admin.php?controller=user&action=index" class="sidebar__button d-flex items-center text-15 lh-1 fw-500">
-        
-                    <img src="/public/img/dashboard/sidebar/user.png" alt="image" class="mr-15">
+                    <a href="admin.php?controller=user&action=index"
+                        class="sidebar__button d-flex items-center text-15 lh-1 fw-500">
+
+                        <img src="/public/img/dashboard/sidebar/user.png" alt="image" class="mr-15">
                         Quản lí Người dùng
                     </a>
 
@@ -330,7 +340,8 @@
                 <div class="sidebar__item ">
 
 
-                    <a href="/admin.php?controller=home&action=logout" class="sidebar__button d-flex items-center text-15 lh-1 fw-500">
+                    <a href="/admin.php?controller=home&action=logout"
+                        class="sidebar__button d-flex items-center text-15 lh-1 fw-500">
                         <img src="/public/img/dashboard/sidebar/log-out.svg" alt="image" class="mr-15">
                         Đăng Xuất
                     </a>

@@ -1,4 +1,4 @@
-<?php include('/DA/admin/views/shared/header.php') ?>
+<?php include('admin/views/shared/header.php') ?>
 
 <div class="dashboard__main">
     <div class="dashboard__content bg-light-2">
@@ -102,42 +102,43 @@
 
 
 
-                                <div class="col-12">
-                                    <div class="text-18 fw-500 mb-10">Mô tả Khách Sạn</div>
-                                    <div class="form-input ">
-                                        <textarea name="mota" id="editor"></textarea>
+                                    <div class="col-12">
+                                        <div class="text-18 fw-500 mb-10">Mô tả Khách Sạn</div>
+                                        <div class="form-input ">
+                                            <textarea name="mota" id="editor"></textarea>
 
-                                    </div>
-
-                                </div>
-                                <div class="col-12">
-                                    <div class="text-18 fw-500 mb-10">Giới thiệu Khách Sạn</div>
-                                    <div class="form-input ">
-                                        <textarea name="gioithieu" id="editor1"></textarea>
-
-                                    </div>
-
-                                </div>
-
-                                <div class="mt-30">
-                                    <div class="fw-500">Hình ảnh</div>
-
-                                    <div class="containerr">
-                                        <input type="file" name="file" id="file" accept="image/*" hidden>
-                                        <div class="img-area" data-img="">
-                                            <i class='bx bxs-cloud-upload icon'></i>
-                                            <h3>Upload Image</h3>
-                                            <p>Image size must be less than <span>2MB</span></p>
                                         </div>
-                                        <button type="button" class="select-image">Chọn Ảnh</button>
-                                    </div>
-                                </div>
-                                <div class="d-inline-block pt-30">
-                                    <input style="width:10% !important" type="submit" class="button h-50 px-24 -dark-1 bg-blue-1 text-white"
-                                        value="Thêm" form="myform">
 
-                                    </input>
-                                </div>
+                                    </div>
+                                    <div class="col-12">
+                                        <div class="text-18 fw-500 mb-10">Giới thiệu Khách Sạn</div>
+                                        <div class="form-input ">
+                                            <textarea name="gioithieu" id="editor1"></textarea>
+
+                                        </div>
+
+                                    </div>
+
+                                    <div class="mt-30">
+                                        <div class="fw-500">Hình ảnh</div>
+
+                                        <div class="containerr">
+                                            <input type="file" name="file" id="file" accept="image/*" hidden>
+                                            <div class="img-area" data-img="">
+                                                <i class='bx bxs-cloud-upload icon'></i>
+                                                <h3>Upload Image</h3>
+                                                <p>Image size must be less than <span>2MB</span></p>
+                                            </div>
+                                            <button type="button" class="select-image">Chọn Ảnh</button>
+                                        </div>
+                                    </div>
+                                    <div class="d-inline-block pt-30">
+                                        <input style="width:10% !important" type="submit"
+                                            class="button h-50 px-24 -dark-1 bg-blue-1 text-white" value="Thêm"
+                                            form="myform">
+
+                                        </input>
+                                    </div>
                             </form>
 
                         </div>
@@ -145,4 +146,4 @@
                 </div>
             </div>
         </div>
-        <?php include('/DA/admin/views/shared/footer.php') ?>
+        <?php include('admin/views/shared/footer.php') ?>

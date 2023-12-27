@@ -1,5 +1,5 @@
 <?php
-include('/DA/admin/views/shared/header.php');
+include('admin/views/shared/header.php');
 ?>
 <div class="dashboard__main">
   <div class="dashboard__content bg-light-2">
@@ -12,10 +12,8 @@ include('/DA/admin/views/shared/header.php');
       </div>
 
       <div class="col-auto">
-        <a
-          href="../../../admin.php?controller=category&amp;action=add"
-          class="button h-50 px-24 -dark-1 bg-blue-1 text-white"
-        >
+        <a href="../../../admin.php?controller=category&amp;action=add"
+          class="button h-50 px-24 -dark-1 bg-blue-1 text-white">
           Thêm danh mục
           <div class="icon-arrow-top-right ml-15"></div>
         </a>
@@ -24,14 +22,11 @@ include('/DA/admin/views/shared/header.php');
 
     <div class="py-30 px-30 rounded-4 bg-white shadow-3">
       <div class="tabs -underline-2 js-tabs">
-        <div
-          class="tabs__controls row x-gap-40 y-gap-10 lg:x-gap-20 js-tabs-controls"
-        >
+        <div class="tabs__controls row x-gap-40 y-gap-10 lg:x-gap-20 js-tabs-controls">
           <div class="col-auto">
             <button
               class="tabs__button text-18 lg:text-16 text-light-1 fw-500 pb-5 lg:pb-0 js-tabs-button is-tab-el-active"
-              data-tab-target=".-tab-item-1"
-            >
+              data-tab-target=".-tab-item-1">
               Tất cả danh mục
             </button>
           </div>
@@ -51,42 +46,38 @@ include('/DA/admin/views/shared/header.php');
                 </thead>
                 <tbody>
                   <?php
-                                    $a = 0;
-                                    foreach ($data as $element) { ?>
-                  <tr>
-                    <td><?php echo ++$a; ?></td>
-                    <td class="text-blue-1 fw-500">
-                      <?php echo $element['category_name']; ?>
-                    </td>
-                    <td class="text-black-1 fw-500">
-                      <?php echo $element['category_status']; ?>
-                    </td>
-                    <td>
-                      <div class="row x-gap-10 y-gap-10 items-center">
-                        <div class="col-auto">
-                          <a
-                            href="../../../admin.php?controller=category&amp;action=edit&amp;id=<?php echo $element['id'] ?>"
-                            ><button
-                              class="flex-center bg-light-2 rounded-4 size-35"
-                            >
-                              <i class="icon-edit text-16 text-light-1"></i>
-                            </button>
-                          </a>
-                        </div>
+                  $a = 0;
+                  foreach ($data as $element) { ?>
+                    <tr>
+                      <td>
+                        <?php echo ++$a; ?>
+                      </td>
+                      <td class="text-blue-1 fw-500">
+                        <?php echo $element['category_name']; ?>
+                      </td>
+                      <td class="text-black-1 fw-500">
+                        <?php echo $element['category_status']; ?>
+                      </td>
+                      <td>
+                        <div class="row x-gap-10 y-gap-10 items-center">
+                          <div class="col-auto">
+                            <a
+                              href="../../../admin.php?controller=category&amp;action=edit&amp;id=<?php echo $element['id'] ?>"><button
+                                class="flex-center bg-light-2 rounded-4 size-35">
+                                <i class="icon-edit text-16 text-light-1"></i>
+                              </button>
+                            </a>
+                          </div>
 
-                        <div class="col-auto">
-                          <a
-                            href="../../../admin.php?controller=category&amp;action=delete&amp;id=<?php echo $element['id'] ?>"
-                            ><button
-                              class="flex-center bg-light-2 rounded-4 size-35" >
-                              <i
-                                class="icon-trash-2 text-16 text-light-1"
-                              ></i></button
-                          ></a>
+                          <div class="col-auto">
+                            <a
+                              href="../../../admin.php?controller=category&amp;action=delete&amp;id=<?php echo $element['id'] ?>"><button
+                                class="flex-center bg-light-2 rounded-4 size-35">
+                                <i class="icon-trash-2 text-16 text-light-1"></i></button></a>
+                          </div>
                         </div>
-                      </div>
-                    </td>
-                  </tr>
+                      </td>
+                    </tr>
                   <?php } ?>
                 </tbody>
               </table>
@@ -96,6 +87,6 @@ include('/DA/admin/views/shared/header.php');
       </div>
     </div>
 
-    <?php include('/DA/admin/views/shared/footer.php') ?>
+    <?php include('admin/views/shared/footer.php') ?>
   </div>
 </div>

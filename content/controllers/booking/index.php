@@ -1,6 +1,6 @@
 <?php
 
-require_once('/DA/lib/models.php');
+require_once('lib/models.php');
 if (isset($_SESSION['user'])) {
     $idt = $_POST['idt'];
     $giatour = 0;
@@ -32,8 +32,9 @@ if (isset($_SESSION['user'])) {
     $ngaydi = $_POST['ngaydi'];
     $ngayve = date('Y-m-d', strtotime($ngaydi . ' + ' . $tourduration . ' days'));
     require("content/views/booking/index.php");
-} else {
-    
-    
+}
+else {
+
+
     echo "<script>alert('Vui lòng đăng nhập để đặt tour!');window.history.back();</script>";
 }

@@ -1,5 +1,5 @@
 <?php
-include("/DA/content/views/shared/headerhome.php");
+include("content/views/shared/headerhome.php");
 ?>
 
 <script>
@@ -61,94 +61,94 @@ include("/DA/content/views/shared/headerhome.php");
                                         <div class="text-15 lh-12 fw-500 text-blue-1 mt-10"><?php echo $idb['last_insert_id()'] ?></div>
                                     </div>
                         <?php foreach ($data2 as $a) { ?>
-                                    <div class="col-lg-3 col-md-6">
-                                        <div class="text-15 lh-12">Ngày</div>
-                                        <div class="text-15 lh-12 fw-500 text-blue-1 mt-10"><?php echo date("d-m-Y") ?></div>
-                                    </div>
+                                        <div class="col-lg-3 col-md-6">
+                                            <div class="text-15 lh-12">Ngày</div>
+                                            <div class="text-15 lh-12 fw-500 text-blue-1 mt-10"><?php echo date("d-m-Y") ?></div>
+                                        </div>
 
-                                    <div class="col-lg-3 col-md-6">
-                                        <div class="text-15 lh-12">Tổng cộng</div>
-                                        <div class="text-15 lh-12 fw-500 text-blue-1 mt-10"><?php echo number_format($_SESSION['total'], 0, ',', '.') . ' VND'; ?></div>
-                                    </div>
+                                        <div class="col-lg-3 col-md-6">
+                                            <div class="text-15 lh-12">Tổng cộng</div>
+                                            <div class="text-15 lh-12 fw-500 text-blue-1 mt-10"><?php echo number_format($_SESSION['total'], 0, ',', '.') . ' VND'; ?></div>
+                                        </div>
 
-                                    <div class="col-lg-3 col-md-6">
-                                        <div class="text-15 lh-12">Phương thức thanh toán</div>
-                                        <div class="text-15 lh-12 fw-500 text-blue-1 mt-10">Thanh toán trực tiếp</div>
-                                    </div>
+                                        <div class="col-lg-3 col-md-6">
+                                            <div class="text-15 lh-12">Phương thức thanh toán</div>
+                                            <div class="text-15 lh-12 fw-500 text-blue-1 mt-10">Thanh toán trực tiếp</div>
+                                        </div>
 
+                                    </div>
                                 </div>
-                            </div>
 
-                            <div class="border-light rounded-8 px-50 py-40 mt-40">
-                                <h4 class="text-20 fw-500 mb-30">Thông tin Khách hàng</h4>
+                                <div class="border-light rounded-8 px-50 py-40 mt-40">
+                                    <h4 class="text-20 fw-500 mb-30">Thông tin Khách hàng</h4>
 
-                                <div class="row y-gap-10">
+                                    <div class="row y-gap-10">
 
-                                    <div class="col-12">
-                                        <div class="d-flex justify-between ">
-                                            <div class="text-15 lh-16">Tên Khách Hàng:</div>
-                                            <div id="hotenn" class="text-15 lh-16 fw-500 text-blue-1"><?php echo $_POST['hoten'] ?></div>
+                                        <div class="col-12">
+                                            <div class="d-flex justify-between ">
+                                                <div class="text-15 lh-16">Tên Khách Hàng:</div>
+                                                <div id="hotenn" class="text-15 lh-16 fw-500 text-blue-1"><?php echo $_POST['hoten'] ?></div>
+                                            </div>
                                         </div>
-                                    </div>
 
                                     
 
-                                    <div class="col-12">
-                                        <div class="d-flex justify-between border-top-light pt-10">
-                                            <div class="text-15 lh-16">Email</div>
-                                            <div class="text-15 lh-16 fw-500 text-blue-1"><?php echo $_POST['email'] ?></div>
+                                        <div class="col-12">
+                                            <div class="d-flex justify-between border-top-light pt-10">
+                                                <div class="text-15 lh-16">Email</div>
+                                                <div class="text-15 lh-16 fw-500 text-blue-1"><?php echo $_POST['email'] ?></div>
+                                            </div>
                                         </div>
-                                    </div>
 
-                                    <div class="col-12">
-                                        <div class="d-flex justify-between border-top-light pt-10">
-                                            <div class="text-15 lh-16">SĐT</div>
-                                            <div class="text-15 lh-16 fw-500 text-blue-1"><?php echo $_POST['sdt'] ?></div>
+                                        <div class="col-12">
+                                            <div class="d-flex justify-between border-top-light pt-10">
+                                                <div class="text-15 lh-16">SĐT</div>
+                                                <div class="text-15 lh-16 fw-500 text-blue-1"><?php echo $_POST['sdt'] ?></div>
+                                            </div>
                                         </div>
-                                    </div>
 
-                                    <div class="col-12">
-                                        <div class="d-flex justify-between border-top-light pt-10">
-                                            <div class="text-15 lh-16">Địa chỉ</div>
-                                            <div class="text-15 lh-16 fw-500 text-blue-1"><?php echo $_POST['diachi'] ?></div>
+                                        <div class="col-12">
+                                            <div class="d-flex justify-between border-top-light pt-10">
+                                                <div class="text-15 lh-16">Địa chỉ</div>
+                                                <div class="text-15 lh-16 fw-500 text-blue-1"><?php echo $_POST['diachi'] ?></div>
+                                            </div>
                                         </div>
-                                    </div>
 
                                     
 
                                     
 
-                                    <div class="col-12">
-                                        <div class="d-flex justify-between border-top-light pt-10">
-                                            <div class="text-15 lh-16">Nước</div>
-                                            <div class="text-15 lh-16 fw-500 text-blue-1">Việt Nam</div>
+                                        <div class="col-12">
+                                            <div class="d-flex justify-between border-top-light pt-10">
+                                                <div class="text-15 lh-16">Nước</div>
+                                                <div class="text-15 lh-16 fw-500 text-blue-1">Việt Nam</div>
+                                            </div>
                                         </div>
-                                    </div>
 
                                     
                 
+                                    </div>
                                 </div>
                             </div>
+
+
+
                         </div>
 
 
-
-                    </div>
-
-
-                    <div class="col-xl-5 col-lg-4">
-                        <div class="ml-80 lg:ml-40 md:ml-0">
-                            <div class="px-30 py-30 border-light rounded-4">
-                                <div class="text-20 fw-500 mb-30">Thông tin booking của bạn</div>
-                        <?php foreach ($data as $e) { ?>
-                                        <div class="row x-gap-15 y-gap-20">
-                                            <div class="col-auto">
-                                                <img src="../../../public/img/tours/<?php echo $e['tour_image_url'] ?>" alt="image"
-                                                    class="size-140 rounded-4 object-cover">
-                                            </div>
+                        <div class="col-xl-5 col-lg-4">
+                            <div class="ml-80 lg:ml-40 md:ml-0">
+                                <div class="px-30 py-30 border-light rounded-4">
+                                    <div class="text-20 fw-500 mb-30">Thông tin booking của bạn</div>
+                            <?php foreach ($data as $e) { ?>
+                                                <div class="row x-gap-15 y-gap-20">
+                                                    <div class="col-auto">
+                                                        <img src="../../../public/img/tours/<?php echo $e['tour_image_url'] ?>" alt="image"
+                                                            class="size-140 rounded-4 object-cover">
+                                                    </div>
                     
-                                            <div class="col">
-                                                            <!-- <div class="d-flex x-gap-5 pb-10">
+                                                    <div class="col">
+                                                                    <!-- <div class="d-flex x-gap-5 pb-10">
                     
                                                                 <i class="icon-star text-yellow-1 text-10"></i>
                     
@@ -162,118 +162,118 @@ include("/DA/content/views/shared/headerhome.php");
                     
                                                             </div> -->
                     
-                                            <div class="lh-17 fw-500">
-                                                <?php echo $e['tour_name']; ?>
-                                            </div>
-                                            <div class="text-14 lh-15 mt-5">
-                                                <?php echo $e['tour_location_name']; ?>
-                                            </div>
+                                                    <div class="lh-17 fw-500">
+                                                        <?php echo $e['tour_name']; ?>
+                                                    </div>
+                                                    <div class="text-14 lh-15 mt-5">
+                                                        <?php echo $e['tour_location_name']; ?>
+                                                    </div>
                     
-                                            <div class="row x-gap-10 y-gap-10 items-center pt-10">
-                                                <div class="col-auto">
-                                                    <div class="d-flex items-center">
-                                                        <div class="size-30 flex-center bg-blue-1 rounded-4">
-                                                            <div class="text-12 fw-600 text-white">4.8</div>
+                                                    <div class="row x-gap-10 y-gap-10 items-center pt-10">
+                                                        <div class="col-auto">
+                                                            <div class="d-flex items-center">
+                                                                <div class="size-30 flex-center bg-blue-1 rounded-4">
+                                                                    <div class="text-12 fw-600 text-white">4.8</div>
+                                                                </div>
+                    
+                                                                <div class="text-14 fw-500 ml-10">Exceptional</div>
+                                                            </div>
                                                         </div>
                     
-                                                        <div class="text-14 fw-500 ml-10">Exceptional</div>
+                                                        <div class="col-auto">
+                                                                            <div class="text-14">3,014 reviews</div>
+                                                                        </div>
                                                     </div>
                                                 </div>
+                                            </div>
                     
+                                            <div class="border-top-light mt-30 mb-20"></div>
+                    
+                                            <div class="row y-gap-20 justify-between">
                                                 <div class="col-auto">
-                                                                    <div class="text-14">3,014 reviews</div>
-                                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                    
-                                    <div class="border-top-light mt-30 mb-20"></div>
-                    
-                                    <div class="row y-gap-20 justify-between">
-                                        <div class="col-auto">
-                                            <div class="text-15">Ngày đi</div>
-                                            <div class="fw-500">
-                                                <?php echo $_POST['ngaydi']; ?>
-                                            </div>
-                    
-                                        </div>
-                    
-                                        <div class="col-auto md:d-none">
-                                            <div class="h-full w-1 bg-border"></div>
-                                        </div>
-                    
-                                        <div class="col-auto text-right md:text-left">
-                                            <div class="text-15">Ngày về</div>
-                                            <div class="fw-500">
-                                                <?php echo $_POST['ngayve']; ?>
-                                            </div>
-                    
-                                        </div>
-                                    </div>
-                    
-                                    <div class="border-top-light mt-30 mb-20"></div>
-                    
-                                    <div class="">
-                                        <div class="text-15">Lịch Trình:</div>
-                                        <div class="fw-500">
-                                            <?php echo $e['tour_schedule']; ?>
-                                        </div>
-                    
-                                    </div>
-                                    <?php if ($idks!=NULL) { ?>
-                                        <div class="border-top-light mt-30 mb-20"></div>
-                    
-                                        <div class="row y-gap-20 justify-between items-center">
-                                            <div class="col-auto">
-                                                <div class="text-15">Bạn đã chọn:</div>
-                                                <?php foreach ($data1 as $e1) { ?>
+                                                    <div class="text-15">Ngày đi</div>
                                                     <div class="fw-500">
-                                                        <?php echo $e1['hotel_name'] ?>
+                                                        <?php echo $_POST['ngaydi']; ?>
                                                     </div>
-                                                <?php } ?>
-                                            </div>
                     
-                                            <div class="col-auto">
-                                                <div class="text-15">
-                                                    <?php echo $_SESSION['sophong'] ?> phòng,
-                                                    <?php echo $_SESSION['songuoi'] ?> người
+                                                </div>
+                    
+                                                <div class="col-auto md:d-none">
+                                                    <div class="h-full w-1 bg-border"></div>
+                                                </div>
+                    
+                                                <div class="col-auto text-right md:text-left">
+                                                    <div class="text-15">Ngày về</div>
+                                                    <div class="fw-500">
+                                                        <?php echo $_POST['ngayve']; ?>
+                                                    </div>
+                    
                                                 </div>
                                             </div>
-                                        </div>
-                                    <?php } ?>
-                                </div>
                     
-                                <div class="px-30 py-30 border-light rounded-4 mt-30">
-                                    <div class="text-20 fw-500 mb-20">Tổng tiền</div>
+                                            <div class="border-top-light mt-30 mb-20"></div>
                     
-                    
-                    
-                                    <div class="px-20 py-20 bg-blue-2 rounded-4 mt-20">
-                                        <div class="row y-gap-5 justify-between">
-                                            <div class="col-auto">
-                                                <div class="text-18 lh-13 fw-500">Giá</div>
-                                            </div>
-                                            <div class="col-auto">
-                                                <div class="text-18 lh-13 fw-500">
-                                                    <?php echo number_format($_SESSION  ['total'], 0, ',', '.') . ' VND'; ?>
+                                            <div class="">
+                                                <div class="text-15">Lịch Trình:</div>
+                                                <div class="fw-500">
+                                                    <?php echo $e['tour_schedule']; ?>
                                                 </div>
                     
                                             </div>
+                                            <?php if ($idks != NULL) { ?>
+                                                    <div class="border-top-light mt-30 mb-20"></div>
+                    
+                                                    <div class="row y-gap-20 justify-between items-center">
+                                                        <div class="col-auto">
+                                                            <div class="text-15">Bạn đã chọn:</div>
+                                                            <?php foreach ($data1 as $e1) { ?>
+                                                                    <div class="fw-500">
+                                                                        <?php echo $e1['hotel_name'] ?>
+                                                                    </div>
+                                                            <?php } ?>
+                                                        </div>
+                    
+                                                        <div class="col-auto">
+                                                            <div class="text-15">
+                                                                <?php echo $_SESSION['sophong'] ?> phòng,
+                                                                <?php echo $_SESSION['songuoi'] ?> người
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                            <?php } ?>
                                         </div>
-                                    </div>
-                                </div>
-                            <?php } ?>
-                        </div>
+                    
+                                        <div class="px-30 py-30 border-light rounded-4 mt-30">
+                                            <div class="text-20 fw-500 mb-20">Tổng tiền</div>
+                    
+                    
+                    
+                                            <div class="px-20 py-20 bg-blue-2 rounded-4 mt-20">
+                                                <div class="row y-gap-5 justify-between">
+                                                    <div class="col-auto">
+                                                        <div class="text-18 lh-13 fw-500">Giá</div>
+                                                    </div>
+                                                    <div class="col-auto">
+                                                        <div class="text-18 lh-13 fw-500">
+                                                            <?php echo number_format($_SESSION['total'], 0, ',', '.') . ' VND'; ?>
+                                                        </div>
+                    
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                <?php } ?>
+                            </div>
                                             
+                            </div>
                         </div>
                     </div>
-                </div>
-            </section>
+                </section>
 
         <?php } ?>
 
 
-        <?php include('/DA/content/views/shared/footer.php') ?>
+        <?php include('content/views/shared/footer.php') ?>
 
     </main>
 

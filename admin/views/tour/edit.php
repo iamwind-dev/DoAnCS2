@@ -1,4 +1,4 @@
-<?php include('/DA/admin/views/shared/header.php') ?>
+<?php include('admin/views/shared/header.php') ?>
 
 <div class="dashboard__main">
     <div class="dashboard__content bg-light-2">
@@ -91,7 +91,7 @@
                                                 <div class="text-18 fw-500 mb-10">Giá</div>
                                                 <div class="form-input ">
                                                     <input name="gia" type="number" required
-                                                        value="<?php echo $element['tour_price']; ?>" min="100000" >
+                                                        value="<?php echo $element['tour_price']; ?>" min="100000">
                                                     <label class="lh-1 text-16 text-light-1">Giá(VND)</label>
                                                 </div>
                                             </div>
@@ -111,25 +111,25 @@
                                                 <div class="form-input ">
                                                     <input name="hanhtrinh" type="text" required
                                                         value="<?php echo $element['tour_journey']; ?>">
-                                                        <label class="lh-1 text-16 text-light-1">Hành trình</label>
-                                                    </div>
+                                                    <label class="lh-1 text-16 text-light-1">Hành trình</label>
                                                 </div>
                                             </div>
-                                            <div class="row">
+                                        </div>
+                                        <div class="row">
                                             <div class="col-4">
                                                 <div class="text-18 fw-500 mb-10">Địa điểm xuất phát</div>
                                                 <div class="form-input ">
                                                     <input name="diemxp" type="text" required
                                                         value="<?php echo $element['tour_starting_point']; ?>">
-                                                        <label class="lh-1 text-16 text-light-1">Địa Điểm xuất
-                                                            phát</label>
-                                                    </div>
+                                                    <label class="lh-1 text-16 text-light-1">Địa Điểm xuất
+                                                        phát</label>
                                                 </div>
-                                                    <div class="col-4">
-                                                        <div class="text-18 fw-500 mb-10">Lịch Trình</div>
-                                                        <div class="form-input ">
-                                                            <input name="lichtrinh" type="text"
-                                                                value="<?php echo $element['tour_schedule']; ?>">
+                                            </div>
+                                            <div class="col-4">
+                                                <div class="text-18 fw-500 mb-10">Lịch Trình</div>
+                                                <div class="form-input ">
+                                                    <input name="lichtrinh" type="text"
+                                                        value="<?php echo $element['tour_schedule']; ?>">
                                                     <label class="lh-1 text-16 text-light-1">Lịch trình</label>
                                                 </div>
                                             </div>
@@ -138,16 +138,16 @@
                                                 <div class="form-input ">
                                                     <input name="thoiluong" type="number" required
                                                         value="<?php echo $element['tour_duration']; ?>" min="1">
-                                                        <label class="lh-1 text-16 text-light-1">Ngày</label>
-                                                    </div>
+                                                    <label class="lh-1 text-16 text-light-1">Ngày</label>
                                                 </div>
                                             </div>
-                                            <div class="row">
-                                                <div class="col-5">
-                                                    <div class="text-18 fw-500 mb-10">Ngày bắt đầu:</div>
-                                                    <div class="form-input ">
-                                                        <input name="batdau" type="date" required
-                                                            value="<?php echo $element['tour_start_date']; ?>">
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-5">
+                                                <div class="text-18 fw-500 mb-10">Ngày bắt đầu:</div>
+                                                <div class="form-input ">
+                                                    <input name="batdau" type="date" required
+                                                        value="<?php echo $element['tour_start_date']; ?>">
                                                     <label class="lh-1 text-16 text-light-1">Ngày bắt đầu</label>
                                                 </div>
                                             </div>
@@ -162,20 +162,20 @@
                                         </div>
                                     </div>
                                     <div class="row">
-                                    <div class="col-6">
-                                        <div class="text-18 fw-500 mb-10">Mô tả tour</div>
-                                        <div class="form-input ">
-                                            <textarea name="mota" id="editor" value="">
-                                                                <?php echo $element['tour_description']; ?>    </textarea>
+                                        <div class="col-6">
+                                            <div class="text-18 fw-500 mb-10">Mô tả tour</div>
+                                            <div class="form-input ">
+                                                <textarea name="mota" id="editor" value="">
+                                                                    <?php echo $element['tour_description']; ?>    </textarea>
+                                            </div>
                                         </div>
-                                    </div>
-                                    <div class="col-6">
-                                        <div class="text-18 fw-500 mb-10">Giới thiệu tour</div>
-                                        <div class="form-input ">
-                                            <textarea name="gioithieu" id="editor1"
-                                                value=""> <?php echo $element['tour_introduction']; ?>       </textarea>
+                                        <div class="col-6">
+                                            <div class="text-18 fw-500 mb-10">Giới thiệu tour</div>
+                                            <div class="form-input ">
+                                                <textarea name="gioithieu" id="editor1"
+                                                    value=""> <?php echo $element['tour_introduction']; ?>       </textarea>
+                                            </div>
                                         </div>
-                                    </div>
                                     </div>
                                     <div class="mt-30">
                                         <div class="fw-500">Hình ảnh</div>
@@ -207,4 +207,4 @@
             </div>
         </div>
 
-        <?php include('/DA/admin/views/shared/footer.php') ?>
+        <?php include('admin/views/shared/footer.php') ?>

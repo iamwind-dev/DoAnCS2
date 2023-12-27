@@ -1,15 +1,16 @@
 <?php
 
 
-require_once('/DA/lib/functions.php');
-function userLogin($input,$password){
+require_once('lib/functions.php');
+function userLogin($input, $password)
+{
     global $conn;
 
-    $sql = "SELECT * FROM `users` WHERE (LOWER(`user_username`)='".strtolower($input)."' OR
-    LOWER(`user_email`)='".strtolower($input)."') AND `user_password`='".$password."'";
+    $sql = "SELECT * FROM `users` WHERE (LOWER(`user_username`)='" . strtolower($input) . "' OR
+    LOWER(`user_email`)='" . strtolower($input) . "') AND `user_password`='" . $password . "'";
 
     $query = mysqli_query($conn, $sql) or die(mysqli_error($conn));
-    if(mysqli_num_rows($query) > 0) {
+    if (mysqli_num_rows($query) > 0) {
         $_SESSION['user'] = mysqli_fetch_assoc($query);
         global $userid;
         $userid = $_SESSION['user']['id'];
@@ -18,10 +19,11 @@ function userLogin($input,$password){
     return false;
 }
 
-function userDestroy($id) {
+function userDestroy($id)
+{
     $user = get_a_record('users', $id);
-    $image = 'public/upload/images/'.$user['user_avatar'];
-    if(is_file($image)) {
+    $image = 'public/upload/images/' . $user['user_avatar'];
+    if (is_file($image)) {
         unlink($image);
     }
     global $conn;
@@ -30,12 +32,13 @@ function userDestroy($id) {
     mysqli_query($conn, $sql) or die(mysqli_error($conn));
 }
 
-function user_update() {
+function user_update()
+{
     global $userNav;
     $user_login = get_a_record('users', $userNav);
 
 
-    if(isset($_POST['roleid']) && $user_login['role_id'] == 1)
+    if (isset($_POST['roleid']) && $user_login['role_id'] == 1)
         $roleid = $_POST['roleid'];
     else
         $roleid = $user_login['role_id'];
@@ -133,13 +136,14 @@ function user_update() {
     // }
 }
 
-function showRole($id){
+function showRole($id)
+{
     $sql = "SELECT * FROM roles WHERE id <> $id;  ";
     global $conn;
     $query = mysqli_query($conn, $sql);
     $data = array();
-    if(mysqli_num_rows($query) > 0) {
-        while($row = mysqli_fetch_assoc($query)) {
+    if (mysqli_num_rows($query) > 0) {
+        while ($row = mysqli_fetch_assoc($query)) {
             $data[] = $row;
         }
         mysqli_free_result($query);
@@ -147,13 +151,14 @@ function showRole($id){
     return $data;
 }
 
-function showstatuss($id) {
+function showstatuss($id)
+{
     $sql = "SELECT * FROM user_status WHERE id <> $id;  ";
     global $conn;
     $query = mysqli_query($conn, $sql);
     $data = array();
-    if(mysqli_num_rows($query) > 0) {
-        while($row = mysqli_fetch_assoc($query)) {
+    if (mysqli_num_rows($query) > 0) {
+        while ($row = mysqli_fetch_assoc($query)) {
             $data[] = $row;
         }
         mysqli_free_result($query);
@@ -161,7 +166,8 @@ function showstatuss($id) {
     return $data;
 }
 
-function userUpdate(){
+function userUpdate()
+{
     $trangthai = $_POST['trangthai'];
     $mang = explode('-', $trangthai);
     $idtrangthai = $mang[0];
@@ -172,7 +178,7 @@ function userUpdate(){
     $tenvaitro = $mang1[1];
 
     $id = $_POST['id'];
-    
+
 
     $user_update = array(
         'user_name' => escape($_POST['ten']),
@@ -182,18 +188,18 @@ function userUpdate(){
         'user_role' => $tenvaitro,
         'user_status_id' => $idtrangthai,
         'user_status' => $tentrangthai,
-        
+
     );
     global $conn;
     $email = addslashes($_POST['email']);
-    if(!preg_match("/([a-z0-9_]+|[a-z0-9_]+\.[a-z0-9_]+)@(([a-z0-9]|[a-z0-9]+\.[a-z0-9]+)+\.([a-z]{2,4}))/i", $email)) {
+    if (!preg_match("/([a-z0-9_]+|[a-z0-9_]+\.[a-z0-9_]+)@(([a-z0-9]|[a-z0-9]+\.[a-z0-9]+)+\.([a-z]{2,4}))/i", $email)) {
         echo "<script>alert('Email này không hợp lệ. Vui long nhập email khác.');window.history.back();</script>";
     }
-    elseif(mysqli_num_rows(mysqli_query($conn, "SELECT user_email FROM users WHERE user_email='$email' AND id<> $id")) > 0) {
+    elseif (mysqli_num_rows(mysqli_query($conn, "SELECT user_email FROM users WHERE user_email='$email' AND id<> $id")) > 0) {
         echo "<script>alert('Email này đã có người dùng. Vui lòng chọn Email khác.');window.history.back();</script>";
     }
     else {
-        update('users',$id, $user_update);
+        update('users', $id, $user_update);
         header('Location:admin.php?controller=user&action=index');
     }
 }

@@ -11,9 +11,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   <!-- Google fonts -->
-  <link rel="preconnect" href="https://fonts.googleapis.com/">
-  <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Jost:wght@400;500;600&amp;display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600&display=swap" rel="stylesheet">
 <link rel="icon" href="../../../public/img/general/logo.ico" type="image/ico">
   <!-- Stylesheets -->
   <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css">
@@ -112,7 +112,7 @@
                                   <?php $avatar = $u['user_avatar'] ?>
                                   <?php $name = $u['user_name'] ?>
                                   <?php $id = $u['id'] ?>
-                                  <img src="/public/img/avatars/<?php echo $u['user_avatar'] ?>" alt="image" class="size-40 rounded-22 object-cover">
+                                  <img style="border-radius:50% !important;" src="/public/img/avatars/<?php echo $u['user_avatar'] ?>" alt="image" class="size-40 rounded-22 object-cover">
                                       <b style='padding:10px'>
                                         <?php echo $u['user_name'] ?>
                                       </b>

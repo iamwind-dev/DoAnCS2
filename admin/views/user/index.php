@@ -1,5 +1,5 @@
 <?php
-include('/DA/admin/views/shared/header.php');
+include('admin/views/shared/header.php');
 ?>
 
 <div class="dashboard__main">
@@ -12,7 +12,7 @@ include('/DA/admin/views/shared/header.php');
                 </div>
             </div>
 
-            
+
         </div>
 
         <div class="py-30 px-30 rounded-4 bg-white shadow-3">
@@ -33,19 +33,19 @@ include('/DA/admin/views/shared/header.php');
                             <table class="table-4 -border-bottom col-12">
                                 <thead class="bg-light-2">
                                     <tr>
-                                        <th >STT</th>
-                                        <th >Họ và Tên</th>
-                                        <th >Email</th>
-                                        <th >SĐT</th>
-                                        <th >Vai trò</th>
-                                        <th >Trạng thái</th>
-                                        <th >Hành động</th>
+                                        <th>STT</th>
+                                        <th>Họ và Tên</th>
+                                        <th>Email</th>
+                                        <th>SĐT</th>
+                                        <th>Vai trò</th>
+                                        <th>Trạng thái</th>
+                                        <th>Hành động</th>
                                     </tr>
                                 </thead>
                                 <tbody>
                                     <?php
                                     $a = 0;
-                                    foreach($data as $element) { ?>
+                                    foreach ($data as $element) { ?>
 
                                         <tr>
                                             <td>
@@ -67,14 +67,14 @@ include('/DA/admin/views/shared/header.php');
                                                 <?php echo $element['user_role'] ?>
                                             </td>
                                             <td>
-                                                
+
                                                 <?php echo $element['user_status_id'] ?>
-                                                    
+
                                             </td>
-                                            
+
                                             <td>
                                                 <div class="row x-gap-10 y-gap-10 items-center">
-                                                    
+
 
                                                     <div class="col-auto">
                                                         <a
@@ -108,39 +108,40 @@ include('/DA/admin/views/shared/header.php');
                                                 </a>
                                             <?php } ?>
                                         </div>
-                            
+
                                         <div class="col-auto">
                                             <div class="row x-gap-20 y-gap-20 items-center">
                                                 <?php for ($i = 1; $i <= $total_page; $i++) {
                                                     if ($i == $current_page) { ?>
                                                         <div class="col-auto">
-                            
+
                                                             <a href="">
                                                                 <div class="size-40 flex-center rounded-full bg-dark-1 text-white">
                                                                     <?php echo $i ?>
                                                                 </div>
                                                             </a>
-                            
+
                                                         </div>
                                                     <?php }
                                                     else { ?>
                                                         <div class="col-auto">
-                                                            <a href="../../../admin.php?controller=user&acion=index&p=<?php echo $i ?> ">
+                                                            <a
+                                                                href="../../../admin.php?controller=user&acion=index&p=<?php echo $i ?> ">
                                                                 <div class="size-40 flex-center rounded-full">
                                                                     <?php echo $i ?>
                                                                 </div>
                                                             </a>
                                                         </div>
-                            
+
                                                     <?php }
                                                 } ?>
-                            
-                            
-                            
-                            
+
+
+
+
                                             </div>
                                         </div>
-                            
+
                                         <div class="col-auto">
                                             <a href='../../../admin.php?controller=user&acion=index&p=<?php echo $current_page + 1 ?> '
                                                 class="button -blue-1 size-40 rounded-full border-light">
@@ -155,6 +156,6 @@ include('/DA/admin/views/shared/header.php');
                 </div>
             </div>
         </div>
-        <?php include('/DA/admin/views/shared/footer.php') ?>
+        <?php include('admin/views/shared/footer.php') ?>
     </div>
 </div>

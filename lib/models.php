@@ -1,5 +1,5 @@
 <?php
-require_once('/DA/lib/config/database.php');
+require_once('config/database.php');
 //Lấy dữ liệu của 1 trường trong bảng theo id
 function get_a_record($table, $id)
 {
@@ -42,10 +42,10 @@ function insert_get_id($table, $data = array())
     }
     $sql = "INSERT INTO `$table` SET " . implode(',', $values);
     mysqli_query($conn, $sql);
-    $sql2="SELECT last_insert_id()";
-    $result=mysqli_query($conn, $sql2);
+    $sql2 = "SELECT last_insert_id()";
+    $result = mysqli_query($conn, $sql2);
     $row = mysqli_fetch_assoc($result);
-    return $row;    
+    return $row;
 }
 
 
@@ -149,7 +149,7 @@ function get_total($table)
     return $row['total'];
 }
 
-function get_total_id($table,$id,$type)
+function get_total_id($table, $id, $type)
 {
     global $conn;
     $sql = "SELECT COUNT(*) as total FROM $table WHERE $type=$id";
@@ -158,7 +158,7 @@ function get_total_id($table,$id,$type)
     return $row['total'];
 }
 
-function get_all_pag($table,$start,$limit)
+function get_all_pag($table, $start, $limit)
 {
     $sql = "SELECT * FROM `$table` LIMIT $start,$limit";
     global $conn;
@@ -173,7 +173,7 @@ function get_all_pag($table,$start,$limit)
     return $data;
 }
 
-function get_all_pags($table, $start, $limit,$type)
+function get_all_pags($table, $start, $limit, $type)
 {
     $sql = "SELECT * FROM `$table` WHERE `$type` <> 2 LIMIT $start,$limit";
     global $conn;
@@ -188,7 +188,7 @@ function get_all_pags($table, $start, $limit,$type)
     return $data;
 }
 
-function get_all_tour_location( $start, $limit,$idl)
+function get_all_tour_location($start, $limit, $idl)
 {
     $sql = "SELECT * FROM tour WHERE tour_status_id <> 2 AND tour_location_id = $idl LIMIT $start,$limit";
     global $conn;
@@ -204,7 +204,8 @@ function get_all_tour_location( $start, $limit,$idl)
 }
 
 
-function increaseValue($table,$field,$id) {
+function increaseValue($table, $field, $id)
+{
     global $conn;
 
     // Tăng giá trị của trường 'quantity' cho sản phẩm có 'product_id' là $productId

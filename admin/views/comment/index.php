@@ -1,5 +1,5 @@
 <?php
-include('/DA/admin/views/shared/header.php');
+include('admin/views/shared/header.php');
 ?>
 
 <div class="dashboard__main">
@@ -215,6 +215,6 @@ include('/DA/admin/views/shared/header.php');
             </div>
         </div>
         
-        <?php include('/DA/admin/views/shared/footer.php') ?>
+        <?php include('admin/views/shared/footer.php') ?>
     </div>
 </div>

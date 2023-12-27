@@ -2539,8 +2539,8 @@
       </section>
 
       <?php
-    include("/DA/content/views/shared/footer.php");
-    ?>
+      include("content/views/shared/footer.php");
+      ?>
     </main>
   </body>
 </html>

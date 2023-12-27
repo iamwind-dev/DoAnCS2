@@ -1,12 +1,12 @@
 <?php
-require_once('/DA/lib/config/database.php');
+require_once('lib/config/database.php');
 
 
 
 
 // function showTourID($id)
 // {
-//     include('/DA/connection.php');
+//     include('connection.php');
 //     $sql = "SELECT Tour.*, Location.location_name, Location.location_description
 // FROM Tour
 // JOIN Location ON Tour.tour_location_id = Location.location_id
@@ -24,7 +24,7 @@ require_once('/DA/lib/config/database.php');
 
 // function showTour()
 // {
-//     include('/DA/connection.php');
+//     include('connection.php');
 //     $sql = "SELECT Tour.*, Location.location_name, Location.location_description
 // FROM Tour
 // JOIN Location ON Tour.tour_location_id = Location.location_id";
@@ -135,7 +135,7 @@ function tour_add()
 //Delete the tour
 function tour_delete($id)
 {
-    include('/DA/connection.php');
+    include('connection.php');
     $sql = "DELETE  from tour where id=$id";
     $query = mysqli_query($conn, $sql);
     header('location:admin.php?controller=tour');

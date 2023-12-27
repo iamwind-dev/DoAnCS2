@@ -1,5 +1,5 @@
 <?php
-require_once('/DA/lib/models.php');
+require_once('lib/models.php');
 $result = get_total('tour');
 $total_records = $result;
 $current_page = isset($_GET['p']) ? $_GET['p'] : 1;
@@ -14,7 +14,7 @@ else if ($current_page < 1) {
 
 $start = ($current_page - 1) * $limit;
 
-$data = get_all_pag('tour',$start,$limit);
+$data = get_all_pag('tour', $start, $limit);
 
 
 include('admin/views/tour/index.php');

@@ -1,4 +1,4 @@
-<?php include('/DA/admin/views/shared/header.php') ?>
+<?php include('admin/views/shared/header.php') ?>
 
 <div class="dashboard__main">
     <div class="dashboard__content bg-light-2">
@@ -115,7 +115,7 @@
 
 
                                         </div>
-                                            <div class="col-4">
+                                        <div class="col-4">
                                             <div class="text-18 fw-500 mb-10">Thời lượng tour</div>
                                             <div class="form-input ">
                                                 <input name="thoiluong" type="number" required>
@@ -129,11 +129,10 @@
                                     </div>
 
                                     <div class="row">
-                                            <div class="col-5">
-                                                <div class="text-18 fw-500 mb-10">Ngày bắt đầu:</div>
-                                                <div class="form-input ">
-                                                    <input name="batdau" type="date" required
-                                                        value="">
+                                        <div class="col-5">
+                                            <div class="text-18 fw-500 mb-10">Ngày bắt đầu:</div>
+                                            <div class="form-input ">
+                                                <input name="batdau" type="date" required value="">
                                                 <label class="lh-1 text-16 text-light-1">Ngày bắt đầu</label>
                                             </div>
                                         </div>
@@ -150,24 +149,24 @@
 
 
 
-                                                        <div class="row">
-                                <div class="col-6">
-                                    <div class="text-18 fw-500 mb-10">Mô tả tour</div>
-                                    <div class="form-input ">
-                                        <textarea name="mota" id="editor"></textarea>
+                                <div class="row">
+                                    <div class="col-6">
+                                        <div class="text-18 fw-500 mb-10">Mô tả tour</div>
+                                        <div class="form-input ">
+                                            <textarea name="mota" id="editor"></textarea>
+
+                                        </div>
 
                                     </div>
+                                    <div class="col-6">
+                                        <div class="text-18 fw-500 mb-10">Giới thiệu tour</div>
+                                        <div class="form-input ">
+                                            <textarea name="gioithieu" id="editor1"></textarea>
 
-                                </div>
-                                <div class="col-6">
-                                    <div class="text-18 fw-500 mb-10">Giới thiệu tour</div>
-                                    <div class="form-input ">
-                                        <textarea name="gioithieu" id="editor1"></textarea>
+                                        </div>
 
                                     </div>
-
                                 </div>
-                                                        </div>
 
                                 <div class="mt-30">
                                     <div class="fw-500">Hình ảnh</div>
@@ -195,4 +194,4 @@
                 </div>
             </div>
         </div>
-        <?php include('/DA/admin/views/shared/footer.php') ?>
+        <?php include('admin/views/shared/footer.php') ?>

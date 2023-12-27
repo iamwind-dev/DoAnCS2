@@ -1,6 +1,6 @@
 <?php
-require_once('/DA/lib/config/database.php');
-require_once('/DA/lib/models.php');
+require_once('lib/config/database.php');
+require_once('lib/models.php');
 
 $result = get_total('tour');
 

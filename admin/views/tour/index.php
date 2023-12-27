@@ -1,5 +1,5 @@
 <?php
-include('/DA/admin/views/shared/header.php');
+include('admin/views/shared/header.php');
 ?>
 
 <div class="dashboard__main">
@@ -41,7 +41,7 @@ include('/DA/admin/views/shared/header.php');
                   <tr>
                     <th style="width: 50px !important">STT</th>
                     <th style="width: 300px">Tên Tour</th>
-                    <th style="width: 300px"style="width: 300px">Ảnh</th>
+                    <th style="width: 300px" style="width: 300px">Ảnh</th>
                     <th style="width: 500px">Lịch Trình/Giá</th>
                     <th style="width: 400px">Thông tin/Địa Điểm</th>
                     <th style="width: 300px">Trạng Thái</th>
@@ -53,9 +53,11 @@ include('/DA/admin/views/shared/header.php');
                   <?php
                   $a = 0;
                   foreach ($data as $element) { ?>
-                  
+
                     <tr>
-                      <td><?php echo ++$a; ?></td>
+                      <td>
+                        <?php echo ++$a; ?>
+                      </td>
                       <td class="text-blue-1 fw-500">
                         <?php echo $element['tour_name'];
                         ?>
@@ -72,33 +74,42 @@ include('/DA/admin/views/shared/header.php');
                         <?php echo $element['tour_schedule']; ?><br><br>
                         <b>Số người:</b>
                         <?php echo $element['tour_max_capacity']; ?> <br>
-                        <br/><b>Giá:</b>
-                      <span class=" text-center text-14 fw-500 text-red-2"><?php echo number_format($element['tour_price'], 0, ',', '.').'VND'; ?></span>
+                        <br /><b>Giá:</b>
+                        <span class=" text-center text-14 fw-500 text-red-2">
+                          <?php echo number_format($element['tour_price'], 0, ',', '.') . 'VND'; ?>
+                        </span>
 
-                        </td>
-                        <td>
-                          <b>Địa điểm:</b>
+                      </td>
+                      <td>
+                        <b>Địa điểm:</b>
                         <?php echo $element['tour_location_name']; ?><br><br><b>Di Chuyển:</b>
                         <?php echo $element['tour_vehicle']; ?><br><br><b>Điểm Xuất Phát:</b>
                         <?php echo $element['tour_starting_point']; ?><br><br><b>Ngày bắt đầu:
-                          </b>
+                        </b>
                         <?php echo date('d/m/Y', strtotime($element['tour_start_date'])); ?><br><br><b>Ngày kết thúc:
-                          </b>
+                        </b>
                         <?php echo date('d/m/Y', strtotime($element['tour_end_date'])); ?>
                       </td>
                       <td>
-                        <?php if($element['tour_status_id']==2){ ?>
-                        <span class="rounded-100 py-4 px-10 text-center text-14 fw-500 bg-red-3 text-red-2"><?php echo $element['tour_status']; ?></span>
-                        <?php }else if($element['tour_status_id']==1){  ?>
-                        <span class="rounded-100 py-4 px-10 text-center text-14 fw-500 bg-blue-1-05 text-blue-1"><?php echo $element['tour_status']; ?></span>
-                        <?php }else if($element['tour_status_id']==3){  ?>
-                        <span
-                          class="rounded-100 py-4 px-10 text-center text-14 fw-500 bg-yellow-4 text-yellow-3"><?php echo $element['tour_status']; ?></span>
-                          <?php } ?>
+                        <?php if ($element['tour_status_id'] == 2) { ?>
+                          <span class="rounded-100 py-4 px-10 text-center text-14 fw-500 bg-red-3 text-red-2">
+                            <?php echo $element['tour_status']; ?>
+                          </span>
+                        <?php }
+                        else if ($element['tour_status_id'] == 1) { ?>
+                            <span class="rounded-100 py-4 px-10 text-center text-14 fw-500 bg-blue-1-05 text-blue-1">
+                            <?php echo $element['tour_status']; ?>
+                            </span>
+                        <?php }
+                        else if ($element['tour_status_id'] == 3) { ?>
+                              <span class="rounded-100 py-4 px-10 text-center text-14 fw-500 bg-yellow-4 text-yellow-3">
+                            <?php echo $element['tour_status']; ?>
+                              </span>
+                        <?php } ?>
                       </td>
                       <td>
                         <div class="rounded-4 size-35 bg-blue-1 text-white flex-center text-12 fw-600">
-                          <?php echo number_format($element['tour_star'], 1, ',', '.');  ?>
+                          <?php echo number_format($element['tour_star'], 1, ',', '.'); ?>
                         </div>
                       </td>
                       <td>
@@ -136,35 +147,41 @@ include('/DA/admin/views/shared/header.php');
           <div class="pt-30">
             <div class="row justify-between">
               <div class="col-auto">
-                <?php if($current_page > 1 && $total_page >1){ ?>
-                  <a href='../../../admin.php?controller=tour&acion=index&p=<?php echo $current_page-1 ?> ' class="button -blue-1 size-40 rounded-full border-light">
-                  <i class="icon-chevron-left text-12"></i>
+                <?php if ($current_page > 1 && $total_page > 1) { ?>
+                  <a href='../../../admin.php?controller=tour&acion=index&p=<?php echo $current_page - 1 ?> '
+                    class="button -blue-1 size-40 rounded-full border-light">
+                    <i class="icon-chevron-left text-12"></i>
                   </a>
                 <?php } ?>
               </div>
 
               <div class="col-auto">
                 <div class="row x-gap-20 y-gap-20 items-center">
-<?php for ($i = 1; $i <= $total_page; $i++) {
-  if ($i == $current_page) { ?>
-    <div class="col-auto">
-                    
-                    <a href="">
-                      <div class="size-40 flex-center rounded-full bg-dark-1 text-white"><?php echo $i ?></div>
-                    </a>
-                    
-                  </div><?php }
-  else { ?>
+                  <?php for ($i = 1; $i <= $total_page; $i++) {
+                    if ($i == $current_page) { ?>
                       <div class="col-auto">
-                  <a href="../../../admin.php?controller=tour&acion=index&p=<?php echo $i ?> ">
-                    <div class="size-40 flex-center rounded-full"><?php echo $i ?></div>
-                            </a>
-                  </div>
-    
-<?php }
-}  ?>
 
-                
+                        <a href="">
+                          <div class="size-40 flex-center rounded-full bg-dark-1 text-white">
+                            <?php echo $i ?>
+                          </div>
+                        </a>
+
+                      </div>
+                    <?php }
+                    else { ?>
+                      <div class="col-auto">
+                        <a href="../../../admin.php?controller=tour&acion=index&p=<?php echo $i ?> ">
+                          <div class="size-40 flex-center rounded-full">
+                            <?php echo $i ?>
+                          </div>
+                        </a>
+                      </div>
+
+                    <?php }
+                  } ?>
+
+
 
 
                 </div>
@@ -181,6 +198,6 @@ include('/DA/admin/views/shared/header.php');
         </div>
       </div>
     </div>
-    <?php include('/DA/admin/views/shared/footer.php') ?>
+    <?php include('admin/views/shared/footer.php') ?>
   </div>
 </div>

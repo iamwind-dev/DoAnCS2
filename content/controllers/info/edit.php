@@ -1,7 +1,7 @@
 <?php
-require_once('/DA/content/models/user.php');
-require_once('/DA/lib/models.php');
-require_once('/DA/lib/functions.php');
+require_once('content/models/user.php');
+require_once('lib/models.php');
+require_once('lib/functions.php');
 if (!empty($_POST)) {
     $folder = 'avatars/';
     upload($folder);

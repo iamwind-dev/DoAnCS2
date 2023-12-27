@@ -1,7 +1,7 @@
 <?php
 
 
-require_once('/DA/lib/models.php');
+require_once('lib/models.php');
 $result = get_total('users');
 $total_records = $result;
 $current_page = isset($_GET['p']) ? $_GET['p'] : 1;
@@ -19,4 +19,4 @@ $start = ($current_page - 1) * $limit;
 $data = get_all_pag('users', $start, $limit);
 
 
-require_once('/DA/admin/views/user/index.php');
+require_once('admin/views/user/index.php');

@@ -1,4 +1,4 @@
-<?php include('/DA/admin/views/shared/header.php') ?>
+<?php include('admin/views/shared/header.php') ?>
 
 <div class="dashboard__main">
     <div class="dashboard__content bg-light-2">
@@ -104,52 +104,53 @@
                                                 </div>
                                             </div>
                                         </div>
-                                    <div class="text-18 fw-500 mb-10">Tiện ích khách sạn</div>
-                                    
+                                        <div class="text-18 fw-500 mb-10">Tiện ích khách sạn</div>
+
                                         <div class="col-12">
                                             <div class="form-input ">
                                                 <input name="tienich" type="text" required
                                                     value="<?php echo $element['hotel_amenities']; ?>">
-                                                    <label class="lh-1 text-16 text-light-1">Tiện ích khách sạn</label>
-                                                </div>
+                                                <label class="lh-1 text-16 text-light-1">Tiện ích khách sạn</label>
                                             </div>
+                                        </div>
 
-                                        
+
                                         <div class="col-12">
                                             <div class="text-18 fw-500 mb-10">Mô tả Khách sạn</div>
                                             <div class="form-input ">
                                                 <textarea name="mota" id="editor" value="">
-                                                        <?php echo $element['hotel_description']; ?>    </textarea>
-                                        </div>
-                                    </div>
-                                    <div class="col-12">
-                                        <div class="text-18 fw-500 mb-10">Giới thiệu tour</div>
-                                        <div class="form-input ">
-                                            <textarea name="gioithieu" id="editor1"
-                                                value=""> <?php echo $element['hotel_introduction']; ?>       </textarea>
-                                        </div>
-                                    </div>
-                                    <div class="mt-30">
-                                        <div class="fw-500">Hình ảnh</div>
-                                        <div class="containerr">
-                                            <input type="file" name="file" id="file" accept="image/*" hidden>
-                                            <div class="img-area" data-img="">
-                                                <i class='bx bxs-cloud-upload icon'></i>
-                                                <h3>Upload Image</h3>
-                                                <p>Image size must be less than <span>2MB</span></p>
-                                                <img src="../../../public/img/hotels/<?php echo $element['hotel_image_url']; ?>"
-                                                    alt="">
+                                                            <?php echo $element['hotel_description']; ?>    </textarea>
                                             </div>
-                                            <button type="button" class="select-image">Chọn Ảnh</button>
                                         </div>
-                                    </div>
-                                    <input type="text" name="image" id="" value="<?php echo $element['hotel_image_url']; ?>"
-                                        hidden>
-                                    <div class="d-inline-block pt-30">
-                                        <input style="width:10% !important"type="submit" class="button h-50 px-24 -dark-1 bg-blue-1 text-white"
-                                            value="Lưu" form="myform">
-                                        </input>
-                                    </div>
+                                        <div class="col-12">
+                                            <div class="text-18 fw-500 mb-10">Giới thiệu tour</div>
+                                            <div class="form-input ">
+                                                <textarea name="gioithieu" id="editor1"
+                                                    value=""> <?php echo $element['hotel_introduction']; ?>       </textarea>
+                                            </div>
+                                        </div>
+                                        <div class="mt-30">
+                                            <div class="fw-500">Hình ảnh</div>
+                                            <div class="containerr">
+                                                <input type="file" name="file" id="file" accept="image/*" hidden>
+                                                <div class="img-area" data-img="">
+                                                    <i class='bx bxs-cloud-upload icon'></i>
+                                                    <h3>Upload Image</h3>
+                                                    <p>Image size must be less than <span>2MB</span></p>
+                                                    <img src="../../../public/img/hotels/<?php echo $element['hotel_image_url']; ?>"
+                                                        alt="">
+                                                </div>
+                                                <button type="button" class="select-image">Chọn Ảnh</button>
+                                            </div>
+                                        </div>
+                                        <input type="text" name="image" id=""
+                                            value="<?php echo $element['hotel_image_url']; ?>" hidden>
+                                        <div class="d-inline-block pt-30">
+                                            <input style="width:10% !important" type="submit"
+                                                class="button h-50 px-24 -dark-1 bg-blue-1 text-white" value="Lưu"
+                                                form="myform">
+                                            </input>
+                                        </div>
                                 </form>
                             <?php } ?>
                         </div>
@@ -158,4 +159,4 @@
             </div>
         </div>
 
-        <?php include('/DA/admin/views/shared/footer.php') ?>
+        <?php include('admin/views/shared/footer.php') ?>

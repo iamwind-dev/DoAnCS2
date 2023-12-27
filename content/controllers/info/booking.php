@@ -1,6 +1,6 @@
 <?php
-require_once('/DA/lib/models.php');
-require_once('/DA/content/models/booking.php');
+require_once('lib/models.php');
+require_once('content/models/booking.php');
 $a = showBooking($_SESSION['user']['id']);
 // foreach ($a as $b) {
 //     //echo $b['tour_id'];

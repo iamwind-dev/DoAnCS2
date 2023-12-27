@@ -1,5 +1,5 @@
 <?php
-include_once('/DA/lib/models.php');
+include_once('lib/models.php');
 $data = get_all('category');
-include_once('/DA/admin/views/category/index.php');
+include_once('admin/views/category/index.php');
 

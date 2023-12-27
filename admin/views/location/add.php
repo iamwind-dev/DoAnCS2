@@ -1,4 +1,4 @@
-<?php include('/DA/admin/views/shared/header.php') ?>
+<?php include('admin/views/shared/header.php') ?>
 
 <div class="dashboard__main">
     <div class="dashboard__content bg-light-2">
@@ -45,16 +45,16 @@
                                         </div>
                                         <button type="button" class="select-image">Chọn Ảnh</button>
                                     </div>
-                                </div>
-                                <div class="d-inline-block pt-30">
-                                    <input type="submit" class="button h-50 px-24 -dark-1 bg-blue-1 text-white"
-                                        value="Thêm" form="myform">
-                                    </input>
-                                </div>
-                            </form>
                         </div>
+                        <div class="d-inline-block pt-30">
+                            <input type="submit" class="button h-50 px-24 -dark-1 bg-blue-1 text-white" value="Thêm"
+                                form="myform">
+                            </input>
+                        </div>
+                        </form>
                     </div>
                 </div>
             </div>
         </div>
-        <?php include('/DA/admin/views/shared/footer.php') ?>
+    </div>
+    <?php include('admin/views/shared/footer.php') ?>

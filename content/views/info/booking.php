@@ -1,5 +1,5 @@
 <?php
-include("/DA/content/views/shared/headerhome.php");
+include("content/views/shared/headerhome.php");
 ?>
     <div class="dashboard -is-sidebar-open" data-x="dashboard" data-x-toggle="-is-sidebar-open">
     
@@ -300,5 +300,5 @@ $(document).ready(function(){
 </script> -->
 
 <?php
-include("/DA/content/views/shared/footer.php");
+include("content/views/shared/footer.php");
 ?>
