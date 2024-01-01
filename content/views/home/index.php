@@ -528,7 +528,7 @@ include("content/views/shared/header.php");
       </div>
 
       <div data-anim-child="slide-up delay-3" class="col-lg-6">
-        <a href="blog-single-1.html" class="row y-gap-20 items-center">
+        <a target="blank" href="https://vinpearl.com/vi/bo-tui-16-dia-diem-du-lich-ha-long-lam-say-long-du-khach" class="row y-gap-20 items-center">
           <div class="col-auto">
             <img class="size-250 rounded-4"
               src="../../../public/img/blog/du-lich-vinh-Ha-Long-hinh-anh3_1625912082_1660489377.png" alt="image">

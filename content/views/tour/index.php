@@ -88,9 +88,11 @@
 
         <div class="col-auto">
           <div id="tourfav" class="row x-gap-10 y-gap-10">
-            <?php $data3 = get_tourfv($_SESSION['user']['id'], $e['id']);
-            if ($data3 == false) {
-              ?>
+            <?php
+            if (isset($_SESSION['user']['id'])) {
+              $data3 = get_tourfv($_SESSION['user']['id'], $e['id']);
+              if ($data3 == false) {
+                ?>
               <div id="remove" class="col-auto" style="display: none ;">
                 <button id="removetourfav" class="button px-15 py-10 text-light-2 bg-blue-1">
                   <i class="icon-heart mr-10" style='content: "\e902";'></i>
@@ -105,7 +107,7 @@
 
               </div>
             <?php }
-            else { ?>
+              else { ?>
               <div id="remove" class="col-auto">
                 <button id="removetourfav" class="button px-15 py-10 text-light-2 bg-blue-1">
                   <i class="icon-heart mr-10"></i>
@@ -120,7 +122,8 @@
 
               </div>
 
-            <?php } ?>
+            <?php }
+            } ?>
           </div>
         </div>
         <input type="text" id="idtour" value="<?php echo $e['id'] ?>" hidden>
@@ -230,7 +233,7 @@
               </div>
             </div>
 
-            <div class="col-12">
+            <!-- <div class="col-12">
               <h5 class="text-16 fw-500">Điểm Nổi Bật</h5>
               <ul class="list-disc text-15 mt-10">
                 <li>
@@ -240,12 +243,12 @@
                 <li>Explore with a guide to delve deeper into the history</li>
                 <li>Great for history buffs and travelers with limited time</li>
               </ul>
-            </div>
+            </div> -->
           </div>
         </div>
 
         <div class="col-lg-4">
-          <form action="../../../index.php?controller=booking&action=index" method="post">
+          <form id="form1" action="../../../index.php?controller=booking&action=index" method="post">
             <div class="d-flex justify-end js-pin-content">
               <div class="w-360 lg:w-full d-flex flex-column items-center">
                 <div class="px-30 py-30 rounded-4 border-light bg-white shadow-4">
@@ -313,7 +316,7 @@
                     </div>
 
                     <div class="col-12">
-                      <button type="submit" class="button -dark-1 py-15 px-35 h-60 col-12 rounded-4 bg-blue-1 text-white">
+                      <button form="form1" type="submit" class="button -dark-1 py-15 px-35 h-60 col-12 rounded-4 bg-blue-1 text-white">
                         Đặt Tour
                       </button>
                     </div>
@@ -364,8 +367,8 @@
                 </div>
                 <div class="px-30">
                   <div class="text-14 text-light-1 mt-30">
-                    Not sure? You can cancel this reservation up to 24 hours in
-                    advance for a full refund.
+
+                    Không chắc chắn?Bạn có thể liên hệ chúng tôi để huỷ đặt chỗ này trước 24h để được hoàn tiền 100%.
                   </div>
                 </div>
               </div>
@@ -487,7 +490,7 @@
                           </div>
 
                           <div class="accordion__button">
-                            <button data-open-change-title="See less"
+                            <button form='form2' data-open-change-title="See less"
                               class="d-block lh-15 text-14 text-blue-1 underline fw-500 mt-5">
                               See more
                             </button>
@@ -511,9 +514,8 @@
   <section>
     <div class="container">
       <div class="row y-gap-40 justify-between">
-        <div class="col-xl-3">
+      
           <h3 class="text-22 fw-500">Đánh giá </h3>
-
           <div class="d-flex items-center mt-20">
             <div class="flex-center bg-blue-1 rounded-4 size-70 text-22 fw-600 text-white">
               <?php echo number_format($e['tour_star'], 1) ?>
@@ -550,7 +552,7 @@
 
 
           </div>
-        </div>
+        
 
         <div class="col-xl-8">
           <div id="binhluan" class="row y-gap-40">
@@ -618,6 +620,7 @@
 
             <div class="col-12">
               <div class="form-input">
+                <?php if(isset($_SESSION['user'])){ ?>
                 <textarea required rows="6" id='noidung'></textarea>
                 <input type="text" id='idtour' hidden value='<?php echo $_GET['id'] ?>'>
                 <input type="text" id='iduser' hidden value='<?php echo $id ?>'>
@@ -637,6 +640,7 @@
 
               </button>
             </div>
+            <?php } ?>
           </div>
         </div>
       </div>

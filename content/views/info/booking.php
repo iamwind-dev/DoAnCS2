@@ -265,8 +265,8 @@ include("content/views/shared/headerhome.php");
     
                         <div class="col-auto">
                             <div class="d-flex x-gap-5 y-gap-5 items-center">
-                                <button class="text-14 fw-500 underline">English (US)</button>
-                                <button class="text-14 fw-500 underline">USD</button>
+                                <button class="text-14 fw-500 underline">VietNam(VND)</button>
+                                <button class="text-14 fw-500 underline">VND</button>
                             </div>
                         </div>
                     </div>

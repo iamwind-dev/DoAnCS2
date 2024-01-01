@@ -11,8 +11,9 @@ function search($start, $limit)
     $sql = "SELECT * FROM tour WHERE tour_status_id <> 2";
 
     if (!empty($dia_diem)) {
-        $dia_diem = removeAccents($dia_diem); // Chuẩn hóa từ khóa tìm kiếm
-        $sql .= " AND tour_location_name COLLATE utf8mb4_unicode_ci LIKE '%$dia_diem%'";
+        $dia_diemm = $dia_diem; // Chuẩn hóa từ khóa tìm kiếm
+         //$sql .= " AND tour_location_name COLLATE utf8mb4_unicode_ci LIKE '%$dia_diem%'";
+        $sql .= " AND tour_name COLLATE utf8mb4_unicode_ci LIKE '%$dia_diem%'";
     }
 
     if (!empty($muc_gia)) {
@@ -51,7 +52,8 @@ function searchtotal()
     $sql = "SELECT COUNT(*) as total FROM tour WHERE tour_status_id <> 2 ";
 
     if (!empty($dia_diem)) {
-        $sql .= " AND tour_location_name LIKE '%$dia_diem%'";
+        //$sql .= " AND tour_location_name LIKE '%$dia_diem%'";
+        $sql .= " AND tour_name LIKE '%$dia_diem%'";
     }
 
     if (!empty($muc_gia)) {

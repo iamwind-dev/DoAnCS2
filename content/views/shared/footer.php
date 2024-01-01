@@ -24,9 +24,9 @@
                 <h5 class="text-16 fw-500 mb-10">Theo Dõi Chúng Tôi</h5>
 
                 <div class="d-flex x-gap-20 items-center">
-                  <a href="#"><i class="icon-facebook text-14"></i></a>
+                  <a href="https://www.facebook.com/win.d63" target="blank"><i class="icon-facebook text-14"></i></a>
                   <a href="#"><i class="icon-twitter text-14"></i></a>
-                  <a href="#"><i class="icon-instagram text-14"></i></a>
+                  <a href="https://www.instagram.com/__win.d"><i class="icon-instagram text-14"></i></a>
                   <a href="#"><i class="icon-linkedin text-14"></i></a>
                 </div>
               </div>

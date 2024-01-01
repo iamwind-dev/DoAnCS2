@@ -63,7 +63,7 @@ include("content/views/shared/headerhome.php");
                                                         <div class="cardImage__wishlist">
                                                             <a href="index.php?controller=info&action=removetourfav&idt=<?php echo $e['id'] ?>"
                                                                 class="button -blue-1 bg-white size-30 rounded-full shadow-2">
-                                                                <i class="icon-close text-12"></i>
+                                                                <i class="icon-trash text-12"></i>
                                                             </a>
                                                             
                                                         </div>

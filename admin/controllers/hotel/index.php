@@ -3,7 +3,7 @@ include_once('lib/models.php');
 $result = get_total('hotel');
 $total_records = $result;
 $current_page = isset($_GET['p']) ? $_GET['p'] : 1;
-$limit = 10;
+$limit = 5;
 $total_page = ceil($total_records / $limit);
 if ($current_page > $total_page) {
     $current_page = $total_page;

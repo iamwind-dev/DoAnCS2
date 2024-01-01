@@ -160,7 +160,7 @@ function get_total_id($table, $id, $type)
 
 function get_all_pag($table, $start, $limit)
 {
-    $sql = "SELECT * FROM `$table` LIMIT $start,$limit";
+    $sql = "SELECT * FROM `$table` ORDER BY id DESC LIMIT $start,$limit";
     global $conn;
     $query = mysqli_query($conn, $sql);
     $data = array();
@@ -175,7 +175,7 @@ function get_all_pag($table, $start, $limit)
 
 function get_all_pags($table, $start, $limit, $type)
 {
-    $sql = "SELECT * FROM `$table` WHERE `$type` <> 2 LIMIT $start,$limit";
+    $sql = "SELECT * FROM `$table` WHERE `$type` <> 2 ORDER BY id DESC LIMIT $start,$limit";
     global $conn;
     $query = mysqli_query($conn, $sql);
     $data = array();

@@ -1,4 +1,5 @@
 <?php
+require_once('config/database.php');
 //upload ảnh
 function upload($folder)
 {

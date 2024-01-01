@@ -1,4 +1,4 @@
-<?php $user = get_a_record('users', $_SESSION['user']['id']); ?>
+<?php $user = get_a_record('users', $_SESSION['usera']['id']); ?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -59,7 +59,7 @@
     <header data-add-bg="" class="header -dashboard bg-white js-header" data-x="header" data-x-toggle="is-menu-opened">
         <div data-anim="fade" class="header__container px-30 sm:px-20">
             <div class="-left-side">
-                <a href="index.php" class="header-logo" data-x="header-logo" data-x-toggle="is-logo-dark">
+                <a href="#" class="header-logo" data-x="header-logo" data-x-toggle="is-logo-dark">
                     <img src="/public/img/general/logo1.png" alt="logo icon">
                     <img src="/public/img/general/logo-dark.svg" alt="logo icon">
                 </a>
@@ -98,17 +98,7 @@
 
 
                         <div class="row items-center x-gap-5 y-gap-20 pl-20 lg:d-none">
-                            <div class="col-auto">
-                                <button class="button -blue-1-05 size-50 rounded-22 flex-center">
-                                    <i class="icon-email-2 text-20"></i>
-                                </button>
-                            </div>
-
-                            <div class="col-auto">
-                                <button class="button -blue-1-05 size-50 rounded-22 flex-center">
-                                    <i class="icon-notification text-20"></i>
-                                </button>
-                            </div>
+                            
                             <?php foreach ($user as $u) { ?>
                                 <div class="col-auto">
                                     <?php echo $u['user_name'] ?>

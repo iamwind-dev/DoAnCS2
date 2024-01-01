@@ -5,7 +5,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Đăng Nhập - Administrator - WinK Travel</title>
+    <title>Đăng Nhập</title>
     <link rel="stylesheet" href="../../../public/css/main.css">
     <link rel="stylesheet" href="../../../public/css/vendors.css">
     <link rel="icon" href="../../../public/img/general/logo.ico" type="image/ico">
@@ -40,11 +40,12 @@
             <div class="row justify-center">
                 <div class="col-xl-6 col-lg-7 col-md-9">
                     <div class="px-50 py-50 sm:px-20 sm:py-20 bg-white shadow-4 rounded-4">
-                        <form action='admin.php?controller=home&action=login' method='POST'>
+                        <form action='index.php?controller=home&action=login' method='POST'>
                             <div class="row y-gap-20">
                                 <div class="col-12">
-                                    <h1 class="text-22 fw-500">Administrator - WinK Travel</h1>
-                                    
+                                    <h1 class="text-22 fw-500">Chào mừng trở lại</h1>
+                                    <p class="mt-10">Bạn chưa có tài khoản? <a href="register.php"
+                                            class="text-blue-1">Đăng kí ngay</a></p>
                                 </div>
 
                                 <div class="col-12">
@@ -65,7 +66,10 @@
 
                                 </div>
 
-                                
+                                <div class="col-12">
+                                    <a href="quenmatkhau.php" class="text-14 fw-500 text-blue-1 underline">Quên mật
+                                        khẩu?</a>
+                                </div>
 
                                 <div class="col-12">
                                     <input type='submit' class="button py-20 -dark-1 bg-blue-1 text-white"
@@ -78,7 +82,10 @@
                         <div class="row y-gap-20 pt-30">
                             
 
-                            
+                            <div class="col-12">
+<p class="mt-10"> <a href="index.php"
+                                            class="text-blue-1">Trở lại trang chủ</a></p>
+                            </div>
                         </div>
                     </div>
                 </div>

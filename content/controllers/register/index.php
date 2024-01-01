@@ -32,6 +32,6 @@ if (!empty($_POST)) {
     }
     else {
         insert('users', $user_add);
-        header('Location:admin.php?controller=home&action=login');
+        header('Location:index.php?controller=home&action=login');
     }
 }
