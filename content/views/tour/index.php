@@ -268,7 +268,7 @@
 
                           <div class="text-15 text-light-1 ls-2 lh-16">
                             <input type="date" name="ngaydi" min="<?php echo $e['tour_start_date'] ?>"
-                              max="<?php echo $e['tour_end_date'] ?>">
+                              max="<?php echo $e['tour_end_date'] ?>" required>
                             <input type="number" name="thoiluong" value="<?php echo $e['tour_duration'] ?>" hidden>
                           </div>
                         </div>

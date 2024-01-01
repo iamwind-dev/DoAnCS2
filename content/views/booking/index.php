@@ -154,10 +154,10 @@ include("content/views/shared/headerhome.php");
                                                 <div class="col-auto">
                                                     <div class="d-flex items-center">
                                                         <div class="size-30 flex-center bg-blue-1 rounded-4">
-                                                            <div class="text-12 fw-600 text-white">4.8</div>
+                                                            <div class="text-12 fw-600 text-white"><?php echo number_format($e['tour_star'],1) ?></div>
                                                         </div>
 
-                                                        <div class="text-14 fw-500 ml-10">Exceptional</div> 
+                                                        
                                                     </div>
                                                 </div>
 
