@@ -86,9 +86,9 @@ include('admin/views/shared/header.php');
                                                         <span class=" text-center text-14 fw-500 text-red-2">
                                                     <?php echo number_format($element['total'], 0, ',', '.') . 'VND';     ?>
                                                     </span>
-<br>
+                                                    <br>
                                                     <b>ghi chú:</b>
-<?php echo $element['note']; ?><br><br>
+                                                    <?php echo $element['note']; ?><br><br>
                                                     </td>
                                                     <td>
                                                         Thanh toán trực tiếp
@@ -203,7 +203,7 @@ include('admin/views/shared/header.php');
                                 </div>
                             </div>
                             <script>
-                                document.addEventListener('DOMContentLoaded', function() {
+    document.addEventListener('DOMContentLoaded', function() {
     var dropdownLinks = document.querySelectorAll('.js-dropdown-link');
 
     dropdownLinks.forEach(function(link) {
@@ -214,30 +214,24 @@ include('admin/views/shared/header.php');
             var idt = this.getAttribute('data-idt'); // Lấy giá trị data-id từ thuộc tính custom
             var ac = this.getAttribute('data-ac'); // Lấy giá trị data-id từ thuộc tính custom
 
-            // Thực hiện hành động dựa trên id, ví dụ console.log
-            console.log('Đã nhấp vào liên kết với id: ' + id + idt+ ac);
-
             $.ajax({
                     method: "POST",
                     url: '/admin/controllers/booking/action.php',
                     data: {
                         id: id,
                         idt : idt,
-                        ac : ac// Send the determined value
-                        // Add more data if needed
+                        ac : ac
                     },
                 })
                     .done(function (data) {
 
                         alert('Xác nhận lưu dữ liệu');
-                        window.location.reload(); // Reload the page after the action is completed
+                        window.location.reload(); 
                         
                     });
             });
         });
     });
-
-
                             </script>
                         </div>
                     </div>

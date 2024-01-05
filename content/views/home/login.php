@@ -32,9 +32,10 @@
     <div class="preloader__title">WinK Travel</div>
   </div>
 <?php if($log === false){
-
     echo "<script>alert('Sai thông tin đăng nhập')</script>";
-} ?>
+}
+
+?>
     <section class="layout-pt-lg layout-pb-lg bg-blue-2">
         <div class="container">
             <div class="row justify-center">
@@ -66,10 +67,7 @@
 
                                 </div>
 
-                                <div class="col-12">
-                                    <a href="quenmatkhau.php" class="text-14 fw-500 text-blue-1 underline">Quên mật
-                                        khẩu?</a>
-                                </div>
+                                
 
                                 <div class="col-12">
                                     <input type='submit' class="button py-20 -dark-1 bg-blue-1 text-white"

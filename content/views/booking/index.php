@@ -105,9 +105,7 @@ include("content/views/shared/headerhome.php");
 
                                         <div class="col-auto">
 
-                                            <!-- <a href="#" class="button h-60 px-24 -dark-1 bg-blue-1 text-white">
-                                                Next: Final details <div class="icon-arrow-top-right ml-15"></div>
-                                            </a> -->
+                                            
                                             <button type="submit" class="button h-60 px-24 -dark-1 bg-blue-1 text-white">Tiếp Tục</button>
                                         </div>
                                     </div>

@@ -6,7 +6,7 @@
             <div class="col-auto">
 
                 <h1 class="text-30 lh-14 fw-600">Sửa Thông tin Khách sạn</h1>
-                <div class="text-15 text-light-1">Lorem ipsum dolor sit amet, consectetur.</div>
+                <div class="text-15 text-light-1"></div>
             </div>
 
             <div class="col-auto">
@@ -119,7 +119,7 @@
                                             <div class="text-18 fw-500 mb-10">Mô tả Khách sạn</div>
                                             <div class="form-input ">
                                                 <textarea name="mota" id="editor" value="">
-                                                            <?php echo $element['hotel_description']; ?>    </textarea>
+                                                                <?php echo $element['hotel_description']; ?>    </textarea>
                                             </div>
                                         </div>
                                         <div class="col-12">

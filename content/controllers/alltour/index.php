@@ -37,8 +37,6 @@ else if ((isset($_POST['diadiem'])) || (isset($_POST['ngay'])) || (isset($_POST[
             $current_page = 1;
             echo $current_page;
         }
-
-
         $start = ($current_page - 1) * $limit;
         $a = search($start, $limit);
     }
@@ -62,7 +60,5 @@ else {
     $a = get_all_pags('tour', $start, $limit, $status);
 
 }
-
-
 
 require("content/views/alltour/index.php");

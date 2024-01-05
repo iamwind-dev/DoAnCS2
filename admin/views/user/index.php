@@ -8,7 +8,7 @@ include('admin/views/shared/header.php');
             <div class="col-auto">
                 <h1 class="text-30 lh-14 fw-600">Tài khoản Người Dùng</h1>
                 <div class="text-15 text-light-1">
-                    Lorem ipsum dolor sit amet, consectetur.
+
                 </div>
             </div>
 

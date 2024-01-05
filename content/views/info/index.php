@@ -135,51 +135,7 @@ include("content/views/shared/headerhome.php");
 
 
 
-                    <!-- <div class="tabs__pane -tab-item-3">
-                                <div class="col-xl-9">
-                                    <div class="row x-gap-20 y-gap-20">
-                                        <div class="col-12">
-
-                                            <div class="form-input ">
-                                                <input type="text" required>
-                                                <label class="lh-1 text-16 text-light-1">Mật Khẩu cũ</label>
-                                            </div>
-
-                                        </div>
-
-                                        <div class="col-12">
-
-                                            <div class="form-input ">
-                                                <input type="text" required>
-                                                <label class="lh-1 text-16 text-light-1">Mật khẩu mới</label>
-                                            </div>
-
-                                        </div>
-
-                                        <div class="col-12">
-
-                                            <div class="form-input ">
-                                                <input type="text" required>
-                                                <label class="lh-1 text-16 text-light-1">Nhập lại mật khẩu mới</label>
-                                            </div>
-
-                                        </div>
-
-                                        <div class="col-12">
-                                            <div class="row x-gap-10 y-gap-10">
-                                                <div class="col-auto">
-
-                                                    <a href="#" class="button h-50 px-24 -dark-1 bg-blue-1 text-white">
-                                                        Lưu <div class="icon-arrow-top-right ml-15"></div>
-                                                    </a>
-
-                                                </div>
-
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div> -->
+                    
                 </div>
             </div>
         </div>

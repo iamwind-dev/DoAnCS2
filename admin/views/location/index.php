@@ -7,7 +7,7 @@ include('admin/views/shared/header.php');
       <div class="col-auto">
         <h1 class="text-30 lh-14 fw-600">Tất cả địa điểm</h1>
         <div class="text-15 text-light-1">
-          Lorem ipsum dolor sit amet, consectetur.
+
         </div>
       </div>
 
@@ -15,7 +15,7 @@ include('admin/views/shared/header.php');
         <a href="../../../admin.php?controller=location&amp;action=add"
           class="button h-50 px-24 -dark-1 bg-blue-1 text-white">
           Thêm địa điểm
-          <div class="icon-arrow-top-right ml-15"></div>
+          
         </a>
       </div>
     </div>

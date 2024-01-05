@@ -6,7 +6,7 @@
             <div class="col-auto">
 
                 <h1 class="text-30 lh-14 fw-600">Sửa Tour</h1>
-                <div class="text-15 text-light-1">Lorem ipsum dolor sit amet, consectetur.</div>
+                <div class="text-15 text-light-1"></div>
             </div>
 
             <div class="col-auto">
@@ -78,16 +78,8 @@
                                             </div>
                                         </div>
                                         <div class="row">
-                                            <div class="col-5">
-                                                <div class="text-18 fw-500 mb-10">Số lượng người tham gia</div>
-                                                <div class="form-input ">
-                                                    <input name="sltg" type="number" required min="1"
-                                                        value="<?php echo $element['tour_max_capacity']; ?>">
-                                                    <label class="lh-1 text-16 text-light-1">Số lượng người tham
-                                                        gia</label>
-                                                </div>
-                                            </div>
-                                            <div class="col-5">
+
+                                            <div class="col-12">
                                                 <div class="text-18 fw-500 mb-10">Giá</div>
                                                 <div class="form-input ">
                                                     <input name="gia" type="number" required
@@ -166,7 +158,7 @@
                                             <div class="text-18 fw-500 mb-10">Mô tả tour</div>
                                             <div class="form-input ">
                                                 <textarea name="mota" id="editor" value="">
-                                                                    <?php echo $element['tour_description']; ?>    </textarea>
+                                                                        <?php echo $element['tour_description']; ?>    </textarea>
                                             </div>
                                         </div>
                                         <div class="col-6">

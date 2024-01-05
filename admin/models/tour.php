@@ -73,7 +73,7 @@ function tour_update()
         'tour_journey' => ($_POST['hanhtrinh']),
         'tour_schedule' => ($_POST['lichtrinh']),
         'tour_price' => intval($_POST['gia']),
-        'tour_max_capacity' => intval($_POST['sltg']),
+        
         'tour_vehicle' => $_POST['phuongtien'],
         'tour_starting_point' => ($_POST['diemxp']),
         'tour_location_name' => ($tendiadiem),
@@ -114,7 +114,7 @@ function tour_add()
         'tour_journey' => ($_POST['hanhtrinh']),
         'tour_schedule' => ($_POST['lichtrinh']),
         'tour_price' => intval($_POST['gia']),
-        'tour_max_capacity' => intval($_POST['sltg']),
+        
         'tour_vehicle' => $_POST['phuongtien'],
         'tour_starting_point' => ($_POST['diemxp']),
         'tour_location_id' => ($iddiadiem),

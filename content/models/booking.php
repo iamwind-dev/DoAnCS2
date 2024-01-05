@@ -1,6 +1,9 @@
 <?php
 function booking_add()
 {
+    date_default_timezone_set('Asia/Ho_Chi_Minh'); // Thiết lập múi giờ Việt Nam
+
+    $currentDateTime = date('Y-m-d H:i:s');
     if (!empty($_POST['idks'])) {
         $idks=intval($_POST['idks']);
     } else{
@@ -20,7 +23,7 @@ function booking_add()
         'user_id' => intval($_SESSION['user']['id']),
         'date_start' => $_POST['ngaydi'],
         'date_end' => $_POST['ngayve'],
-    );
+        'date' => $currentDateTime);
     $idb=insert_get_id('book_tour', $book);
     return $idb;
 }

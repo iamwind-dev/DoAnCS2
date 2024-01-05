@@ -8,7 +8,7 @@ include('admin/views/shared/header.php');
       <div class="col-auto">
         <h1 class="text-30 lh-14 fw-600">Tất cả các Tour</h1>
         <div class="text-15 text-light-1">
-          Lorem ipsum dolor sit amet, consectetur.
+
         </div>
       </div>
 
@@ -16,7 +16,7 @@ include('admin/views/shared/header.php');
         <a href="../../../admin.php?controller=tour&amp;action=add"
           class="button h-50 px-24 -dark-1 bg-blue-1 text-white">
           Thêm Tour
-          <div class="icon-arrow-top-right ml-15"></div>
+        
         </a>
       </div>
     </div>
@@ -72,8 +72,6 @@ include('admin/views/shared/header.php');
                         <?php echo $element['tour_journey']; ?><br><br>
                         <b>Lịch Trình:</b>
                         <?php echo $element['tour_schedule']; ?><br><br>
-                        <b>Số người:</b>
-                        <?php echo $element['tour_max_capacity']; ?> <br>
                         <br /><b>Giá:</b>
                         <span class=" text-center text-14 fw-500 text-red-2">
                           <?php echo number_format($element['tour_price'], 0, ',', '.') . 'VND'; ?>

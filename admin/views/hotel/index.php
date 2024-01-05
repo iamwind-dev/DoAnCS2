@@ -7,7 +7,7 @@ include('admin/views/shared/header.php');
             <div class="col-auto">
 
                 <h1 class="text-30 lh-14 fw-600">Tất cả khách sạn</h1>
-                <div class="text-15 text-light-1">Lorem ipsum dolor sit amet, consectetur.</div>
+                <div class="text-15 text-light-1"></div>
 
             </div>
 
@@ -16,7 +16,7 @@ include('admin/views/shared/header.php');
 
                 <a href="../../../admin.php?controller=hotel&amp;action=add"
                     class="button h-50 px-24 -dark-1 bg-blue-1 text-white">
-                    Thêm Khách sạn<div class="icon-arrow-top-right ml-15"></div>
+                    Thêm Khách sạn
                 </a>
 
 

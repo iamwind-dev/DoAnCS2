@@ -127,7 +127,7 @@ include("content/views/shared/headerhome.php");
                     href="../../../index.php?controller=tour&action=index&id=<?php echo $e['id'] ?>"
                                                                         class="button -md -dark-1 bg-blue-1 text-white mt-24">
                                                                         Xem chi tiết
-                                                                        <div class="icon-arrow-top-right ml-15"></div>
+                                                                        
                                                                     </a>
                                                                 </div>
                                                             </div>

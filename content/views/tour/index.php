@@ -189,10 +189,10 @@
 
             <div class="col-md-auto col-6">
               <div class="d-flex">
-                <i class="icon-customer text-22 text-blue-1 mr-10"></i>
+                <i class="icon-location text-22 text-blue-1 mr-10"></i>
                 <div class="text-15 lh-15">
-                  Số lượng:<br />
-                  <?php echo $e['tour_max_capacity'] ?>
+                  Điểm Xuất Phát:<br />
+                  <?php echo $e['tour_starting_point'] ?>
                 </div>
               </div>
             </div>
@@ -233,17 +233,7 @@
               </div>
             </div>
 
-            <!-- <div class="col-12">
-              <h5 class="text-16 fw-500">Điểm Nổi Bật</h5>
-              <ul class="list-disc text-15 mt-10">
-                <li>
-                  Travel between the UNESCO World Heritage sites aboard a
-                  comfortable coach
-                </li>
-                <li>Explore with a guide to delve deeper into the history</li>
-                <li>Great for history buffs and travelers with limited time</li>
-              </ul>
-            </div> -->
+          
           </div>
         </div>
 
@@ -286,7 +276,7 @@
                           </h4>
 
                           <div class="text-15 text-light-1 ls-2 lh-16">
-                            <input type="number" name="songuoi" min="1" max="<?php echo $e['tour_max_capacity'] ?>"
+                            <input type="number" name="songuoi" min="1" 
                               required>
                           </div>
 
@@ -341,7 +331,7 @@
                               <?php echo $a['hotel_name'] ?>
                             </b><br>
                             <div class="text-15 text-blue-1 ls-2 lh-16">
-                              <?php echo number_format($a['hotel_price'], 0, ',', '.') . 'VND'; ?>
+                              <?php echo number_format($a['hotel_price'], 0, ',', '.') . ' VND / đêm'; ?>
                             </div>
                             <div class="text-15 text-light-1 ls-2 lh-16">
                               <?php if ($a['hotel_status_id'] == 2) { ?>
@@ -635,7 +625,7 @@
             <div class="col-auto">
               <button class="button -md -dark-1 bg-blue-1 text-white" type="submit" id="btnGui">
 
-                Đăng
+                Gửi
                 <div class="icon-arrow-top-right ml-15"></div>
 
               </button>
