@@ -31,12 +31,12 @@ include('admin/views/shared/header.php');
                             <table class="table-4 -border-bottom col-12">
                                 <thead class="bg-light-2">
                                     <tr>
-                                        <th style="width: 100px !important">STT</th>
+                                        <th >STT</th>
                                         <th style="width: 300px">Tên Tour</th>
                                         <th style="width: 300px" style="width: 300px">Thông tin khách hàng</th>
                                         <th style="width: 500px">Thông tin tour</th>
-                                        <th style="width: 300px">Thanh toán</th>
-                                        <th style="width: 300px">Trạng Thái</th>
+                                        <th >Thanh toán</th>
+                                        <th style="width: 300px !important">Trạng Thái</th>
                                         <th>Hành động</th>
                                     </tr>
                                 </thead>

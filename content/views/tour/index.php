@@ -130,7 +130,7 @@
       </div>
     </div>
     </div>
-  </section>
+</section>
 
   <section class="pt-40 js-pin-container">
     <div class="container">
@@ -143,38 +143,10 @@
                 <img src="../../../public/img/tours/<?php echo $e['tour_image_url'] ?>" alt="image"
                   class="rounded-4 col-12 h-full object-cover" />
               </div>
-
-              <!-- <div class="swiper-slide">
-              <img
-                src="img/gallery/1/2.png"
-                alt="image"
-                class="rounded-4 col-12 h-full object-cover"
-              />
+              
             </div>
-
-            <div class="swiper-slide">
-              <img
-                src="img/gallery/1/3.png"
-                alt="image"
-                class="rounded-4 col-12 h-full object-cover"
-              />
-            </div>
-
-            <div class="swiper-slide">
-              <img
-                src="../../../public/img/gallery/1/4.png"
-                alt="image"
-                class="rounded-4 col-12 h-full object-cover"
-              />
-            </div> -->
-            </div>
-
-
-
 
           </div>
-
-
 
           <div class="row y-gap-30 justify-between pt-20">
             <div class="col-md-auto col-6">
@@ -369,70 +341,6 @@
     </div>
   </section>
 
-  <!-- <section class="pt-40">
-            <div class="container">
-                <div class="pt-40 border-top-light">
-                    <div class="row x-gap-40 y-gap-40">
-                        <div class="col-auto">
-                            <h3 class="text-22 fw-500">Important information</h3>
-                        </div>
-                    </div>
-
-                    <div class="row x-gap-40 y-gap-40 justify-between pt-20">
-                        <div class="col-lg-4 col-md-6">
-                            <div class="fw-500 mb-10">Inclusions</div>
-                            <ul class="list-disc">
-                                <li>Superior Coach, Wi-Fi and USB Charging On-board</li>
-                                <li>Expert guide</li>
-                                <li>Admission to Windsor Castle (if option selected)</li>
-                                <li>Admission to Stonehenge</li>
-                            </ul>
-                        </div>
-
-                        <div class="col-lg-4 col-md-6">
-                            <div class="fw-500 mb-10">Departure details</div>
-                            <div class="text-15">
-                                Departures from 01st April 2022: Tour departs at 8 am (boarding at 7.30 am), Victoria
-                                Coach Station Gate 1-5
-                            </div>
-                        </div>
-
-                        <div class="col-lg-3 col-md-6">
-                            <div class="fw-500 mb-10">Know before you go</div>
-                            <ul class="list-disc">
-                                <li>Duration: 11h</li>
-                                <li>Mobile tickets accepted</li>
-                                <li>Instant confirmation</li>
-                            </ul>
-                        </div>
-
-                        <div class="col-lg-4 col-md-6">
-                            <div class="fw-500 mb-10">Exclusions</div>
-                            <ul class="list-disc">
-                                <li>Hotel pick-up and drop-off</li>
-                                <li>Gratuities</li>
-                                <li>Lunch</li>
-                            </ul>
-                        </div>
-
-                        <div class="col-12">
-                            <div class="fw-500 mb-10">Additional information</div>
-                            <ul class="list-disc">
-                                <li>Confirmation will be received at time of booking</li>
-                                <li>Departs at 8am (boarding at 7.30am), Victoria Coach Station Gate 1-5, 164 Buckingham
-                                    Palace Road, London, SW1W 9TP</li>
-                                <li>As Windsor Castle is a working royal palace, sometimes the entire Castle or the
-                                    State Apartments within the Castle need to be closed at short notice. (if selected
-                                    this option)</li>
-                                <li>Stonehenge is closed on 21 June due to the Summer Solstice. During this time, we
-                                    will instead visit the Avebury Stone Circle.</li>
-                                <li>Please note: the tour itinerary and order may change</li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section> -->
 
   <div class="container mt-40 mb-40">
     <div class="border-top-light"></div>
@@ -537,10 +445,6 @@
             </fieldset>
             </form>
 
-
-
-
-
           </div>
         
 
@@ -586,13 +490,7 @@
         </div>
       </div>
     </div>
-    <!-- <?php
-    if ($total_records > 5) {
-      ?>
-  <button id="loadMoreComments">Hiển thị thêm</button>
-  <?php
-    }
-    ?> -->
+    
   </section>
 
 
@@ -640,30 +538,7 @@
   <div class="container">
     <div class="mt-50 border-top-light"></div>
   </div>
-  <script>
-    $(document).ready(function () {
-      var offset = 1;
-      var limit = 5;
-
-      // Hàm để tải thêm comment
-      function loadMoreComments() {
-        $.ajax({
-          url: "/content/controllers/comment/loadcomment.php",
-          type: "POST",
-          data: { idt: $('#idtour').val(), offset: offset, limit: limit },
-          success: function (data) {
-            $('#binhluan').append(data);
-            offset += limit;
-          }
-        });
-      }
-
-      // Xử lý sự kiện khi nhấp vào nút "Hiển thị thêm"
-      $('#loadMoreComments').on('click', function () {
-        loadMoreComments();
-      });
-    });
-  </script>
+  
   <script>
     $("#btnGui").click(function () {
       // Lấy giá trị của #noidung
@@ -679,7 +554,7 @@
       $.ajax({
         method: "POST",
         url: '/content/controllers/comment/postcomment.php',
-        // data: { idtour: $('#idtour').val(), noidung: $('#noidung').val(),iduser: $('#iduser').val() ,avatar: $('#avatar').val() ,name: $('#name').val(), time : $('#time').val()},
+        
         data: { idt: $('#idtour').val(), noidung: $('#noidung').val(), idu: $('#iduser').val(), rating: $('input[name="rating"]:checked').val(), num: $('#num').val(), rate: $('#rating').val() },
       })
         .done(function (data) {
@@ -713,8 +588,6 @@
           // Sử dụng hàm formatTimeAgo với thời gian bình luận để hiển thị kết quả
           var commentTime = $('time').val();
           var timeAgo = formatTimeAgo(commentTime);
-
-
 
           var name = $('#name').val();
           var avatar = $('#avatar').val();

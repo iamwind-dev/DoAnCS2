@@ -9,7 +9,7 @@ session_start();
         $controller = $_GET['controller'];
     }
     else {
-        $controller = 'tour';
+        $controller = 'dashboard';
     }
 
     if (isset($_GET['action']) && '' != $_GET['action']) {

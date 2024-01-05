@@ -208,7 +208,7 @@ function increaseValue($table, $field, $id)
 {
     global $conn;
 
-    // Tăng giá trị của trường 'quantity' cho sản phẩm có 'product_id' là $productId
+    
     $sql = "UPDATE `$table` SET `$field` = `$field` + 1 WHERE id = $id";
 
     mysqli_query($conn, $sql);

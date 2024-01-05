@@ -12,11 +12,8 @@ $total_records = $result;
 $data = get_a_record('tour', $_GET['id']);
 foreach ($data as $a) {
     $id = $a['tour_location_id'];
-    $description = $a['tour_description'];
 }
 $data1 = showHotel($id);
 $data2 = showComment($_GET['id']);
-
-
 
 include('content/views/tour/index.php');

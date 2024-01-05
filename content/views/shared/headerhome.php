@@ -51,7 +51,7 @@
 
 
     <div class="header-margin"></div>
-    <header data-add-bg="" class="header bg-dark-1 js-header" data-x="header" data-x-toggle="is-menu-opened">
+    <header data-add-bg="" class="header bg-dark-2 js-header" data-x="header" data-x-toggle="is-menu-opened">
       <div data-anim="fade" class="header__container container">
         <div class="row justify-between items-center">
 
@@ -75,7 +75,7 @@
                   <a href="index.php?controller=home&action=login"
                     class="button px-30 fw-400 text-14 -blue-1 bg-white h-50 text-dark-1">Đăng Nhập</a>
                   <a href="register.php" class="button px-30 fw-400 text-14 border-white -blue-1 h-50 text-white ml-20">Đăng Kí</a>
-                  <!-- <a href="login.html" class="button px-30 fw-400 text-14 -blue-1 bg-white h-50 text-dark-1 ml-20">Đăng Nhập</a> -->
+                  
                 </div>
               <?php }
               else {

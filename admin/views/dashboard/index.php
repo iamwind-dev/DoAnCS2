@@ -102,10 +102,10 @@
                                     <thead class="">
                                         <tr>
                                             <th>#</th>
-                                            <th>Tour</th>
+                                            <th style="width: 250px;">Tour</th>
                                             <th>Tổng giá</th>
                                             
-                                            <th>Trạng thái</th>
+                                            <th style="width: 200px;">Trạng thái</th>
                                             <th>Thời gian</th>
                                         </tr>
                                     </thead>

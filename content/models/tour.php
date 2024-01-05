@@ -16,7 +16,7 @@ function showHotel($id)
 
 function showComment($id)
 {
-    $sql = "SELECT * FROM comment WHERE tour_id = $id ORDER BY time DESC LIMIT 0, 5;  ";
+    $sql = "SELECT * FROM comment WHERE tour_id = $id AND status_id <> 3 ORDER BY time DESC   ";
     global $conn;
     $query = mysqli_query($conn, $sql);
     $data = array();

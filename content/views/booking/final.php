@@ -2,15 +2,7 @@
 include("content/views/shared/headerhome.php");
 ?>
 
-<script>
-    window.addEventListener('beforeunload', function (e) {
-    // Ngăn chặn trình duyệt tải lại trang
-    e.preventDefault();
-    // Thông báo cho người dùng trước khi họ rời khỏi trang
-    e.returnValue = '';
-});
 
-</script>
         <section class="pt-40">
             <div class="container">
                 <div class="row x-gap-40 y-gap-30 items-center">
@@ -148,19 +140,7 @@ include("content/views/shared/headerhome.php");
                                                     </div>
                     
                                                     <div class="col">
-                                                                    <!-- <div class="d-flex x-gap-5 pb-10">
-                    
-                                                                <i class="icon-star text-yellow-1 text-10"></i>
-                    
-                                                                <i class="icon-star text-yellow-1 text-10"></i>
-                    
-                                                                <i class="icon-star text-yellow-1 text-10"></i>
-                    
-                                                                <i class="icon-star text-yellow-1 text-10"></i>
-                    
-                                                                <i class="icon-star text-yellow-1 text-10"></i>
-                    
-                                                            </div> -->
+                                                                    
                     
                                                     <div class="lh-17 fw-500">
                                                         <?php echo $e['tour_name']; ?>

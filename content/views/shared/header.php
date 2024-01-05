@@ -76,7 +76,7 @@
               <div class="d-flex items-center ml-20 is-menu-opened-hide md:d-none">
                 <a href="index.php?controller=home&action=login" class="button px-30 fw-400 text-14 -blue-1 bg-white h-50 text-dark-1">Đăng Nhập</a>
                 <a href="register.php" class="button px-30 fw-400 text-14 border-white -blue-1 h-50 text-white ml-20">Đăng Kí</a>
-                <!-- <a href="login.html" class="button px-30 fw-400 text-14 -blue-1 bg-white h-50 text-dark-1 ml-20">Đăng Nhập</a> -->
+            
               </div>
                 <?php }else{ $user = get_a_record('users', $_SESSION['user']['id']); ?>
 
