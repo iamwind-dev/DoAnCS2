@@ -559,6 +559,8 @@
       })
         .done(function (data) {
           
+          console.log(data);
+
           function formatTimeAgo(commentTime) {
             var now = new Date(); // Thời gian hiện tại
             var difference = now - commentTime; // Độ chênh lệch thời gian

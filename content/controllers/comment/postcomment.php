@@ -2,7 +2,7 @@
 
 require_once('../../../lib/models.php');
 require_once('../../../content/models/comment.php');
-comment_add();
+comment_add($_POST['idt'], $_POST['idu'], $_POST['noidung']);
 if(isset($_POST['rating'])){
 $currentstar = $_POST['rate'];
 $currentnum = $_POST['num'];
