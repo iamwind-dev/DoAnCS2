@@ -21,8 +21,8 @@
      ```php
      define('DB_HOST', 'localhost');
      define('DB_USER', 'root');
-     define('DB_PASS', '1234'); // Change this if your MySQL password is different
-     define('DB_NAME', 'doanqldulich');
+     define('DB_PASS', 'YOUR_PASSWORD'); // Change this if your MySQL password is different
+     define('DB_NAME', 'YOUR_DATABASE');
      ```
 
 4. **Place the Project in the XAMPP Directory:**
